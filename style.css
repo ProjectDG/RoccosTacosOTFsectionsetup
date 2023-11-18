@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: Arial, sans-serif;
+  }
+
+  /*
+::-webkit-scrollbar {
+    display: none;
+  }
+  */
+
+body {
+    font-size: 2vh;
+    background-image: url("./images/newWoodBackground2.jpg");
+    background-size: 105% 120%;
+    display: block;
+    height: 97vh;
+    text-align: center;
+  }
+
+  ::backdrop {
+    background-image: url("./images/newWoodBackground2.jpg");
+    background-size: 105% 120%;
+    display: block;
+  }  
+
+@media screen and (orientation:landscape) {
+
+    *{
+        color: rgb(241, 237, 231);
+    }
+
+    #logoDiv{
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+    }
+
+    img[src="./images/logo.png"]{
+        margin: auto;
+        max-height: 20vh;
+    }
+
+    #photoContainer{
+        float: left;
+        border: 2px solid white;
+        height: 65vh;
+        width: 49vw;
+    }
+
+    #listContainer{
+        float: right;
+        border: 2px solid white;
+        height: 65vh;
+        width: 49vw;
+    }
+
+}
+
+@media screen and (orientation:portrait) {
+
+}
