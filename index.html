@@ -3,27 +3,90 @@
 
 <meta charset="UTF-8">
 
-<title>Rocco's Tacos & Tequila</title>
+<title>Rocco's Tacos & Tequila Section Setup</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 </style>
 
 <body>
-    <div id="logoDiv">
-        <img src="./images/logo.png" alt="Rocco's Taco Logo">
-    </div>
+  <div id="portraitContainer">
+    <h1>Please Rotate Screen</h1>
+    <img id="rotateScreenIcon" src="./images/rotateScreenIcon.png" alt="rotate screen icon">
+    <h1>For Section Setup</h1>
+  </div>
 
-    <div id="photoContainer">
-        
-    </div>
+  <!-- Landscape Mode -->
+  <div class="topnav">
     
-    <div id="listContainer">
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>  
 
+    
+    
+    <!--<a href="#home" class="active">-->
+      <h2 id="mainTitle" class="titles">Section Setup</h2>
+      <img src="./images/logo.png" alt="Rocco's Taco Logo">
+    <!--</a>-->
+    
+    <!--
+    <div id="myLinks">
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
     </div>
+  -->
+  </div>  
+  
+    
+  
+
+
+
+  <div id="photoContainer">
+    <img class="setupImages" src="./images/serviceWell_1.jpg" alt="Service Well Setup">
+    <button class="imageNumbers" id="btn1">1</button>
+    <button class="imageNumbers" id="btn2">2</button>
+    <button class="imageNumbers" id="btn3">3</button>
+    <button class="imageNumbers" id="btn4">4</button>
+    <button class="imageNumbers" id="btn5">5</button>
+    <button class="imageNumbers" id="btn6">6</button>
+    <button class="imageNumbers" id="btn7">7</button>
+    <button class="imageNumbers" id="btn8">8</button>
+  </div>
+    
+
+  <h2 id="itemList" class="titles">Item List</h2>
+
+  <div id="listContainer">                            <!-- Make drop downs withe specifics -->
+    <ol id="left">
+      <li>Sangria Batches ( Red, White & Rose )</li>
+      <li>Syrups ( Watermelon, Grenadine & Pomegranate )</li>
+      <li>Glass Rimmer ( Salt, Sugar, Hibiscus Salt & Tajin )</li>
+      <li>Bitters & Extra Rimmer ( Black Salt )</li>
+      <li>Ginger Beer, Pineapple Juice & Ginger Ale</li>
+      <li>Bloody Mary Mix & Tonics ( Classic & Tiki Tonic )</li>
+      <li>Printer Paper and Ink</li>
+      <li>Coffee Beans & Cinnamon Sugar</li>
+    </ol>
+    <!--
+    <ol id="right" start="9">
+      <li>Coffee Beans & Cinnamon Sugar</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+  -->
+  </div>
+
 
 
 
