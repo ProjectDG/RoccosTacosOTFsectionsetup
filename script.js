@@ -79,6 +79,7 @@ $(document).ready(function(){
 
     // Resets Modal List
     $("#modalList").empty();
+    $("#modalTitle").empty();
     
     console.log(this);
     
