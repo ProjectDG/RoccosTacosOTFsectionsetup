@@ -45,7 +45,11 @@ body {
 
 @media screen and (orientation:landscape) and (max-width: 4000px) {
     #rotateScreenIcon,
-    h1{
+    h1,
+    #dropDownMenu,
+    #serviceWellFruit,
+    .service-well-fruit
+    {
     display: none;
     }
 
@@ -62,7 +66,7 @@ body {
     /* Header */
     .topnav {
       background-color: rgba(0, 0, 0, .6);
-      border-bottom: 4px solid black;
+      border-bottom: 10px solid black;
       color: white;
       width: 100%;
       height: 10%;
@@ -76,6 +80,33 @@ body {
       top: 3.5%;
       left: 3%;
       font-size: 2em;
+    }
+
+    #dropDownMenu{
+      background-color: rgba(0, 0, 0, .8);
+      border-right: 10px solid black;
+      border-bottom: 10px solid black;
+      width: 20%;
+      height: 85.5%;
+      position: absolute;
+      left: 0;
+      top: 10.5%;
+      z-index: 2;
+      padding: 0% 0% 1% 0%;
+      overflow: scroll;
+      overflow-x: hidden;
+      box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
+    }
+
+    .menu-items{
+      padding: 3% 0% 3% 8%;
+      height: 5%;
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-items:hover{
+      background-color: #2a2a2a;
     }
 
     .titles{
@@ -108,6 +139,10 @@ body {
       max-width: 70%;
     }
 
+    #serviceWellFruit{
+      max-width: 45%;
+    }
+
     .image-numbers{
       font-size: 1.5em;
       box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
@@ -129,44 +164,52 @@ body {
       transform: scale(1.75);
     }
 
-    #btn1{
+
+    /* Service Well Printer */
+    #btn1SWP{
       top: 40%;
       left: 18%;
     }
 
-    #btn2{
+    #btn2SWP{
       top: 25%;
       left: 32%;
     }
 
-    #btn3{
+    #btn3SWP{
       top: 70%;
       left: 47.25%;
     }
 
-    #btn4{
+    #btn4SWP{
       top: 73%;
       left: 22%;
     }
 
-    #btn5{
+    #btn5SWP{
       top: 45%;
       left: 42%;
     }
 
-    #btn6{
+    #btn6SWP{
       top: 33%;
       left: 54%;
     }
 
-    #btn7{
+    #btn7SWP{
       top: 42%;
       left: 70%;
     }
 
-    #btn8{
+    #btn8SWP{
       top: 17%;
       left: 67%;
+    }
+
+    /* Service Well Fruit */
+    #btn1SWF{
+      top: 45%;
+      left: 49%;
     }
 
 
@@ -199,7 +242,7 @@ body {
 
 .modal-content h2{
   position: relative;
-  margin: 2% auto 2% auto;
+  margin: 0 auto 2% auto;
   color: antiquewhite;
   width: fit-content;
   font-size: 2em;

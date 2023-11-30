@@ -1,24 +1,14 @@
 
 class Item{
-    constructor(id, name, contents = []/*, rim, liquor = [], liqueur = [], mixers = [], garnish = [], photo, batch, instructions = []*/){
+    constructor(id, name, contents = []){
      this.id = id; 
      this.name = name;
      this.contents = contents;
-     /*
-     this.rim = rim;
-     this.liquor = liquor;
-     this.liqueur = liqueur;
-     this.mixers = mixers;
-     this.garnish = garnish;
-     this.photo = photo;
-     this.batch = batch;
-     this.instructions = instructions;
-     */
     };
    };
 
 
-
+   // Servie Well Printer
   let sangriaBatches = new Item("SWPSB", "Sangria Batches", ["Red Sangria Batch", "White Sangria Batch", "Rosé Sangria Batch"]);
   let syrups = new Item("SWPS", "Syrups", ["Grenadine", "Pomegranate", "Watermelon"]);
   let glassRimmer = new Item("SWPGR", "Glass Rimmer", ["Lime Juice", "Salt", "Sugar", "Hibiscus Salt", "Tajin"]);
@@ -28,9 +18,12 @@ class Item{
   let printerStand = new Item("SWPPS", "Printer Stand", ["Printer Paper", "Printer Ink", "Cocktail Picks", "Chocolate Bar"]);
   let extraGarnish = new Item("SWPEG", "Extra Garnish", ["Coffee Beans", "Cinnamon Sugar"]);
 
+  // Service Well Fruits
+  let fruitsSWF = new Item("SWF", "Fruits", ["Basil", " Strawberries", "Limes", "Mint", "Jalapenos", "Oranges", "Lemons"])
 
 
   itemList = [
+    // Servie Well Printer
     sangriaBatches,
     syrups,
     glassRimmer,
@@ -38,7 +31,10 @@ class Item{
     mixers,
     tonics,
     printerStand,
-    extraGarnish
+    extraGarnish,
+
+    // Service Well Fruits
+    fruitsSWF
   ];
 
 
@@ -59,7 +55,7 @@ class Item{
 
 
 
-  // Get the modal
+// Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the <span> element that closes the modal
@@ -83,6 +79,34 @@ mainTitle.innerText = selectedSection;
 
 
 $(document).ready(function(){
+
+  $('body').on('click','.icon', function(){
+    $("#dropDownMenu").toggle();
+  });
+
+  $('.menu-items').on('click', function(){
+    $("#dropDownMenu").toggle();
+    $(".setup-images").hide(200);
+    $(".image-numbers").hide(200);
+  });
+
+  $("#menuItem1").on('click', function(){
+    $("#serviceWellPrinter").show(200);
+    $(".service-well-printer").show(200);
+  })
+
+  $("#menuItem2").on('click', function(){
+    $("#serviceWellFruit").show(200);
+    $(".service-well-fruit").show(200);
+  })
+  
+
+
+  
+  
+
+
+
 
   // When the user clicks the button, open the modal
   $('body').on('click','.image-numbers', function(){
@@ -116,18 +140,3 @@ $(document).ready(function(){
   });
 
 });
-
-
-
-/*
-if(x.similarBrands !== null){
-  x.similarBrands.map(i => {
-    //console.log(i);
-    let p = document.createElement('p');
-    p.append(i);
-    similarBrandsElement.append(p);
-  })
-} else {
-  $("#similarBrandsTitle").remove();
-  $("#similarBrandsElement").remove();
-}*/
