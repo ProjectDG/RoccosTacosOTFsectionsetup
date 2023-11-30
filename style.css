@@ -220,13 +220,17 @@ body {
 }
 
 .modal-content ul{
-  margin: 10% auto;
-  width: fit-content;
+  margin: 10% 0;
+  width: 100%;
+  
 }
 
 .modal-content li{
-  padding: 10% 0;
+  margin: 0 auto;
+  padding: 3% 3%;
   font-size: 1.5em;
+  justify-self: left;
+  width: 50%;
 }
 
 /* The Close Button */
