@@ -37,7 +37,7 @@ class Item{
     fruitsSWF
   ];
 
-
+  console.log(sangriaBatches)
 
 
    function myFunction() {
@@ -57,6 +57,9 @@ class Item{
 
 // Get the modal
 var modal = document.getElementById("myModal");
+var dropDownMenu = document.getElementById("dropDownMenu");
+var icon = document.getElementById("icon");
+var iconActual = document.getElementById("iconActual");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0]; 
@@ -71,6 +74,14 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+
+  if (event.target !== dropDownMenu) {
+    dropDownMenu.style.display = "none";
+  }
+
+  if (event.target == icon || event.target == iconActual) {
+    dropDownMenu.style.display = "block";
+  }
 }
 
 var mainTitle = document.getElementById("mainTitle");
@@ -79,27 +90,49 @@ mainTitle.innerText = selectedSection;
 
 
 $(document).ready(function(){
+  // Initialize
+  $("#serviceWellPrinter").show();
+  $(".service-well-printer").show();
 
-  $('body').on('click','.icon', function(){
+  $('body').on('click','#icon', function(){
     $("#dropDownMenu").toggle();
   });
 
   $('.menu-items').on('click', function(){
     $("#dropDownMenu").toggle();
-    $(".setup-images").hide(200);
-    $(".image-numbers").hide(200);
+    $(".setup-images").hide(400);
+    $(".image-numbers").hide(400);
   });
 
   $("#menuItem1").on('click', function(){
-    $("#serviceWellPrinter").show(200);
-    $(".service-well-printer").show(200);
+    $("#serviceWellPrinter").show(400);
+    $(".service-well-printer").show(500);
   })
 
   $("#menuItem2").on('click', function(){
-    $("#serviceWellFruit").show(200);
-    $(".service-well-fruit").show(200);
+    $("#serviceWellMain").show(400);
+    //$(".service-well-printer").show(500);
+  })
+
+  $("#menuItem3").on('click', function(){
+    $("#serviceWellTopRackLeft").show(400);
+    //$(".service-well-printer").show(500);
+  })
+
+  $("#menuItem4").on('click', function(){
+    $("#serviceWellTopRackRight").show(400);
+    //$(".service-well-printer").show(500);
+  })
+
+  $("#menuItem5").on('click', function(){
+    $("#serviceWellFruit").show(400);
+    $(".service-well-fruit").show(500);
   })
   
+  $("#menuItem6").on('click', function(){
+    $("#serviceWellOverstock").show(400);
+    //$(".service-well-printer").show(500);
+  })
 
 
   

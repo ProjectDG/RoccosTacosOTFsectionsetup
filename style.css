@@ -47,8 +47,8 @@ body {
     #rotateScreenIcon,
     h1,
     #dropDownMenu,
-    #serviceWellFruit,
-    .service-well-fruit
+    .setup-images,
+    .image-numbers
     {
     display: none;
     }
@@ -75,7 +75,7 @@ body {
       justify-content: center;
     }
 
-    .icon{
+    #icon{
       position: absolute;
       top: 3.5%;
       left: 3%;
@@ -139,8 +139,16 @@ body {
       max-width: 70%;
     }
 
-    #serviceWellFruit{
-      max-width: 45%;
+    #serviceWellFruit,
+    #serviceWellMain,
+    #serviceWellTopRackRight
+    {
+      max-width: 50%;
+    }
+
+    #serviceWellTopRackLeft,
+    #serviceWellOverstock{
+      max-width: 65%;
     }
 
     .image-numbers{
@@ -291,7 +299,7 @@ body {
 
 /*---------------------------------------------------------- Portrait Mode ----------------------------------------------------------------------------*/
 
-@media screen and (orientation:portrait) {
+@media screen and (orientation:portrait) and (max-width: 2000px) {
   *{
     z-index: 2;
     color: rgb(241, 237, 231);
@@ -304,7 +312,13 @@ body{
 }
 
 .topnav,
-.photo-containers
+.photo-containers,
+.setup-images,
+.menu-items,
+.close,
+.image-numbers,
+#dropDownMenu,
+#myModal
 {
   display: none;
 }
@@ -317,24 +331,24 @@ body{
 }
 
 img[src="./images/logo.png"]{
-    display: block;
+    display: flex;
     margin: auto;
     height: auto;
     max-width: 90%;
 }
 
-.photo-containers{
+#portraitContainer{
   box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
   display: flex;
   flex-wrap: wrap;
-  height: 36%;
+  width: 60%;
+  height: 50%;
   border: 10px solid black;
-  margin: 0% 10%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
-  padding: 5%;
+  padding: 8%;
 }
 
 h1{
@@ -351,6 +365,6 @@ h1{
 #rotateScreenIcon{
     display: block;
     margin: auto;
-    height: auto;
+    height: 30%;
 }
 }
