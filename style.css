@@ -130,6 +130,7 @@ body {
       width: 100vw;
       padding: 1.5%;
       position: relative;
+      top: -3%;
       overflow: hidden;
     }
 
@@ -227,6 +228,42 @@ body {
     }
 
 
+    /* Service Well Main */
+    #btn1SWM{
+      top: 36%;
+      left: 37%;
+    }
+
+    #btn2SWM{
+      top: 43%;
+      left: 65%;
+    }
+
+    #btn3SWM{
+      top: 63%;
+      left: 48%;
+    }
+
+    #btn4SWM{
+      top: 66%;
+      left: 56%;
+    }
+
+    #btn5SWM{
+      top: 70%;
+      left: 34%;
+    }
+
+    #btn6SWM{
+      top: 82%;
+      left: 52%;
+    }
+
+    #btn7SWM{
+      top: 50%;
+      left: 55%;
+    }
+
     /* Service Well Top Rack Left */
     #btn1SWTRL{
       top: 20%;
@@ -253,6 +290,32 @@ body {
       left: 65%;
     }
 
+
+    /* Service Well Top Rack Right */
+    #btn1SWTRR{
+      top: 75%;
+      left: 49.5%;
+    }
+
+    #btn2SWTRR{
+      top: 55%;
+      left: 60%;
+    }
+
+    #btn3SWTRR{
+      top: 43%;
+      left: 54%;
+    }
+
+    #btn4SWTRR{
+      top: 37.5%;
+      left: 48%;
+    }
+
+    #btn5SWTRR{
+      top: 32%;
+      left: 42%;
+    }
 
     /* Service Well Fruit */
     #btn1SWF{

@@ -8,7 +8,7 @@ class Item{
    };
 
 
-   // Service Well Printer
+  // Service Well Printer
   let sangriaBatches = new Item("SWPSB", "Sangria Batches", ["Red Sangria Batch", "White Sangria Batch", "Rosé Sangria Batch"]);
   let syrups = new Item("SWPS", "Syrups", ["Grenadine", "Pomegranate", "Watermelon"]);
   let glassRimmer = new Item("SWPGR", "Glass Rimmer", ["Lime Juice", "Salt", "Sugar", "Hibiscus Salt", "Tajin"]);
@@ -18,13 +18,27 @@ class Item{
   let printerStand = new Item("SWPPS", "Printer Stand", ["Printer Paper", "Printer Ink", "Cocktail Picks", "Chocolate Bar"]);
   let extraGarnish = new Item("SWPEG", "Extra Garnish", ["Coffee Beans", "Cinnamon Sugar"]);
 
+  // Service Well Main
+  let mainSWTRL = new Item("SWMTRL", "Top Rack Left", ["-- Click Here for Section --"]);
+  let mainSWTRR = new Item("SWMTRR", "Top Rack Right", ["-- Click Here for Section --"]);
+  let mainSWMLSM = new Item("SWMLSM", "Left Side Mixers", ["Simple Syrup", "Orange Juice", "Cranberry Juice"]);
+  let mainSWMRSM = new Item("SWMRSM", "Right Side Mixers", ["Sour Mix", "Lime Juice", "Rocco's Lime Mix"]);
+  let mainSWF = new Item("SWMF", "Fruits", ["-- Click Here for Section --"]);
+  let mainSWSG = new Item("SWMSG", "Server Garnish", ["-- Click Here for Section --"]);
+
   // Service Well Top Rack Left
-  let purees = new Item("SWTRLP", "Purées", ["Coconut Purée", "Strawberry Purée", "Mango Purée", "Black Cherry Purée", "Olive Juice"]);
+  let pureesTRL = new Item("SWTRLP", "Purées", ["Coconut Purée", "Strawberry Purée", "Mango Purée", "Black Cherry Purée", "Olive Juice"]);
   let jigger = new Item("SWTRLJ", "Jigger", ["Jiggers must be used when preparing all menu drinks to ensure accuracy."]);
   let altMixer1 = new Item("SWTRLT1", "Alt. Mixer #1", ["Using alternate mixing tins can help expedite the time required to complete service well tickets. For example, using one mixing tin exclusively for standard margaritas is less likely to impact the taste from one drink to another. However, if the same tin is used for a spicy drink, it may lead to the next non-spicy drink being sent back. Allocating separate tins for spicy drinks or those with muddled ingredients can be reused for similar drinks, reducing the need to rinse your tins as often."]);
   let altMixer2 = new Item("SWTRLT2", "Alt. Mixer #2", ["Using alternate mixing tins can help expedite the time required to complete service well tickets. For example, using one mixing tin exclusively for standard margaritas is less likely to impact the taste from one drink to another. However, if the same tin is used for a spicy drink, it may lead to the next non-spicy drink being sent back. Allocating separate tins for spicy drinks or those with muddled ingredients can be reused for similar drinks, reducing the need to rinse your tins as often."]);
   let altMixer3 = new Item("SWTRLT3", "Alt. Mixer #3", ["Using alternate mixing tins can help expedite the time required to complete service well tickets. For example, using one mixing tin exclusively for standard margaritas is less likely to impact the taste from one drink to another. However, if the same tin is used for a spicy drink, it may lead to the next non-spicy drink being sent back. Allocating separate tins for spicy drinks or those with muddled ingredients can be reused for similar drinks, reducing the need to rinse your tins as often."]);
 
+  // Service Well Top Rack Right
+  let mainMixer = new Item("SWTRRMT", "Main Mixer", []);
+  let agave = new Item("SWTRRA", "Agave", []);
+  let tools = new Item("SWTRRT", "Tools", ["Strainers", "Muddler", "Stir Spoon", "Peeler"]);
+  let pureesTRR = new Item("SWTRRP", "Purées", []);
+  let rosemaryTRR = new Item("SWTRRR", "Rosemary", []);
 
 
   // Service Well Fruits
@@ -42,12 +56,27 @@ class Item{
     printerStand,
     extraGarnish,
 
+    // Service Well Main
+    mainSWTRL,
+    mainSWTRR,
+    mainSWMLSM,
+    mainSWMRSM,
+    mainSWF,
+    mainSWSG,
+
     // Service Well Top Rack Left
-    purees,
+    pureesTRL,
     jigger,
     altMixer1,
     altMixer2,
     altMixer3,
+
+    // Service Well Top Rack Left
+    mainMixer,
+    agave,
+    tools,
+    pureesTRR,
+    rosemaryTRR,
 
     // Service Well Fruits
     fruitsSWF
@@ -127,7 +156,7 @@ $(document).ready(function(){
 
   $("#menuItem2").on('click', function(){
     $("#serviceWellMain").show(400);
-    //$(".service-well-printer").show(500);
+    $(".service-well-main").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
@@ -141,7 +170,7 @@ $(document).ready(function(){
 
   $("#menuItem4").on('click', function(){
     $("#serviceWellTopRackRight").show(400);
-    //$(".service-well-printer").show(500);
+    $(".service-well-top-rack-right").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
@@ -248,8 +277,43 @@ $(document).ready(function(){
             let li = document.createElement('li');
             li.innerText= i;
             modalList.append(li);
-          })
+
+            if(x.contents[0] === "-- Click Here for Section --"){
+                modal.style.display = "none";
+                $(".setup-images").hide(400);
+                $(".image-numbers").hide(400);
+
+                if(this.id === "btn1SWM"){
+                  $("#serviceWellTopRackLeft").show(400);
+                  $(".service-well-top-rack-left").show(500);
+                } 
+                
+                if(this.id === "btn2SWM"){
+                  $("#serviceWellTopRackRight").show(400);
+                  $(".service-well-top-rack-right").show(500);
+                }
+
+                if(this.id === "btn5SWM"){
+                  $("#serviceWellFruit").show(400);
+                  $(".service-well-fruit").show(500);
+                }
+
+                /*
+                if(this.id === "btn6SWM"){
+                  $("#serviceWellFruit").show(400);
+                  $(".service-well-fruit").show(500);
+                }
+                */
+
+                if(this.id === "btn7SWM"){
+                  $("#serviceWellServerGarnish").show(400);
+                  $(".service-well-server-garnish").show(500);
+                }
+                
+            }
+          });
         }
+
 
       }
     });
