@@ -323,7 +323,58 @@ body {
       left: 49%;
     }
 
+    /* Service Well Server Garnish */
+    #btn1SWSG{
+      top: 73%;
+      left: 49%;
+    }
     
+    #btn2SWSG{
+      top: 41%;
+      left: 47.5%;
+    }
+
+    #btn3SWSG{
+      top: 21%;
+      left: 47.5%;
+    }
+
+    /* Service Well Overstock */
+    #btn1SWO{
+      top: 68%;
+      left: 24%;
+    }
+
+    #btn2SWO{
+      top: 34.5%;
+      left: 33.5%;
+    }
+
+    #btn3SWO{
+      top: 48%;
+      left: 33%;
+    }
+
+    #btn4SWO{
+      top: 62%;
+      left: 32.5%;
+    }
+
+    #btn5SWO{
+      top: 75%;
+      left: 32%;
+    }
+
+    #btn6SWO{
+      top: 55%;
+      left: 62%;
+    }
+
+    #btn7SWO{
+      top: 85%;
+      left: 62%;
+    }
+
 
 /* The Modal (background) */
 .modal {

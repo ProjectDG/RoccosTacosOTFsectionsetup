@@ -7,79 +7,111 @@ class Item{
     };
    };
 
-
+  // Service Well ---------------------------------------------------------------------------------------------------------------------------------------------
   // Service Well Printer
-  let sangriaBatches = new Item("SWPSB", "Sangria Batches", ["Red Sangria Batch", "White Sangria Batch", "Rosé Sangria Batch"]);
-  let syrups = new Item("SWPS", "Syrups", ["Grenadine", "Pomegranate", "Watermelon"]);
-  let glassRimmer = new Item("SWPGR", "Glass Rimmer", ["Lime Juice", "Salt", "Sugar", "Hibiscus Salt", "Tajin"]);
-  let sideRimBitters = new Item("SWPSRB", "Side Rim & Bitters", ["Black Salt", "Classic Bitters", "Chocolate Bitters", "Orange Bitters"]);
-  let mixers = new Item("SWPM", "Mixers", ["Ginger Beer", "Ginger Ale", "Pineapple Juice"]);
-  let tonics = new Item("SWPT", "Tonics", ["Classic Tonic", "Tiki Tonic", "Bloody Mary Mix"]);
-  let printerStand = new Item("SWPPS", "Printer Stand", ["Printer Paper", "Printer Ink", "Cocktail Picks", "Chocolate Bar"]);
-  let extraGarnish = new Item("SWPEG", "Extra Garnish", ["Coffee Beans", "Cinnamon Sugar"]);
+  let sangriaBatchesSWP = new Item("SWPSB", "Sangria Batches", ["Red Sangria Batch", "White Sangria Batch", "Rosé Sangria Batch"]);
+  let syrupsSWP = new Item("SWPS", "Syrups", ["Grenadine", "Pomegranate", "Watermelon"]);
+  let glassRimmerSWP = new Item("SWPGR", "Glass Rimmer", ["Lime Juice", "Salt", "Sugar", "Hibiscus Salt", "Tajin"]);
+  let sideRimBittersSWP = new Item("SWPSRB", "Side Rim & Bitters", ["Black Salt", "Classic Bitters", "Chocolate Bitters", "Orange Bitters"]);
+  let mixersSWP = new Item("SWPM", "Mixers", ["Ginger Beer", "Ginger Ale", "Pineapple Juice"]);
+  let tonicsSWP = new Item("SWPT", "Tonics", ["Classic Tonic", "Tiki Tonic", "Bloody Mary Mix"]);
+  let printerStandSWP = new Item("SWPPS", "Printer Stand", ["Printer Paper", "Printer Ink", "Cocktail Picks", "Chocolate Bar"]);
+  let extraGarnishSWP = new Item("SWPEG", "Extra Garnish", ["Coffee Beans", "Cinnamon Sugar"]);
 
   // Service Well Main
   let mainSWTRL = new Item("SWMTRL", "Top Rack Left", ["-- Click Here for Section --"]);
   let mainSWTRR = new Item("SWMTRR", "Top Rack Right", ["-- Click Here for Section --"]);
   let mainSWMLSM = new Item("SWMLSM", "Left Side Mixers", ["Simple Syrup", "Orange Juice", "Cranberry Juice"]);
   let mainSWMRSM = new Item("SWMRSM", "Right Side Mixers", ["Sour Mix", "Lime Juice", "Rocco's Lime Mix"]);
-  let mainSWF = new Item("SWMF", "Fruits", ["-- Click Here for Section --"]);
+  let mainSWMF = new Item("SWMF", "Fruits", ["-- Click Here for Section --"]);
+  let mainSWMSR = new Item("SWMSR", "Speed Rack", ["Upper Rack ( Left to Right ):", "Dos Hombres Mezcal", "Triple Sec", "Triple Sec", "Jose Cuervo Tradicional Plata", "Jose Cuervo Tradicional Plata", "Titos", "Finlandia Or Other Well Vodka Brand", "Lower Rack ( Left to Right ):", "Teremana Blanco", "J.F. Hayden Citrus", "1800 Anejo", "Fletcha Azul Blanco", " Santo Blanco", "Tanteo Jalapeno", "Bacardi"]);
   let mainSWSG = new Item("SWMSG", "Server Garnish", ["-- Click Here for Section --"]);
 
   // Service Well Top Rack Left
   let pureesTRL = new Item("SWTRLP", "Purées", ["Coconut Purée", "Strawberry Purée", "Mango Purée", "Black Cherry Purée", "Olive Juice"]);
-  let jigger = new Item("SWTRLJ", "Jigger", ["Jiggers must be used when preparing all menu drinks to ensure accuracy."]);
-  let altMixer1 = new Item("SWTRLT1", "Alt. Mixer #1", ["Using alternate mixing tins can help expedite the time required to complete service well tickets. For example, using one mixing tin exclusively for standard margaritas is less likely to impact the taste from one drink to another. However, if the same tin is used for a spicy drink, it may lead to the next non-spicy drink being sent back. Allocating separate tins for spicy drinks or those with muddled ingredients can be reused for similar drinks, reducing the need to rinse your tins as often."]);
-  let altMixer2 = new Item("SWTRLT2", "Alt. Mixer #2", ["Using alternate mixing tins can help expedite the time required to complete service well tickets. For example, using one mixing tin exclusively for standard margaritas is less likely to impact the taste from one drink to another. However, if the same tin is used for a spicy drink, it may lead to the next non-spicy drink being sent back. Allocating separate tins for spicy drinks or those with muddled ingredients can be reused for similar drinks, reducing the need to rinse your tins as often."]);
-  let altMixer3 = new Item("SWTRLT3", "Alt. Mixer #3", ["Using alternate mixing tins can help expedite the time required to complete service well tickets. For example, using one mixing tin exclusively for standard margaritas is less likely to impact the taste from one drink to another. However, if the same tin is used for a spicy drink, it may lead to the next non-spicy drink being sent back. Allocating separate tins for spicy drinks or those with muddled ingredients can be reused for similar drinks, reducing the need to rinse your tins as often."]);
+  let jiggerTRL = new Item("SWTRLJ", "Jigger", ["Jiggers must be used when preparing all menu drinks to ensure accuracy."]);
+  let altMixer1TRL = new Item("SWTRLT1", "Alt. Mixer #1", ["Using alternate mixing tins can help expedite the time required to complete service well tickets. For example, using one mixing tin exclusively for standard margaritas is less likely to impact the taste from one drink to another. However, if the same tin is used for a spicy drink, it may lead to the next non-spicy drink being sent back. Allocating separate tins for spicy drinks or those with muddled ingredients can be reused for similar drinks, reducing the need to rinse your tins as often."]);
+  let altMixer2TRL = new Item("SWTRLT2", "Alt. Mixer #2", ["Using alternate mixing tins can help expedite the time required to complete service well tickets. For example, using one mixing tin exclusively for standard margaritas is less likely to impact the taste from one drink to another. However, if the same tin is used for a spicy drink, it may lead to the next non-spicy drink being sent back. Allocating separate tins for spicy drinks or those with muddled ingredients can be reused for similar drinks, reducing the need to rinse your tins as often."]);
+  let altMixer3TRL = new Item("SWTRLT3", "Alt. Mixer #3", ["Using alternate mixing tins can help expedite the time required to complete service well tickets. For example, using one mixing tin exclusively for standard margaritas is less likely to impact the taste from one drink to another. However, if the same tin is used for a spicy drink, it may lead to the next non-spicy drink being sent back. Allocating separate tins for spicy drinks or those with muddled ingredients can be reused for similar drinks, reducing the need to rinse your tins as often."]);
 
   // Service Well Top Rack Right
-  let mainMixer = new Item("SWTRRMT", "Main Mixer", []);
-  let agave = new Item("SWTRRA", "Agave", []);
-  let tools = new Item("SWTRRT", "Tools", ["Strainers", "Muddler", "Stir Spoon", "Peeler"]);
-  let pureesTRR = new Item("SWTRRP", "Purées", []);
-  let rosemaryTRR = new Item("SWTRRR", "Rosemary", []);
+  let mainMixerTRR = new Item("SWTRRMT", "Main Mixer", ["Used for mixing most of the drinks ordered."]);
+  let agaveTRR = new Item("SWTRRA", "Agave", ["Agave syrup comes from the agave plant, a succulent that is native to dry regions in Mexico.", "Agave syrup predominantly consists of fructose and some glucose, along with water, as well as small amounts of other carbohydrates, fat, polyols and vitamins and minerals.", "The sugars in agave syrup comprise around 80% fructose and 20% glucose.", "Due to its high fructose concentration, agave syrup is sweeter than table sugar and has less of an impact on blood glucose levels.", "The U.S. Food and Drug Administration has established specific labeling requirements for the Nutrition Facts of single-ingredient sugars such as pure agave syrup, honey and maple syrup.", "Agave syrup is not healthier than other sugars, but there are a few differences that make it an appealing choice for some."]);
+  let toolsTRR = new Item("SWTRRT", "Tools", ["Strainers", "Muddler", "Stir Spoon", "Peeler"]);
+  let pureesTRR = new Item("SWTRRP", "Purées", ["Prickly Pear", "Passion Fruit"]);
+  let rosemaryTRR = new Item("SWTRRR", "Rosemary", ["Rosemary is used in the", "Roseberry Mocktail."]);
 
 
   // Service Well Fruits
-  let fruitsSWF = new Item("SWF", "Fruits", ["Basil", " Strawberries", "Limes", "Mint", "Jalapenos", "Oranges", "Lemons"])
+  let fruitsSWF = new Item("SWF", "Fruits", ["Basil", " Strawberries", "Limes", "Mint", "Jalapenos", "Oranges", "Lemons"]);
+
+  // Service Well Server Garnish
+  let lemonsLimesSWSG = new Item("SWSG", "Limes & Lemons", ["Servers will cut lemons and limes and stock the service area with them, while all other garnishes will be filled by the opening bartender."]);
+  let bottomFruitCaddySWSG = new Item("SWSGBFC", "Bottom Fruit Caddy", ["Left to Right:", "Watermelon Slices", "Dehydrated Limes Wheel", "Dehydrated Pineapples & Chilis", "Coconut Powder", "Edible Rose Buds", "Cherries"]);
+  let topFruitCaddySWSG = new Item("SWSGTFC", "Top Fruit Caddy", ["Left to Right:", "Blueberries", "Olives", "Oranges", "Strawberries", "Basil", "Mint"]);
+
+  // Service Well Overstock
+  let houseMargaritaStationSWO = new Item("SWOHMS", "House Margarita Station", ["2x - Large Store'N'Pour containers filled with House Margarita Batch", "Other commonly used ingredients:", "Jameson & Peach Schnapps for Green Tea Shots", "Kahlua and Creme De Cacao for Espresso Martinis"]);
+  let topRowSWO = new Item("SWOTR", "Top Row", ["Lindeman's Merlot", "Lindeman's Cabernet", "Rocco Mango Batch"]);
+  let topMiddleRowSWO = new Item("SWOTMR", "Top Middle Row", ["Casamigos Reposado", "Casamigos Blanco", "Ghost Tequila"]);
+  let bottomMiddleRowSWO = new Item("SWOBMR", "Bottom Middle Row", ["Don Julio Blanco", "Herradura Silver", "El Jimador Blanco"]);
+  let bottomRowSWO = new Item("SWOBR", "Bottom Row", ["Parton Silver", "Cazadores Reposado", "J.F. Haydens Coffee Liqueur"]);
+  let topStorageCabinetSWO = new Item("SWOTSC", "Top Of Starge Cabinet", ["Grand Marnier", "Zero Ritual (Tequila Alt.)", "Hornitos Anejo", "1x - Large Store'N'Pour container of Sour Mix", "1x - Large Store'N'Pour container of Rocco's Lime Mix", "-- Leave room for other liquors you may pull from the wall for service tickets --"]);
+
+
+  // 400 Well ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
   itemList = [
     // Servie Well Printer
-    sangriaBatches,
-    syrups,
-    glassRimmer,
-    sideRimBitters,
-    mixers,
-    tonics,
-    printerStand,
-    extraGarnish,
+    sangriaBatchesSWP,
+    syrupsSWP,
+    glassRimmerSWP,
+    sideRimBittersSWP,
+    mixersSWP,
+    tonicsSWP,
+    printerStandSWP,
+    extraGarnishSWP,
 
     // Service Well Main
     mainSWTRL,
     mainSWTRR,
     mainSWMLSM,
     mainSWMRSM,
-    mainSWF,
+    mainSWMF,
+    mainSWMSR,
     mainSWSG,
 
     // Service Well Top Rack Left
     pureesTRL,
-    jigger,
-    altMixer1,
-    altMixer2,
-    altMixer3,
+    jiggerTRL,
+    altMixer1TRL,
+    altMixer2TRL,
+    altMixer3TRL,
 
     // Service Well Top Rack Left
-    mainMixer,
-    agave,
-    tools,
+    mainMixerTRR,
+    agaveTRR,
+    toolsTRR,
     pureesTRR,
     rosemaryTRR,
 
     // Service Well Fruits
-    fruitsSWF
+    fruitsSWF,
+
+    //Servise Well Server Garnish
+    lemonsLimesSWSG,
+    bottomFruitCaddySWSG,
+    topFruitCaddySWSG,
+
+    //Servise Well Overstock
+    houseMargaritaStationSWO,
+    topRowSWO,
+    topMiddleRowSWO,
+    bottomMiddleRowSWO,
+    bottomRowSWO,
+    topStorageCabinetSWO
+
   ];
 
 
@@ -184,14 +216,14 @@ $(document).ready(function(){
   
   $("#menuItem6").on('click', function(){
     $("#serviceWellServerGarnish").show(400);
-    //$(".service-well-printer").show(500);
+    $(".service-well-server-garnish").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
 
   $("#menuItem7").on('click', function(){
     $("#serviceWellOverstock").show(400);
-    //$(".service-well-printer").show(500);
+    $(".service-well-overstock").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
@@ -275,7 +307,7 @@ $(document).ready(function(){
         if(x.contents !== null){
           x.contents.map(i => {
             let li = document.createElement('li');
-            li.innerText= i;
+            li.innerText = i;
             modalList.append(li);
 
             if(x.contents[0] === "-- Click Here for Section --"){
