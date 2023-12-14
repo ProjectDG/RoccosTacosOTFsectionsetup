@@ -152,6 +152,28 @@ window.onclick = function(event) {
 
   if (event.target !== dropDownMenu) {
     dropDownMenu.style.display = "none";
+
+    var serviceWellSection = document.getElementById("menuItem1");
+    var well400Section = document.getElementById("menuItem9");
+    var well500Section = document.getElementById("menuItem12");
+    var well700Section = document.getElementById("menuItem17");
+    if (event.target == serviceWellSection) {
+      dropDownMenu.style.display = "block";
+    };
+
+    if (event.target == well400Section) {
+      dropDownMenu.style.display = "block";
+    };
+
+    if (event.target == well500Section) {
+      dropDownMenu.style.display = "block";
+    };
+
+    if (event.target == well700Section) {
+      dropDownMenu.style.display = "block";
+    };
+
+
   }
 
   if (event.target == icon || event.target == iconActual) {
@@ -169,115 +191,142 @@ $(document).ready(function(){
   $("#serviceWellPrinter").show();
   $(".service-well-printer").show();
 
+
   $('body').on('click','#icon', function(){
     $("#dropDownMenu").toggle();
+    $(".service-well-items").hide();
+    $(".well-400-items").hide();
+    $(".well-500-items").hide();
+    $(".well-700-items").hide();
   });
 
-  $('.menu-items').on('click', function(){
+  
+  $('.sub-menu-items').on('click', function(){
     $("#dropDownMenu").toggle();
     $(".setup-images").hide(400);
     $(".image-numbers").hide(400);
   });
+  
 
   $("#menuItem1").on('click', function(){
+    dropDownMenu.style.display = "block";
+    $(".service-well-items").toggle();
+  });
+
+  $("#menuItem2").on('click', function(){
     $("#serviceWellPrinter").show(400);
     $(".service-well-printer").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
 
-  $("#menuItem2").on('click', function(){
+  $("#menuItem3").on('click', function(){
     $("#serviceWellMain").show(400);
     $(".service-well-main").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
 
-  $("#menuItem3").on('click', function(){
+  $("#menuItem4").on('click', function(){
     $("#serviceWellTopRackLeft").show(400);
     $(".service-well-top-rack-left").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
 
-  $("#menuItem4").on('click', function(){
+  $("#menuItem5").on('click', function(){
     $("#serviceWellTopRackRight").show(400);
     $(".service-well-top-rack-right").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
 
-  $("#menuItem5").on('click', function(){
+  $("#menuItem6").on('click', function(){
     $("#serviceWellFruit").show(400);
     $(".service-well-fruit").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
   
-  $("#menuItem6").on('click', function(){
+  $("#menuItem7").on('click', function(){
     $("#serviceWellServerGarnish").show(400);
     $(".service-well-server-garnish").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
 
-  $("#menuItem7").on('click', function(){
+  $("#menuItem8").on('click', function(){
     $("#serviceWellOverstock").show(400);
     $(".service-well-overstock").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
 
-  $("#menuItem8").on('click', function(){
+  $("#menuItem9").on('click', function(){
+    dropDownMenu.style.display = "block";
+    $(".well-400-items").toggle();
+  });
+
+  $("#menuItem10").on('click', function(){
     $("#well400Main").show(400);
-    //$(".service-well-printer").show(500);
+    $(".well-400-main").show(500);
     selectedSection = document.getElementById("well400Main").alt;
     mainTitle.innerText = selectedSection;
   });
 
-  $("#menuItem9").on('click', function(){
+  $("#menuItem11").on('click', function(){
     $("#well400SideStation").show(400);
-    //$(".service-well-printer").show(500);
+    $(".well-400-side-station").show(500);
     selectedSection = document.getElementById("well400Main").alt;
     mainTitle.innerText = selectedSection;
   });
+
+  $("#menuItem12").on('click', function(){
+    dropDownMenu.style.display = "block";
+    $(".well-500-items").toggle();
+  });
   
-  $("#menuItem10").on('click', function(){
+  $("#menuItem13").on('click', function(){
     $("#well500Main").show(400);
-    //$(".service-well-printer").show(500);
+    $(".well-500-main").show(500);
     selectedSection = document.getElementById("well500Main").alt;
     mainTitle.innerText = selectedSection;
   });
   
-  $("#menuItem11").on('click', function(){
+  $("#menuItem14").on('click', function(){
     $("#well500LeftSide").show(400);
-    //$(".service-well-printer").show(500);
+    $(".well-500-left-side").show(500);
     selectedSection = document.getElementById("well500LeftSide").alt;
     mainTitle.innerText = selectedSection;
   });
   
-  $("#menuItem12").on('click', function(){
+  $("#menuItem15").on('click', function(){
     $("#well500RightSide").show(400);
-    //$(".service-well-printer").show(500);
+    $(".well-500-right-side").show(500);
     selectedSection = document.getElementById("well500RightSide").alt;
     mainTitle.innerText = selectedSection;
   });
   
-  $("#menuItem13").on('click', function(){
+  $("#menuItem16").on('click', function(){
     $("#well500Garnish").show(400);
     //$(".service-well-printer").show(500);
     selectedSection = document.getElementById("well500Garnish").alt;
     mainTitle.innerText = selectedSection;
   });
 
-  $("#menuItem14").on('click', function(){
+  $("#menuItem17").on('click', function(){
+    dropDownMenu.style.display = "block";
+    $(".well-700-items").toggle();
+  });
+
+  $("#menuItem18").on('click', function(){
     $("#well700Main").show(400);
     //$(".service-well-printer").show(500);
     selectedSection = document.getElementById("well700Main").alt;
     mainTitle.innerText = selectedSection;
   });
 
-  $("#menuItem15").on('click', function(){
+  $("#menuItem19").on('click', function(){
     $("#well700LeftStation").show(400);
     //$(".service-well-printer").show(500);
     selectedSection = document.getElementById("well700LeftStation").alt;

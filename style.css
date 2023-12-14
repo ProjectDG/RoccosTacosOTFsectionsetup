@@ -24,7 +24,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(84, 84, 84);
+  background: rgb(129, 129, 129);
   border-radius: 10px;
 }
 
@@ -86,7 +86,7 @@ body {
       background-color: rgba(0, 0, 0, .8);
       border-right: 10px solid black;
       border-bottom: 10px solid black;
-      width: 25%;
+      width: 30%;
       height: 85.5%;
       position: absolute;
       left: 0;
@@ -107,6 +107,11 @@ body {
 
     .menu-items:hover{
       background-color: #2a2a2a;
+    }
+
+    .sub-menu-items{
+      padding-left: 15%;
+      background-color: #515151;
     }
 
     .titles{
@@ -140,7 +145,10 @@ body {
       max-width: 70%;
     }
 
-    #serviceWellFruit,
+    #serviceWellFruit{
+      max-width: 45%;
+    }
+
     #serviceWellMain,
     #serviceWellTopRackRight,
     #well500Main
@@ -148,11 +156,14 @@ body {
       max-width: 50%;
     }
 
+    #well500LeftSide,
+    #well400Main{
+      max-width: 55%;
+    }
+
     #serviceWellTopRackLeft,
     #serviceWellOverstock,
     #serviceWellServerGarnish,
-    #well400Main,
-    #well500LeftSide,
     #well500RightSide
     {
       max-width: 65%;
@@ -164,14 +175,17 @@ body {
       max-width: 90%;
     }
 
+    
+
     .image-numbers{
-      font-size: 1.5em;
+      font-size: 1em;
       box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
-      background-color: antiquewhite;
-      color: black;
+      border: 6px solid rgb(38, 255, 0);
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
       border-radius: 50%;
-      width: 3.5%;
-      height: 7%;
+      width: 3%;
+      height: 6.25%;
       position: absolute;
       cursor: pointer;
       text-align: center;
@@ -374,6 +388,134 @@ body {
       top: 85%;
       left: 62%;
     }
+
+    /* Well 400 Main*/
+    #btn1W4M{
+      top: 28%;
+      left: 28%;
+    }
+
+    #btn2W4M{
+      top: 50%;
+      left: 40%;
+    }
+
+    #btn3W4M{
+      top: 49.5%;
+      left: 52.5%;
+    }
+
+    #btn4W4M{
+      top: 48%;
+      left: 60.5%;
+    }
+
+    #btn5W4M{
+      top: 43%;
+      left: 66.5%;
+    }
+
+    #btn6W4M{
+      top: 55%;
+      left: 72%;
+    }
+
+    #btn7W4M{
+      top: 63%;
+      left: 48%;
+    }
+
+    #btn8W4M{
+      top: 75%;
+      left: 48%;
+    }
+
+    /* Well 400 Side Station */
+    #btn1W4SS{
+      top: 55%;
+      left: 21.5%;
+    }
+
+    #btn2W4SS{
+      top: 48%;
+      left: 32.75%;
+    }
+
+    #btn3W4SS{
+      top: 48%;
+      left: 44%;
+    }
+
+    #btn4W4SS{
+      top: 48%;
+      left: 55%;
+    }
+
+    #btn5W4SS{
+      top: 48%;
+      left: 70%;
+    }
+
+    /* Well 500 Main */
+    #btn1W5M{
+      top: 30%;
+      left: 30%;
+    }
+
+    #btn2W5M{
+      top: 48%;
+      left: 43%;
+    }
+
+    #btn3W5M{
+      top: 48%;
+      left: 59%;
+    }
+
+    #btn4W5M{
+      top: 69%;
+      left: 50%;
+    }
+    
+    #btn5W5M{
+      top: 82%;
+      left: 50%;
+    }
+
+    #btn6W5M{
+      top: 26%;
+      left: 50%;
+    }
+
+    /* Well 500 Left Side */
+    #btn1W5LS{
+      top: 50%;
+      left: 44%;
+    }
+
+    #btn2W5LS{
+      top: 66%;
+      left: 62%;
+    }
+    
+    /* Well 500 Right Side */
+    #btn1W5RS{
+      top: 67%;
+      left: 41%;
+    }
+
+    #btn2W5RS{
+      top: 28%;
+      left: 31.5%;
+    }
+
+    #btn3W5RS{
+      top: 23%;
+      left: 59.5%;
+    }
+
+
+
 
 
 /* The Modal (background) */
