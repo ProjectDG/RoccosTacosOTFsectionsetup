@@ -146,19 +146,19 @@ body {
     }
 
     #serviceWellFruit{
-      max-width: 45%;
+      max-width: 40%;
     }
 
     #serviceWellMain,
     #serviceWellTopRackRight,
     #well500Main
     {
-      max-width: 50%;
+      max-width: 45%;
     }
 
     #well500LeftSide,
     #well400Main{
-      max-width: 55%;
+      max-width: 50%;
     }
 
     #serviceWellTopRackLeft,
@@ -166,13 +166,13 @@ body {
     #serviceWellServerGarnish,
     #well500RightSide
     {
-      max-width: 65%;
+      max-width: 60%;
     }
 
     #well500Garnish,
     #well700LeftStation
     {
-      max-width: 90%;
+      max-width: 85%;
     }
 
     
@@ -180,7 +180,7 @@ body {
     .image-numbers{
       font-size: 1em;
       box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
-      border: 6px solid rgb(38, 255, 0);
+      border: .2em solid rgb(38, 255, 0);
       background-color: rgb(0, 0, 0);
       color: rgb(255, 255, 255);
       border-radius: 50%;
@@ -512,6 +512,21 @@ body {
     #btn3W5RS{
       top: 23%;
       left: 59.5%;
+    }
+
+    #btn4W5RS{
+      top: 60%;
+      left: 66%;
+    }
+
+    #btn5W5RS{
+      top: 45%;
+      left: 41%;
+    }
+
+    #btn6W5RS{
+      top: 40%;
+      left: 60%;
     }
 
 
