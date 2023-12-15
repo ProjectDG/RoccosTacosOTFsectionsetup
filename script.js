@@ -309,7 +309,7 @@ $(document).ready(function(){
   
   $("#menuItem16").on('click', function(){
     $("#well500Garnish").show(400);
-    //$(".service-well-printer").show(500);
+    $(".well-500-garnish").show(500);
     selectedSection = document.getElementById("well500Garnish").alt;
     mainTitle.innerText = selectedSection;
   });
@@ -321,14 +321,14 @@ $(document).ready(function(){
 
   $("#menuItem18").on('click', function(){
     $("#well700Main").show(400);
-    //$(".service-well-printer").show(500);
+    $(".well-700-main").show(500);
     selectedSection = document.getElementById("well700Main").alt;
     mainTitle.innerText = selectedSection;
   });
 
   $("#menuItem19").on('click', function(){
     $("#well700LeftStation").show(400);
-    //$(".service-well-printer").show(500);
+    $(".well-700-left-station").show(500);
     selectedSection = document.getElementById("well700LeftStation").alt;
     mainTitle.innerText = selectedSection;
   });
