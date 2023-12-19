@@ -56,10 +56,12 @@ class Item{
   let topMiddleRowSWO = new Item("SWOTMR", "Top Middle Row", ["Casamigos Reposado", "Casamigos Blanco", "Ghost Tequila"]);
   let bottomMiddleRowSWO = new Item("SWOBMR", "Bottom Middle Row", ["Don Julio Blanco", "Herradura Silver", "El Jimador Blanco"]);
   let bottomRowSWO = new Item("SWOBR", "Bottom Row", ["Parton Silver", "Cazadores Reposado", "J.F. Haydens Coffee Liqueur"]);
-  let topStorageCabinetSWO = new Item("SWOTSC", "Top Of Starge Cabinet", ["Grand Marnier", "Zero Ritual (Tequila Alt.)", "Hornitos Anejo", "1x - Large Store'N'Pour container of Sour Mix", "1x - Large Store'N'Pour container of Rocco's Lime Mix", "-- Leave room for other liquors you may pull from the wall for service tickets --"]);
+  let topStorageCabinetSWO = new Item("SWOTSC", "Top Of Starge Cabinet", ["Grand Marnier", "Zero Ritual (Tequila Alt.)", "Hornitos Anejo", "1x - Large Store'N'Pour container of Sour Mix", "1x - Large Store'N'Pour container of Rocco's Lime Mix", "-- Leave room for other liquors you may pull from the wall for service tickets. Replace when no longer needed. --"]);
+  let storageCabinetSWO = new Item("SWOSC", "Storage Cabinet", ["The backup storage should include the most frequently used liquors from the menu.", "For Example:", "Jose Cuervo Tradicional", "Triple Sec", "Tanteo Jalapeno", "1800 Anejo", "Fletcha Azul"]);
 
 
   // 400 Well ------------------------------------------------------------------------------------------------------------------------------------------------
+  let topRowW4M = new Item("W4MSRTR", "Speed Rack Top Row", [""]);
 
 
   itemList = [
@@ -110,7 +112,11 @@ class Item{
     topMiddleRowSWO,
     bottomMiddleRowSWO,
     bottomRowSWO,
-    topStorageCabinetSWO
+    topStorageCabinetSWO,
+    storageCabinetSWO,
+    
+    // Well 400 Main
+    topRowW4M
 
   ];
 
