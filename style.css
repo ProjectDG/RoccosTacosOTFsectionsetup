@@ -192,7 +192,6 @@ body {
       width: 3%;
       height: 6.25%;
       position: absolute;
-      cursor: pointer;
       text-align: center;
     }
 
@@ -745,7 +744,6 @@ body {
     width: 3%;
     height: 7.75%;
     position: absolute;
-    cursor: pointer;
     text-align: center;
   }
 
