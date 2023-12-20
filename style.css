@@ -689,6 +689,482 @@ body {
 } 
 
 
+/*---------------------------------------------------------- S22 Ultra Landscape Mode ----------------------------------------------------------------------------*/
+
+
+@media screen and (orientation:landscape) and (max-width: 830px) {
+  .setup-images{
+    box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
+    border-radius: 1.5%;
+    max-width: 55%;
+  }
+
+  #serviceWellFruit{
+    max-width: 35%;
+  }
+
+  #serviceWellMain,
+  #serviceWellTopRackRight,
+  #well500Main
+  {
+    max-width: 35%;
+  }
+
+  #well500LeftSide,
+  #well400Main{
+    max-width: 45%;
+  }
+
+  #serviceWellTopRackLeft,
+  #serviceWellOverstock,
+  #serviceWellServerGarnish,
+  #well500RightSide
+  {
+    max-width: 48%;
+  }
+
+  #well500Garnish
+  {
+    max-width: 75%;
+  }
+
+  #well700LeftStation{
+    max-width: 85%;
+  }
+
+
+
+
+  .image-numbers{
+    font-size: 1.5em;
+    box-shadow: 1px 1px 30px rgb(0, 0, 0, 1), 1px 1px 30px rgb(0, 0, 0, 1), 1px 1px 30px rgb(0, 0, 0, 1);
+    border: .2em solid rgb(38, 255, 0);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 3%;
+    height: 7.75%;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .image-numbers:hover{
+    background-color: rgb(0, 0, 0, .7);
+    color: antiquewhite;
+    box-shadow: 1px 1px 30px rgb(255, 255, 255) , 1px 1px 30px rgb(255, 255, 255), 1px 1px 30px rgb(255, 255, 255);
+    transition: transform .2s;
+    transform: scale(1.75);
+  }
+
+
+  /* Service Well Printer */
+  #btn1SWP{
+    top: 40%;
+    left: 28%;
+  }
+
+  #btn2SWP{
+    top: 25%;
+    left: 41%;
+  }
+
+  #btn3SWP{
+    top: 66%;
+    left: 47.75%;
+  }
+
+  #btn4SWP{
+    top: 72%;
+    left: 27.5%;
+  }
+
+  #btn5SWP{
+    top: 45%;
+    left: 45%;
+  }
+
+  #btn6SWP{
+    top: 33%;
+    left: 54%;
+  }
+
+  #btn7SWP{
+    top: 55%;
+    left: 67%;
+  }
+
+  #btn8SWP{
+    top: 17%;
+    left: 64%;
+  }
+
+
+  /* Service Well Main */
+  #btn1SWM{
+    top: 35%;
+    left: 40%;
+  }
+
+  #btn2SWM{
+    top: 41%;
+    left: 60%;
+  }
+
+  #btn3SWM{
+    top: 60%;
+    left: 49%;
+  }
+
+  #btn4SWM{
+    top: 64%;
+    left: 56%;
+  }
+
+  #btn5SWM{
+    top: 70%;
+    left: 38%;
+  }
+
+  #btn6SWM{
+    top: 82%;
+    left: 50%;
+  }
+
+  #btn7SWM{
+    top: 50%;
+    left: 55%;
+  }
+
+  /* Service Well Top Rack Left */
+  #btn1SWTRL{
+    top: 20%;
+    left: 34%;
+  }
+
+  #btn2SWTRL{
+    top: 80%;
+    left: 30%;
+  }
+
+  #btn3SWTRL{
+    top: 60%;
+    left: 42.5%;
+  }
+
+  #btn4SWTRL{
+    top: 56%;
+    left: 54%;
+  }
+
+  #btn5SWTRL{
+    top: 52%;
+    left: 65%;
+  }
+
+
+  /* Service Well Top Rack Right */
+  #btn1SWTRR{
+    top: 75%;
+    left: 49.5%;
+  }
+
+  #btn2SWTRR{
+    top: 55%;
+    left: 60%;
+  }
+
+  #btn3SWTRR{
+    top: 43%;
+    left: 54%;
+  }
+
+  #btn4SWTRR{
+    top: 37.5%;
+    left: 48%;
+  }
+
+  #btn5SWTRR{
+    top: 32%;
+    left: 42%;
+  }
+
+  /* Service Well Fruit */
+  #btn1SWF{
+    top: 45%;
+    left: 49%;
+  }
+
+  /* Service Well Server Garnish */
+  #btn1SWSG{
+    top: 73%;
+    left: 49%;
+  }
+  
+  #btn2SWSG{
+    top: 41%;
+    left: 47.5%;
+  }
+
+  #btn3SWSG{
+    top: 21%;
+    left: 47.5%;
+  }
+
+  /* Service Well Overstock */
+  #btn1SWO{
+    top: 68%;
+    left: 24%;
+  }
+
+  #btn2SWO{
+    top: 34.5%;
+    left: 33.5%;
+  }
+
+  #btn3SWO{
+    top: 48%;
+    left: 33%;
+  }
+
+  #btn4SWO{
+    top: 62%;
+    left: 32.5%;
+  }
+
+  #btn5SWO{
+    top: 75%;
+    left: 32%;
+  }
+
+  #btn6SWO{
+    top: 55%;
+    left: 62%;
+  }
+
+  #btn7SWO{
+    top: 85%;
+    left: 62%;
+  }
+
+  /* Well 400 Main*/
+  #btn1W4M{
+    top: 28%;
+    left: 28%;
+  }
+
+  #btn2W4M{
+    top: 50%;
+    left: 40%;
+  }
+
+  #btn3W4M{
+    top: 49.5%;
+    left: 52.5%;
+  }
+
+  #btn4W4M{
+    top: 48%;
+    left: 60.5%;
+  }
+
+  #btn5W4M{
+    top: 43%;
+    left: 66.5%;
+  }
+
+  #btn6W4M{
+    top: 55%;
+    left: 72%;
+  }
+
+  #btn7W4M{
+    top: 63%;
+    left: 48%;
+  }
+
+  #btn8W4M{
+    top: 75%;
+    left: 48%;
+  }
+
+  /* Well 400 Side Station */
+  #btn1W4SS{
+    top: 55%;
+    left: 21.5%;
+  }
+
+  #btn2W4SS{
+    top: 48%;
+    left: 32.75%;
+  }
+
+  #btn3W4SS{
+    top: 48%;
+    left: 44%;
+  }
+
+  #btn4W4SS{
+    top: 48%;
+    left: 55%;
+  }
+
+  #btn5W4SS{
+    top: 48%;
+    left: 70%;
+  }
+
+  /* Well 500 Main */
+  #btn1W5M{
+    top: 30%;
+    left: 30%;
+  }
+
+  #btn2W5M{
+    top: 48%;
+    left: 43%;
+  }
+
+  #btn3W5M{
+    top: 48%;
+    left: 59%;
+  }
+
+  #btn4W5M{
+    top: 69%;
+    left: 50%;
+  }
+  
+  #btn5W5M{
+    top: 82%;
+    left: 50%;
+  }
+
+  #btn6W5M{
+    top: 26%;
+    left: 50%;
+  }
+
+  /* Well 500 Left Side */
+  #btn1W5LS{
+    top: 50%;
+    left: 44%;
+  }
+
+  #btn2W5LS{
+    top: 66%;
+    left: 62%;
+  }
+  
+  /* Well 500 Right Side */
+  #btn1W5RS{
+    top: 67%;
+    left: 41%;
+  }
+
+  #btn2W5RS{
+    top: 28%;
+    left: 31.5%;
+  }
+
+  #btn3W5RS{
+    top: 23%;
+    left: 59.5%;
+  }
+
+  #btn4W5RS{
+    top: 60%;
+    left: 66%;
+  }
+
+  #btn5W5RS{
+    top: 45%;
+    left: 41%;
+  }
+
+  #btn6W5RS{
+    top: 40%;
+    left: 60%;
+  }
+
+  /* Well 500 Garnish */
+  #btn1W5G{
+    top: 30%;
+    left: 42%;
+  }
+
+  #btn2W5G{
+    top: 50%;
+    left: 42%;
+  }
+
+  #btn3W5G{
+    top: 42%;
+    left: 78%;
+  }
+
+  /* Well 700 Main */
+  #btn1W7M{
+    top: 66%;
+    left: 38%;
+  }
+
+  #btn2W7M{
+    top: 51%;
+    left: 38%;
+  }
+
+  #btn3W7M{
+    top: 38%;
+    left: 38%;
+  }
+
+  #btn4W7M{
+    top: 60%;
+    left: 53.5%;
+  }
+
+  #btn5W7M{
+    top: 22%;
+    left: 64%;
+  }
+
+  #btn6W7M{
+    top: 53%;
+    left: 64%;
+  }
+
+  #btn7W7M{
+    top: 26%;
+    left: 43%;
+  }
+
+  #btn8W7M{
+    top: 56%;
+    left: 22%;
+  }
+
+  /* Well 700 Left Station */
+  #btn1W7LS{
+    top: 55%;
+    left: 19%;
+  }
+
+  #btn2W7LS{
+    top: 55%;
+    left: 48%;
+  }
+
+  #btn3W7LS{
+    top: 55%;
+    left: 79%;
+  }
+
+
+
+}
+
+
 /*---------------------------------------------------------- Portrait Mode ----------------------------------------------------------------------------*/
 
 @media screen and (orientation:portrait) and (max-width: 2000px) {
