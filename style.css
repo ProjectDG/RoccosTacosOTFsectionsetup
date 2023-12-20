@@ -35,7 +35,6 @@ body {
     display: block;
     height: 97vh;
     text-align: center;
-    cursor: pointer;
   }
 
   ::backdrop {

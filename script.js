@@ -61,8 +61,8 @@ class Item{
 
 
   // 400 Well ------------------------------------------------------------------------------------------------------------------------------------------------
-  let topRowW4M = new Item("W4MSRTR", "Speed Rack Top Row", [""]);
-
+  let topRowW4M = new Item("W4MSRTR", "Speed Rack Top Row", ["Rocco Mango Batch", "Hornitos Anejo", "Dos Hombres Joven", "J. F. Hayden Citrus", " Teremana Blanco", "Triple Sec", "Triple Sec", "Jose Cuervo Tradicional", "Jose Cuervo Tradicional", "Tito's", "Well Vodka", "( i.e. Finlandia or Sky )", "Call Vodka", "( i.e. Kettle One or Grey Goose )"]);
+  let bottomRowW4M = new Item("W4MSRBR", "Speed Rack Bottom Row", ["Jack Daniels", "Bombay Gin", "Zero Ritual Tequila Alt.", "Cointreau", "El Jimador", "Herradura Silver", "1800 Anejo", "Santo Blanco", "Fletcha Azul", "Tanteo Jalapeno", "Tanteo Habanero", "Tanteo Chipotle", "Ghost Infused", "Bacardi"]);
 
   itemList = [
     // Servie Well Printer
@@ -116,7 +116,8 @@ class Item{
     storageCabinetSWO,
     
     // Well 400 Main
-    topRowW4M
+    topRowW4M,
+    bottomRowW4M
 
   ];
 
