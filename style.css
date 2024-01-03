@@ -47,6 +47,7 @@ body {
     #rotateScreenIcon,
     h1,
     #dropDownMenu,
+    #batchRecipesDiv,
     .setup-images,
     .image-numbers
     {
@@ -152,6 +153,7 @@ body {
     }
 
     #serviceWellMain,
+    #well500Overstock,
     #serviceWellTopRackRight,
     #well500Main
     {
@@ -610,6 +612,21 @@ body {
 
 
 
+    #batchRecipesDiv{
+      border: 4px solid rgb(23, 23, 23);
+      background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+      box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
+      border-radius: 4%;
+      width: 50%;
+      height: fit-content;
+      padding: 6% 0;
+      font-size: 1.5em;
+      overflow: scroll;
+      overflow-y: hidden;
+      list-style: none;
+    }
+
+
 
 /* The Modal (background) */
 .modal {
@@ -692,6 +709,20 @@ body {
 
 
 @media screen and (orientation:landscape) and (max-width: 830px) {
+  #rotateScreenIcon,
+  h1,
+  #dropDownMenu,
+  #batchRecipesDiv,
+  .setup-images,
+  .image-numbers
+  {
+  display: none;
+  }
+
+  .close {
+    font-size: 20px;
+  }
+
   .setup-images{
     box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
     border-radius: 1.5%;
@@ -703,6 +734,7 @@ body {
   }
 
   #serviceWellMain,
+  #well500Overstock,
   #serviceWellTopRackRight,
   #well500Main
   {
@@ -836,28 +868,28 @@ body {
 
   /* Service Well Top Rack Left */
   #btn1SWTRL{
-    top: 20%;
-    left: 34%;
+    top: 28%;
+    left: 38%;
   }
 
   #btn2SWTRL{
     top: 80%;
-    left: 30%;
+    left: 35%;
   }
 
   #btn3SWTRL{
     top: 60%;
-    left: 42.5%;
+    left: 44%;
   }
 
   #btn4SWTRL{
     top: 56%;
-    left: 54%;
+    left: 53%;
   }
 
   #btn5SWTRL{
-    top: 52%;
-    left: 65%;
+    top: 53%;
+    left: 61%;
   }
 
 
@@ -868,23 +900,23 @@ body {
   }
 
   #btn2SWTRR{
-    top: 55%;
-    left: 60%;
+    top: 58%;
+    left: 57%;
   }
 
   #btn3SWTRR{
     top: 43%;
-    left: 54%;
+    left: 52%;
   }
 
   #btn4SWTRR{
     top: 37.5%;
-    left: 48%;
+    left: 47.5%;
   }
 
   #btn5SWTRR{
     top: 32%;
-    left: 42%;
+    left: 43%;
   }
 
   /* Service Well Fruit */
@@ -905,127 +937,127 @@ body {
   }
 
   #btn3SWSG{
-    top: 21%;
+    top: 19%;
     left: 47.5%;
   }
 
   /* Service Well Overstock */
   #btn1SWO{
-    top: 68%;
-    left: 24%;
+    top: 65%;
+    left: 30%;
   }
 
   #btn2SWO{
     top: 34.5%;
-    left: 33.5%;
+    left: 37%;
   }
 
   #btn3SWO{
     top: 48%;
-    left: 33%;
+    left: 36.5%;
   }
 
   #btn4SWO{
     top: 62%;
-    left: 32.5%;
+    left: 36%;
   }
 
   #btn5SWO{
     top: 75%;
-    left: 32%;
+    left: 35.5%;
   }
 
   #btn6SWO{
     top: 55%;
-    left: 62%;
+    left: 59%;
   }
 
   #btn7SWO{
     top: 85%;
-    left: 62%;
+    left: 59%;
   }
 
   /* Well 400 Main*/
   #btn1W4M{
-    top: 28%;
-    left: 28%;
+    top: 34%;
+    left: 31%;
   }
 
   #btn2W4M{
     top: 50%;
-    left: 40%;
+    left: 41%;
   }
 
   #btn3W4M{
     top: 49.5%;
-    left: 52.5%;
+    left: 51.5%;
   }
 
   #btn4W4M{
     top: 48%;
-    left: 60.5%;
+    left: 58.5%;
   }
 
   #btn5W4M{
     top: 43%;
-    left: 66.5%;
+    left: 63.25%;
   }
 
   #btn6W4M{
     top: 55%;
-    left: 72%;
+    left: 68%;
   }
 
   #btn7W4M{
     top: 63%;
-    left: 48%;
+    left: 46%;
   }
 
   #btn8W4M{
     top: 75%;
-    left: 48%;
+    left: 46%;
   }
 
   /* Well 400 Side Station */
   #btn1W4SS{
     top: 55%;
-    left: 21.5%;
+    left: 27.25%;
   }
 
   #btn2W4SS{
     top: 48%;
-    left: 32.75%;
+    left: 36%;
   }
 
   #btn3W4SS{
     top: 48%;
-    left: 44%;
+    left: 45%;
   }
 
   #btn4W4SS{
     top: 48%;
-    left: 55%;
+    left: 54%;
   }
 
   #btn5W4SS{
     top: 48%;
-    left: 70%;
+    left: 66%;
   }
 
   /* Well 500 Main */
   #btn1W5M{
-    top: 30%;
-    left: 30%;
+    top: 34%;
+    left: 35%;
   }
 
   #btn2W5M{
     top: 48%;
-    left: 43%;
+    left: 45%;
   }
 
   #btn3W5M{
     top: 48%;
-    left: 59%;
+    left: 56%;
   }
 
   #btn4W5M{
@@ -1051,38 +1083,38 @@ body {
 
   #btn2W5LS{
     top: 66%;
-    left: 62%;
+    left: 58%;
   }
   
   /* Well 500 Right Side */
   #btn1W5RS{
     top: 67%;
-    left: 41%;
+    left: 42.75%;
   }
 
   #btn2W5RS{
     top: 28%;
-    left: 31.5%;
+    left: 36%;
   }
 
   #btn3W5RS{
     top: 23%;
-    left: 59.5%;
+    left: 56%;
   }
 
   #btn4W5RS{
     top: 60%;
-    left: 66%;
+    left: 62%;
   }
 
   #btn5W5RS{
     top: 45%;
-    left: 41%;
+    left: 44%;
   }
 
   #btn6W5RS{
-    top: 40%;
-    left: 60%;
+    top: 39%;
+    left: 57.5%;
   }
 
   /* Well 500 Garnish */
@@ -1098,28 +1130,28 @@ body {
 
   #btn3W5G{
     top: 42%;
-    left: 78%;
+    left: 74%;
   }
 
   /* Well 700 Main */
   #btn1W7M{
     top: 66%;
-    left: 38%;
+    left: 40%;
   }
 
   #btn2W7M{
-    top: 51%;
-    left: 38%;
+    top: 49%;
+    left: 40%;
   }
 
   #btn3W7M{
-    top: 38%;
-    left: 38%;
+    top: 37%;
+    left: 40%;
   }
 
   #btn4W7M{
     top: 60%;
-    left: 53.5%;
+    left: 52.5%;
   }
 
   #btn5W7M{
@@ -1133,19 +1165,19 @@ body {
   }
 
   #btn7W7M{
-    top: 26%;
+    top: 24%;
     left: 43%;
   }
 
   #btn8W7M{
-    top: 56%;
-    left: 22%;
+    top: 65%;
+    left: 26%;
   }
 
   /* Well 700 Left Station */
   #btn1W7LS{
     top: 55%;
-    left: 19%;
+    left: 21%;
   }
 
   #btn2W7LS{
@@ -1177,6 +1209,9 @@ body{
   justify-content: center;
 }
 
+li,
+#modalTitle,
+#batchRecipesDiv,
 .topnav,
 .photo-containers,
 .setup-images,
