@@ -9,7 +9,7 @@ class Item{
 
   // Service Well ---------------------------------------------------------------------------------------------------------------------------------------------
   // Service Well Printer
-  let sangriaBatchesSWP = new Item("SWPSB", "Sangria Batches", ["Red Sangria Batch", "Equal parts:", "E & J Brandy / Blackberry Brandy", "-----------------------------------------------", "White Sangria Batch", "Equal parts:", "- E & J Brandy / Amaretto", "-----------------------------------------------", "Rosé Sangria Batch", "Equal parts:", "E & J Brandy / Peach Schnapps"]);
+  let sangriaBatchesSWP = new Item("SWPSB", "Sangria", ["Red Sangria Batch", "Equal parts:", "E & J Brandy / Blackberry Brandy", "-----------------------------------------------", "White Sangria Batch", "Equal parts:", "- E & J Brandy / Amaretto", "-----------------------------------------------", "Rosé Sangria Batch", "Equal parts:", "E & J Brandy / Peach Schnapps"]);
   let syrupsSWP = new Item("SWPS", "Syrups", ["Grenadine", "Pomegranate", "Watermelon"]);
   let glassRimmerSWP = new Item("SWPGR", "Glass Rimmer", ["Lime Juice", "Salt", "Sugar", "Hibiscus Salt", "Tajin"]);
   let sideRimBittersSWP = new Item("SWPSRB", "Side Rim & Bitters", ["Black Salt", "Classic Bitters", "Chocolate Bitters", "Orange Bitters"]);
@@ -102,6 +102,11 @@ class Item{
   let bottomRowW5G = new Item("W5GGBR", "Bottom Row", ["Mint", "Blueberries", "Oranges", "Peeled Cucumbers", "Olives"]);
   let platesSilverwareW5G = new Item("W5GPS", "Plates & Silverware", ["Side plates & silverware should be placed in front each guest that plans on eating."]);
 
+  // 500 Well Overstock ------------------------------------------------------------------------------------------------------------------------------------------------
+  let joseCuervoW5O = new Item("W5OJCT", "Jose Cuervo Tradicional", ["2 Rows", "----------------------", "12 Bottles Total"]);
+  let tripleSecW5O = new Item("W5OTS", "Triple Sec", ["2 Rows", "----------------------", "12 Bottles Total"]);
+  let tanteoJalapenoW5O = new Item("W5OTJ", "Tanteo Jalapeno", ["1 Row", "----------------------", "6 Bottles Total"]);
+
   // 700 Well Main ------------------------------------------------------------------------------------------------------------------------------------------------
   let glassRimmerW7M = new Item("W7MGR", "Glass Rimmer", ["Lime Juice", "Salt", "Sugar", "Hibiscus Salt", "Tajin"]);
   let limesW7M = new Item("W7ML", "Limes", ["Make sure limes are fresh and rotated when necessary."]);
@@ -117,6 +122,20 @@ class Item{
   let pureesW7LS = new Item("W7LSP", "Side Well", ["Strawberry", "Mango", "Black Cherry", "Prickly Pear", "Passion Fruit", "Watermelon", "Pomegranate", "Grenadine", "Olive Juice", "Bloody Mary Mix"]);
   let leftSideMixersW7LS = new Item("W7LSLSM", "Left Side Mixers", ["Simple Syrup", "Orange Juice", "Cranberry Juice"]);
 
+  // 700 Well Overstock ------------------------------------------------------------------------------------------------------------------------------------------------
+  let ghostInfusedW7O = new Item("W5OGI", "Ghost Infused", ["1 Row", "----------------------", "6 Bottles Total"]);
+  let teremanaW7O = new Item("W5OT", "Teremana", ["1 Row", "----------------------", "6 Bottles Total"]);
+  let wellVodkaW7O = new Item("W5OWV", "Well Vodka", ["1 Row", "----------------------", "7 Bottles Total"]);
+  let herraduraSilverW7O = new Item("W5OHS", "Herradura Silver", ["1 Row", "----------------------", "5 Bottles Total"]);
+  let elJimadorW7O = new Item("W5OEJ", "El Jimador", ["1 Row", "----------------------", "6 Bottles Total"]);
+
+
+
+  // Batch Recipes ------------------------------------------------------------------------------------------------------------------------------------------------------
+  let houseMargaritaBR = new Item("HMBR", "House Margarita", ["House Margarita Batch", "--------------------------------------------------", "Coming Soon..."]);
+  let roccoLimeBR = new Item("RLBR", "Rocco Lime", ["Rocco Lime Batch", "--------------------------------------------------", "Coming Soon..."]);
+  let roccoMangoBR = new Item("RMBR", "Rocco Mango", ["Rocco Mango Batch", "--------------------------------------------------", "Jose Cuervo Tradicional Silver:", "750ml", "--------------------------------------------------", "Rock & Roll Mango Tequila:", "750ml", "--------------------------------------------------", "J.F. Hayden's Mango Liqueur:", "750ml"]);
+  let sourMixBR = new Item("SMBR", "Sour Mix", ["Sour Mix Batch", "--------------------------------------------------", "- Use 22 liter container", "- Add 2 gallons of sour mix", "- Mix 1 Tablespoon of Aqua Faba with 8oz of water", "- Add Aqua Faba Mix", "- Stir until dissolved"]);
 
 
 
@@ -210,6 +229,11 @@ class Item{
     bottomRowW5G,
     platesSilverwareW5G,
 
+    // Well 500 Overstock
+    joseCuervoW5O,
+    tripleSecW5O,
+    tanteoJalapenoW5O,
+
     // Well 700 Main
     glassRimmerW7M,
     limesW7M,
@@ -221,8 +245,21 @@ class Item{
     rightSideMixersW7M,
     mixersW7LS,
     pureesW7LS,
-    leftSideMixersW7LS
+    leftSideMixersW7LS,
 
+    // Well 700 Overstock
+    ghostInfusedW7O,
+    teremanaW7O,
+    wellVodkaW7O,
+    herraduraSilverW7O,
+    elJimadorW7O,
+
+
+    // Batch Recipes
+    houseMargaritaBR,
+    roccoLimeBR,
+    roccoMangoBR,
+    sourMixBR
 
   ];
 
@@ -268,8 +305,8 @@ window.onclick = function(event) {
     var serviceWellSection = document.getElementById("menuItem1");
     var well400Section = document.getElementById("menuItem9");
     var well500Section = document.getElementById("menuItem12");
-    var well700Section = document.getElementById("menuItem17");
-    var batchRecipes = document.getElementById("menuItem20");
+    var well700Section = document.getElementById("menuItem18");
+    var batchRecipes = document.getElementById("menuItem22");
 
 
 
@@ -312,7 +349,7 @@ $(document).ready(function(){
   $(".service-well-printer").show();
 
 
-  $('body').on('click','#icon', function(){
+  $('body').on('click','#icon','#iconActual', function(){
     $("#dropDownMenu").toggle();
     $(".service-well-items").hide();
     $(".well-400-items").hide();
@@ -345,6 +382,7 @@ $(document).ready(function(){
   });
 
   $("#menuItem3").on('click', function(){
+    $(".photo-containers").show();
     $("#serviceWellMain").show(400);
     $(".service-well-main").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
@@ -352,6 +390,7 @@ $(document).ready(function(){
   });
 
   $("#menuItem4").on('click', function(){
+    $(".photo-containers").show();
     $("#serviceWellTopRackLeft").show(400);
     $(".service-well-top-rack-left").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
@@ -359,6 +398,7 @@ $(document).ready(function(){
   });
 
   $("#menuItem5").on('click', function(){
+    $(".photo-containers").show();
     $("#serviceWellTopRackRight").show(400);
     $(".service-well-top-rack-right").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
@@ -366,6 +406,7 @@ $(document).ready(function(){
   });
 
   $("#menuItem6").on('click', function(){
+    $(".photo-containers").show();
     $("#serviceWellFruit").show(400);
     $(".service-well-fruit").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
@@ -373,6 +414,7 @@ $(document).ready(function(){
   });
   
   $("#menuItem7").on('click', function(){
+    $(".photo-containers").show();
     $("#serviceWellServerGarnish").show(400);
     $(".service-well-server-garnish").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
@@ -380,6 +422,7 @@ $(document).ready(function(){
   });
 
   $("#menuItem8").on('click', function(){
+    $(".photo-containers").show();
     $("#serviceWellOverstock").show(400);
     $(".service-well-overstock").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
@@ -392,6 +435,7 @@ $(document).ready(function(){
   });
 
   $("#menuItem10").on('click', function(){
+    $(".photo-containers").show();
     $("#well400Main").show(400);
     $(".well-400-main").show(500);
     selectedSection = document.getElementById("well400Main").alt;
@@ -399,6 +443,7 @@ $(document).ready(function(){
   });
 
   $("#menuItem11").on('click', function(){
+    $(".photo-containers").show();
     $("#well400SideStation").show(400);
     $(".well-400-side-station").show(500);
     selectedSection = document.getElementById("well400Main").alt;
@@ -411,6 +456,7 @@ $(document).ready(function(){
   });
   
   $("#menuItem13").on('click', function(){
+    $(".photo-containers").show();
     $("#well500Main").show(400);
     $(".well-500-main").show(500);
     selectedSection = document.getElementById("well500Main").alt;
@@ -418,6 +464,7 @@ $(document).ready(function(){
   });
   
   $("#menuItem14").on('click', function(){
+    $(".photo-containers").show();
     $("#well500LeftSide").show(400);
     $(".well-500-left-side").show(500);
     selectedSection = document.getElementById("well500LeftSide").alt;
@@ -425,6 +472,7 @@ $(document).ready(function(){
   });
   
   $("#menuItem15").on('click', function(){
+    $(".photo-containers").show();
     $("#well500RightSide").show(400);
     $(".well-500-right-side").show(500);
     selectedSection = document.getElementById("well500RightSide").alt;
@@ -432,6 +480,7 @@ $(document).ready(function(){
   });
   
   $("#menuItem16").on('click', function(){
+    $(".photo-containers").show();
     $("#well500Garnish").show(400);
     $(".well-500-garnish").show(500);
     selectedSection = document.getElementById("well500Garnish").alt;
@@ -439,6 +488,7 @@ $(document).ready(function(){
   });
 
   $("#menuItem17").on('click', function(){
+    $(".photo-containers").show();
     $("#well500Overstock").show(400);
     $(".well-500-overstock").show(500);
     selectedSection = document.getElementById("well500Overstock").alt;
@@ -451,6 +501,7 @@ $(document).ready(function(){
   });
 
   $("#menuItem19").on('click', function(){
+    $(".photo-containers").show();
     $("#well700Main").show(400);
     $(".well-700-main").show(500);
     selectedSection = document.getElementById("well700Main").alt;
@@ -458,6 +509,7 @@ $(document).ready(function(){
   });
 
   $("#menuItem20").on('click', function(){
+    $(".photo-containers").show();
     $("#well700LeftStation").show(400);
     $(".well-700-left-station").show(500);
     selectedSection = document.getElementById("well700LeftStation").alt;
@@ -465,18 +517,24 @@ $(document).ready(function(){
   });
 
   $("#menuItem21").on('click', function(){
+    $(".photo-containers").show();
+    $("#well700Overstock").show(400);
+    $(".well-700-overstock").show(500);
+    selectedSection = document.getElementById("well700Overstock").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItem22").on('click', function(){
     dropDownMenu.style.display = "block";
     $(".batch-recipes").toggle();
   });
+  
 
-  $("#sangriaBR").on('click', function(){
+  $(".batch-recipes").on('click', function(){
     $(".photo-containers").hide();
     $("#batchRecipesDiv").show(300);
     mainTitle.innerText = "Batch Recipes";
-
-    let target = document.getElementById("batchRecipesDiv");
-
-    console.log(this.innerText)
+    
     itemList.map(x => {
       if(this.innerText === x["name"]){
         let modalList = document.getElementById("batchRecipesDiv");
