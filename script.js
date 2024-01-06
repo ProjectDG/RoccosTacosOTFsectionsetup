@@ -129,6 +129,11 @@ class Item{
   let herraduraSilverW7O = new Item("W5OHS", "Herradura Silver", ["1 Row", "----------------------", "5 Bottles Total"]);
   let elJimadorW7O = new Item("W5OEJ", "El Jimador", ["1 Row", "----------------------", "6 Bottles Total"]);
 
+  // Server Pickup ------------------------------------------------------------------------------------------------------------------------------------------------
+  let rightSideSP = new Item("SPLL", "Lemons & Limes", ["Also:", "Garnish Picks", "Ticket Holder", "Tall Straws", "Short Straws", "Tiny Clothes Pins"]);
+  let leftSide1SP = new Item("SPSGL", "Dry Garnish", ["Dehydrated Lime Wheels", "Dehydrated Pineapples / Peppers", "Rose Buds", "Coconut Powder", "Olives", "Cherries"]);
+  let leftSide2SP = new Item("SPSGR", "Muddle Garnish", ["Oranges", "Watermelon", "Basil", "Strawberries", "Mint", "Jalapenos", "Blueberries", "( Garnishes can be placed on the side if there's no room in the fruit caddy. )"]);
+
 
 
   // Batch Recipes ------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -254,6 +259,10 @@ class Item{
     herraduraSilverW7O,
     elJimadorW7O,
 
+    // Server Pickup
+    rightSideSP,
+    leftSide1SP,
+    leftSide2SP,
 
     // Batch Recipes
     houseMargaritaBR,
@@ -521,6 +530,18 @@ $(document).ready(function(){
     $("#well700Overstock").show(400);
     $(".well-700-overstock").show(500);
     selectedSection = document.getElementById("well700Overstock").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItemSP").on('click', function(){
+    $(".setup-images").hide(400);
+    $(".image-numbers").hide(400);
+    $("#batchRecipesDiv").hide();
+    $("#batchRecipesDiv").empty();
+    $(".photo-containers").show();
+    $("#serverPickup").show(400);
+    $(".server-pickup").show(500);
+    selectedSection = document.getElementById("serverPickup").alt;
     mainTitle.innerText = selectedSection;
   });
 

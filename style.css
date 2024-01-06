@@ -81,9 +81,9 @@ body {
 
     #icon{
       position: absolute;
-      top: 3.5%;
-      left: 3%;
-      font-size: 2em;
+      top: 2%;
+      left: 2%;
+      font-size: 3em;
     }
 
     #dropDownMenu{
@@ -172,6 +172,7 @@ body {
     #serviceWellTopRackLeft,
     #serviceWellOverstock,
     #serviceWellServerGarnish,
+    #serverPickup,
     #well500RightSide
     {
       max-width: 60%;
@@ -654,6 +655,29 @@ body {
     left: 60%;
   }
 
+  /* Server Pickup */
+  #btn1SP{
+    top: 25%;
+    left: 60%;
+  }
+
+  #btn2SP{
+    top: 58%;
+    left: 42%;
+  }
+
+  #btn3SP{
+    top: 50%;
+    left: 48%;
+  }
+
+
+
+
+
+
+
+
 
     #batchRecipePhotos{
       border: 2px solid red;
@@ -769,6 +793,12 @@ body {
   display: none;
   }
 
+  #icon{
+    top: 1.5%;
+    left: 2%;
+    font-size: 4em;
+  }
+
   .close {
     font-size: 20px;
   }
@@ -796,13 +826,14 @@ body {
   }
 
   #well500LeftSide,
+  #serverPickup,
   #well400Main{
     max-width: 45%;
   }
 
   #serviceWellTopRackLeft,
   #serviceWellOverstock,
-  #well700Main
+  #well700Main,
   #serviceWellServerGarnish,
   #well500RightSide
   {
@@ -1260,6 +1291,23 @@ body {
     top: 55%;
     left: 79%;
   }
+
+  /* Server Pickup */
+  #btn1SP{
+    top: 27%;
+    left: 57%;
+  }
+
+  #btn2SP{
+    top: 61%;
+    left: 42%;
+  }
+
+  #btn3SP{
+    top: 50%;
+    left: 48%;
+  }
+
 
 
 
