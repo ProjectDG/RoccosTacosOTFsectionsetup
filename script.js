@@ -316,7 +316,7 @@ window.onclick = function(event) {
     var well500Section = document.getElementById("menuItem12");
     var well700Section = document.getElementById("menuItem18");
     var batchRecipes = document.getElementById("menuItem22");
-
+    var menuItemClosingDuties = document.getElementById("menuItemClosingDuties");
 
 
     if (event.target == serviceWellSection) {
@@ -336,6 +336,10 @@ window.onclick = function(event) {
     };
 
     if (event.target == batchRecipes) {
+      dropDownMenu.style.display = "block";
+    };
+
+    if (event.target == menuItemClosingDuties) {
       dropDownMenu.style.display = "block";
     };
 
@@ -365,6 +369,7 @@ $(document).ready(function(){
     $(".well-500-items").hide();
     $(".well-700-items").hide();
     $(".batch-recipes").hide();
+    $(".closing-duties").hide();
   });
 
   
@@ -525,6 +530,22 @@ $(document).ready(function(){
     mainTitle.innerText = selectedSection;
   });
 
+  $("#menuItemW7SRR").on('click', function(){
+    $(".photo-containers").show();
+    $("#well700SpeedRackRight").show(400);
+    $(".well-700-speedrack-right").show(500);
+    selectedSection = document.getElementById("well700SpeedRackRight").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItemW7SRL").on('click', function(){
+    $(".photo-containers").show();
+    $("#well700SpeedRackLeft").show(400);
+    $(".well-700-speedrack-left").show(500);
+    selectedSection = document.getElementById("well700SpeedRackLeft").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
   $("#menuItem21").on('click', function(){
     $(".photo-containers").show();
     $("#well700Overstock").show(400);
@@ -549,7 +570,22 @@ $(document).ready(function(){
     dropDownMenu.style.display = "block";
     $(".batch-recipes").toggle();
   });
+
+  $("#menuItemClosingDuties").on('click', function(){
+    dropDownMenu.style.display = "block";
+    $(".closing-duties").toggle();
+  });
   
+  $("#menuItemsBusTubs").on('click', function(){
+    $(".photo-containers").show();
+    $("#busTubsCD").show(400);
+    //$(".well-700-speedrack-left").show(500);
+    selectedSection = document.getElementById("busTubsCD").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+
+  // -----------------------------------------------------------------------------------------------------------------------------------------
 
   $(".batch-recipes").on('click', function(){
     $(".photo-containers").hide();
