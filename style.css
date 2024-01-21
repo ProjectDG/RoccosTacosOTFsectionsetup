@@ -810,6 +810,10 @@ body {
     max-width: 55%;
   }
 
+  #busTubsCD{
+    max-width: 30%;
+  }
+
   #serviceWellFruit{
     max-width: 35%;
   }
@@ -846,7 +850,8 @@ body {
     max-width: 68%;
   }
 
-  #well700LeftStation{
+  #well700LeftStation
+  {
     max-width: 85%;
   }
 
