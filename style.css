@@ -150,41 +150,58 @@ body {
       border-radius: 1.5%;
       max-width: 70%;
     }
+    
 
-    #serviceWellFruit{
-      max-width: 40%;
+    #serviceWellFruit
+    {
+      max-width: 45%;
     }
 
     #serviceWellMain,
     #well500Overstock,
     #serviceWellTopRackRight,
+    #busTubsCD,
     #well500Main
     {
       max-width: 45%;
     }
 
-    #well500LeftSide,
     #well700Overstock,
-    #well400Main{
+    #well400MainCD,
+    #serviceWellPrinterCD
+    {
       max-width: 50%;
     }
 
-    #serviceWellTopRackLeft,
-    #serviceWellOverstock,
-    #serviceWellServerGarnish,
+    #well500LeftSide,
     #serverPickup,
+    #serviceWellOverstockCD,
+    #well400Main
+    {
+      max-width: 58%;
+    }
+
+    #serviceWellTopRackLeft,
+    #serviceWellServerGarnish,
     #well500RightSide
     {
       max-width: 60%;
     }
+
+    /*
+    {
+      max-width: 65%;
+    }
+    */
 
     #well500Garnish
     {
       max-width: 85%;
     }
 
-    #well700LeftStation{
-      max-width: 95%;
+    #well700LeftStation,
+    #serviceWellMainCD{
+      max-width: 100%;
     }
 
 
@@ -821,6 +838,8 @@ body {
   #serviceWellMain,
   #well500Overstock,
   #serviceWellTopRackRight,
+  #serviceWellMainCD,
+  #well400MainCD,
   #well500Main
   {
     max-width: 35%;
@@ -832,6 +851,8 @@ body {
 
   #well500LeftSide,
   #serverPickup,
+  #serviceWellPrinterCD,
+  #serviceWellOverstockCD,  
   #well400Main{
     max-width: 45%;
   }

@@ -137,9 +137,9 @@ class Item{
 
 
   // Batch Recipes ------------------------------------------------------------------------------------------------------------------------------------------------------
-  let houseMargaritaBR = new Item("HMBR", "House Margarita", ["House Margarita Batch", "--------------------------------------------------", "Coming Soon..."]);
+  let houseMargaritaBR = new Item("HMBR", "House Margarita", ["House Margarita Batch", "--------------------------------------------------", "- Use 22 liter container", "- 6 Bottles Jose Cuervo Tradicional", "- 3 Bottles of Triple Sec", "- 9 Liters of Sour Mix", "--------------------------------------------------", "Please make sure to measure out 9 liters of the sour mix. Do not pour 9 bottles."]);
   let roccoLimeBR = new Item("RLBR", "Rocco Lime", ["Rocco Lime Batch", "--------------------------------------------------", "Coming Soon..."]);
-  let roccoMangoBR = new Item("RMBR", "Rocco Mango", ["Rocco Mango Batch", "--------------------------------------------------", "Jose Cuervo Tradicional Silver:", "750ml", "--------------------------------------------------", "Rock & Roll Mango Tequila:", "750ml", "--------------------------------------------------", "J.F. Hayden's Mango Liqueur:", "750ml"]);
+  let roccoMangoBR = new Item("RMBR", "Rocco Mango", ["Rocco Mango Batch", "--------------------------------------------------", "Jose Cuervo Tradicional Silver:", "1500ml", "--------------------------------------------------", "Rock & Roll Mango Tequila:", "1500ml", "--------------------------------------------------", "J.F. Hayden's Mango Liqueur:", "1500ml"]);
   let sourMixBR = new Item("SMBR", "Sour Mix", ["Sour Mix Batch", "--------------------------------------------------", "- Use 22 liter container", "- Add 2 gallons of sour mix", "- Mix 1 Tablespoon of Aqua Faba with 8oz of water", "- Add Aqua Faba Mix", "- Stir until dissolved"]);
 
 
@@ -581,6 +581,38 @@ $(document).ready(function(){
     $("#busTubsCD").show(400);
     //$(".well-700-speedrack-left").show(500);
     selectedSection = document.getElementById("busTubsCD").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItemsServiceWellPrinterCD").on('click', function(){
+    $(".photo-containers").show();
+    $("#serviceWellPrinterCD").show(400);
+    //$(".well-700-speedrack-left").show(500);
+    selectedSection = document.getElementById("serviceWellPrinterCD").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItemsServiceWellMainCD").on('click', function(){
+    $(".photo-containers").show();
+    $("#serviceWellMainCD").show(400);
+    //$(".well-700-speedrack-left").show(500);
+    selectedSection = document.getElementById("serviceWellMainCD").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItemsServiceWellOverstockCD").on('click', function(){
+    $(".photo-containers").show();
+    $("#serviceWellOverstockCD").show(400);
+    //$(".well-700-speedrack-left").show(500);
+    selectedSection = document.getElementById("serviceWellOverstockCD").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItemsWell400MainCD").on('click', function(){
+    $(".photo-containers").show();
+    $("#well400MainCD").show(400);
+    //$(".well-700-speedrack-left").show(500);
+    selectedSection = document.getElementById("well400MainCD").alt;
     mainTitle.innerText = selectedSection;
   });
 
