@@ -161,6 +161,7 @@ body {
     #well500Overstock,
     #serviceWellTopRackRight,
     #busTubsCD,
+    #serviceWellMainCD,
     #well500Main
     {
       max-width: 45%;
@@ -199,8 +200,8 @@ body {
       max-width: 85%;
     }
 
-    #well700LeftStation,
-    #serviceWellMainCD{
+    #well700LeftStation
+    {
       max-width: 100%;
     }
 
