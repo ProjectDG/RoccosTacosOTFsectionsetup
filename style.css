@@ -176,6 +176,7 @@ body {
 
     #well500LeftSide,
     #serverPickup,
+    #serviceWellOverstockStorage,
     #serviceWellOverstockCD,
     #well400Main
     {
@@ -418,6 +419,72 @@ body {
       top: 85%;
       left: 62%;
     }
+
+    /* Service Well Overstock Storage*/
+  #btn1SWOS{
+    top: 20%;
+    left: 30%;
+  }
+
+  #btn2SWOS{
+    top: 20.5%;
+    left: 38%;
+  }
+
+  #btn3SWOS{
+    top: 21%;
+    left: 45.25%;
+  }
+
+  #btn4SWOS{
+    top: 21.5%;
+    left: 51%;
+  }
+
+  #btn5SWOS{
+    top: 22%;
+    left: 57%;
+  }
+
+  #btn6SWOS{
+    top: 22.75%;
+    left: 64%;
+  }
+
+  #btn7SWOS{
+    top: 85%;
+    left: 29%;
+  }
+
+  #btn8SWOS{
+    top: 85%;
+    left: 35%;
+  }
+
+  #btn9SWOS{
+    top: 85%;
+    left: 41%;
+  }
+
+  #btn10SWOS{
+    top: 85%;
+    left: 47%;
+  }
+
+  #btn11SWOS{
+    top: 85%;
+    left: 53%;
+  }
+
+  #btn12SWOS{
+    top: 85%;
+    left: 59%;
+  }
+
+  #btn13SWOS{
+    top: 85%;
+    left: 65%;
+  }
 
     /* Well 400 Main*/
     #btn1W4M{
@@ -846,7 +913,9 @@ body {
     max-width: 35%;
   }
 
-  #well700Overstock{
+  #well700Overstock,
+  #serviceWellOverstockStorage
+  {
     max-width: 40%;
   }
 
@@ -1089,6 +1158,72 @@ body {
   #btn7SWO{
     top: 85%;
     left: 59%;
+  }
+
+  /* Service Well Overstock Storage*/
+  #btn1SWOS{
+    top: 20%;
+    left: 35%;
+  }
+
+  #btn2SWOS{
+    top: 20.5%;
+    left: 40.5%;
+  }
+
+  #btn3SWOS{
+    top: 21%;
+    left: 46%;
+  }
+
+  #btn4SWOS{
+    top: 21.5%;
+    left: 51%;
+  }
+
+  #btn5SWOS{
+    top: 22%;
+    left: 56%;
+  }
+
+  #btn6SWOS{
+    top: 22.75%;
+    left: 61%;
+  }
+
+  #btn7SWOS{
+    top: 85%;
+    left: 34%;
+  }
+
+  #btn8SWOS{
+    top: 85%;
+    left: 38.5%;
+  }
+
+  #btn9SWOS{
+    top: 85%;
+    left: 43.1%;
+  }
+
+  #btn10SWOS{
+    top: 85%;
+    left: 47.5%;
+  }
+
+  #btn11SWOS{
+    top: 85%;
+    left: 51.75%;
+  }
+
+  #btn12SWOS{
+    top: 85%;
+    left: 56%;
+  }
+
+  #btn13SWOS{
+    top: 85%;
+    left: 60.5%;
   }
 
   /* Well 400 Main*/

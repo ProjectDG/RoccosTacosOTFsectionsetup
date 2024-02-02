@@ -52,12 +52,28 @@ class Item{
 
   // Service Well Overstock
   let houseMargaritaStationSWO = new Item("SWOHMS", "House Margarita Station", ["2x - Large Store'N'Pour containers filled with House Margarita Batch", "Other commonly used ingredients:", "Jameson & Peach Schnapps for Green Tea Shots", "Kahlua and Creme De Cacao for Espresso Martinis"]);
-  let topRowSWO = new Item("SWOTR", "Top Row", ["Lindeman's Merlot", "Lindeman's Cabernet", "Rocco Mango Batch"]);
-  let topMiddleRowSWO = new Item("SWOTMR", "Top Middle Row", ["Casamigos Reposado", "Casamigos Blanco", "Ghost Tequila"]);
-  let bottomMiddleRowSWO = new Item("SWOBMR", "Bottom Middle Row", ["Don Julio Blanco", "Herradura Silver", "El Jimador Blanco"]);
-  let bottomRowSWO = new Item("SWOBR", "Bottom Row", ["Parton Silver", "Cazadores Reposado", "J.F. Haydens Coffee Liqueur"]);
+  let topRowSWO = new Item("SWOTR", "Top Row", ["Lindeman's Merlot", "(Happy Hour Merlot & used in the Red Sangria)", "----------------------------------------", "Lindeman's Cabernet", "(Happy Hour Cabernet)", "----------------------------------------","Rocco Mango Batch", "Used in the Rocco Mango"]);
+  let topMiddleRowSWO = new Item("SWOTMR", "Top Middle Row", ["Casamigos Reposado", "(Frequently used tequila)", "----------------------------------------", "Casamigos Blanco", "(Frequently used tequila)", "----------------------------------------", "Ghost Tequila", "(Used in the Spicy Mango)"]);
+  let bottomMiddleRowSWO = new Item("SWOBMR", "Bottom Middle Row", ["Don Julio Blanco", "(Frequently used tequila)", "----------------------------------------", "Herradura Silver", "(Used in the Skinny senorita)", "----------------------------------------", "El Jimador Blanco", "(Used in the Watermelon Kiss & Two)"]);
+  let bottomRowSWO = new Item("SWOBR", "Bottom Row", ["Parton Silver", "(Frequently used tequila)", "----------------------------------------", "Cazadores Reposado", "(Used in the Mexitini)", "----------------------------------------", "J.F. Haydens Coffee Liqueur", "(Used in the Mexitini)"]);
   let topStorageCabinetSWO = new Item("SWOTSC", "Top Of Starge Cabinet", ["Grand Marnier", "Zero Ritual (Tequila Alt.)", "Hornitos Anejo", "1x - Large Store'N'Pour container of Sour Mix", "1x - Large Store'N'Pour container of Rocco's Lime Mix", "-- Leave room for other liquors you may pull from the wall for service tickets. Replace when no longer needed. --"]);
-  let storageCabinetSWO = new Item("SWOSC", "Storage Cabinet", ["The backup storage should include the most frequently used liquors from the menu.", "For Example:", "Jose Cuervo Tradicional", "Triple Sec", "Tanteo Jalapeno", "1800 Anejo", "Fletcha Azul"]);
+  let storageCabinetSWO = new Item("SWOSC", "Storage Cabinet", ["-- Click Here for Section --"]);
+
+  // Service Well Overstock Storage
+  let tanteoSWOS = new Item("SWOST", "Tanteo", ["Habanero or Chipotle", "You will Likely go through more Habanero."]);
+  let herraduraSilverSWOS = new Item("SWOSHS", "Herradura Silver", ["Used in the Skinny Senorita"]);
+  let dosHombresJovenSWOS = new Item("SWOSDHJ", "Dos Hombres Joven", ["Used in the Two Tango, Smokey Mule & Dos Homb-Rise"]);
+  let anejo1800SWOS = new Item("SWOS1800A", "1800 Anejo", ["Used in the Cadillac Margarita & the Mexican Mule"]);
+  let fletchaAzulSWOS = new Item("SWOSFAB", "Fletcha Azul Blanco", ["Used in the Strawberry Basil"]);
+  let santoBlancoSWOS = new Item("SWOSSB", "Santo Blanco", ["Used in the Black Diamond"]);
+  let joseCuervoTradicionalSWOS = new Item("SWOSJCT", "Jose Cuervo Tradicional", ["Used in the House Margarita & in a number of other menu drinks"]);
+  let tripleSecSWOS = new Item("SWOSTS", "Triple Sec", ["Used in:", "House Margarita", "Spicy Jalapeno", "Strawberry Basil", "Watermelon Kiss", "Happy Hour Margaritas"]);
+  let titosSWOS = new Item("SWOSTITOS", "Tito's", ["Used in the American Mule"]);
+  let wellVodkaSWOS = new Item("SWOSWV", "Well Vodka", ["Happy Hour Vodka"]);
+  let ghostInfusedSWOS = new Item("SWOSGI", "Ghost Infused", ["Used in the Spicy Mango"]);
+  let tanteoJalapenoSWOS = new Item("SWOSTJ", "Tanteo Jalapeno", ["Used in the Spicy Jalapeno"]);
+  let bacardiSWOS = new Item("SWOSB", "Bacardi", ["Used as Well Rum"]);
+
 
 
   // 400 Well ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -195,6 +211,23 @@ class Item{
     bottomRowSWO,
     topStorageCabinetSWO,
     storageCabinetSWO,
+
+    // Service Well Overstock Storage
+    tanteoSWOS,
+    herraduraSilverSWOS,
+    dosHombresJovenSWOS,
+    anejo1800SWOS,
+    fletchaAzulSWOS,
+    santoBlancoSWOS,
+    joseCuervoTradicionalSWOS,
+    tripleSecSWOS,
+    titosSWOS,
+    wellVodkaSWOS,
+    ghostInfusedSWOS,
+    tanteoJalapenoSWOS,
+    bacardiSWOS,
+
+
     
     // Well 400 Main
     toolsW4M,
@@ -439,6 +472,14 @@ $(document).ready(function(){
     $(".photo-containers").show();
     $("#serviceWellOverstock").show(400);
     $(".service-well-overstock").show(500);
+    selectedSection = document.getElementById("serviceWellPrinter").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItemServiceWellOverstockStorage").on('click', function(){
+    $(".photo-containers").show();
+    $("#serviceWellOverstockStorage").show(400);
+    $(".service-well-overstock-storage").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
   });
@@ -695,6 +736,12 @@ $(document).ready(function(){
                 if(this.id === "btn7SWM"){
                   $("#serviceWellServerGarnish").show(400);
                   $(".service-well-server-garnish").show(500);
+                }
+
+                if(this.id === "btn7SWO"){
+                  $("#serviceWellOverstockStorage").show(400);
+                  $(".service-well-overstock-storage").show(500);
+                  console.log("yay")
                 }
                 
             }
