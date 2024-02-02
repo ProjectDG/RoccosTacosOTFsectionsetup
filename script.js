@@ -56,7 +56,7 @@ class Item{
   let topMiddleRowSWO = new Item("SWOTMR", "Top Middle Row", ["Casamigos Reposado", "(Frequently used tequila)", "----------------------------------------", "Casamigos Blanco", "(Frequently used tequila)", "----------------------------------------", "Ghost Tequila", "(Used in the Spicy Mango)"]);
   let bottomMiddleRowSWO = new Item("SWOBMR", "Bottom Middle Row", ["Don Julio Blanco", "(Frequently used tequila)", "----------------------------------------", "Herradura Silver", "(Used in the Skinny senorita)", "----------------------------------------", "El Jimador Blanco", "(Used in the Watermelon Kiss & Two)"]);
   let bottomRowSWO = new Item("SWOBR", "Bottom Row", ["Parton Silver", "(Frequently used tequila)", "----------------------------------------", "Cazadores Reposado", "(Used in the Mexitini)", "----------------------------------------", "J.F. Haydens Coffee Liqueur", "(Used in the Mexitini)"]);
-  let topStorageCabinetSWO = new Item("SWOTSC", "Top Of Starge Cabinet", ["Grand Marnier", "Zero Ritual (Tequila Alt.)", "Hornitos Anejo", "1x - Large Store'N'Pour container of Sour Mix", "1x - Large Store'N'Pour container of Rocco's Lime Mix", "-- Leave room for other liquors you may pull from the wall for service tickets. Replace when no longer needed. --"]);
+  let topStorageCabinetSWO = new Item("SWOTSC", "Top Of Starge Cabinet", ["Grand Marnier", "Zero Ritual (Tequila Alt.)", "Hornitos Anejo", "1x - Large Store'N'Pour container of Sour Mix", "1x - Large Store'N'Pour container of Rocco's Lime Mix", "-- Leave room for other liquors you may pull from the wall for service tickets. Place back when no longer needed. --"]);
   let storageCabinetSWO = new Item("SWOSC", "Storage Cabinet", ["-- Click Here for Section --"]);
 
   // Service Well Overstock Storage
@@ -66,7 +66,7 @@ class Item{
   let anejo1800SWOS = new Item("SWOS1800A", "1800 Anejo", ["Used in the Cadillac Margarita & the Mexican Mule"]);
   let fletchaAzulSWOS = new Item("SWOSFAB", "Fletcha Azul Blanco", ["Used in the Strawberry Basil"]);
   let santoBlancoSWOS = new Item("SWOSSB", "Santo Blanco", ["Used in the Black Diamond"]);
-  let joseCuervoTradicionalSWOS = new Item("SWOSJCT", "Jose Cuervo Tradicional", ["Used in the House Margarita & in a number of other menu drinks"]);
+  let joseCuervoTradicionalSWOS = new Item("SWOSJCT", "Jose Cuervo Tradicional", ["Used in the: ", "House Margarita", "Coco Cabana", "Prickly Pineapple Express", "&", "Happy Hour Margaritas"]);
   let tripleSecSWOS = new Item("SWOSTS", "Triple Sec", ["Used in:", "House Margarita", "Spicy Jalapeno", "Strawberry Basil", "Watermelon Kiss", "Happy Hour Margaritas"]);
   let titosSWOS = new Item("SWOSTITOS", "Tito's", ["Used in the American Mule"]);
   let wellVodkaSWOS = new Item("SWOSWV", "Well Vodka", ["Happy Hour Vodka"]);
@@ -119,9 +119,9 @@ class Item{
   let platesSilverwareW5G = new Item("W5GPS", "Plates & Silverware", ["Side plates & silverware should be placed in front each guest that plans on eating."]);
 
   // 500 Well Overstock ------------------------------------------------------------------------------------------------------------------------------------------------
-  let joseCuervoW5O = new Item("W5OJCT", "Jose Cuervo Tradicional", ["2 Rows", "----------------------", "12 Bottles Total"]);
-  let tripleSecW5O = new Item("W5OTS", "Triple Sec", ["2 Rows", "----------------------", "12 Bottles Total"]);
-  let tanteoJalapenoW5O = new Item("W5OTJ", "Tanteo Jalapeno", ["1 Row", "----------------------", "6 Bottles Total"]);
+  let joseCuervoW5O = new Item("W5OJCT", "Jose Cuervo Tradicional", ["Used in the: ", "House Margarita", "Coco Cabana", "Prickly Pineapple Express", "&", "Happy Hour Margaritas"]);
+  let tripleSecW5O = new Item("W5OTS", "Triple Sec", ["Used in:", "House Margarita", "Spicy Jalapeno", "Strawberry Basil", "Watermelon Kiss", "Happy Hour Margaritas"]);
+  let tanteoJalapenoW5O = new Item("W5OTJ", "Tanteo Jalapeno", ["Used in the Spicy Jalapeno"]);
 
   // 700 Well Main ------------------------------------------------------------------------------------------------------------------------------------------------
   let glassRimmerW7M = new Item("W7MGR", "Glass Rimmer", ["Lime Juice", "Salt", "Sugar", "Hibiscus Salt", "Tajin"]);
@@ -139,11 +139,11 @@ class Item{
   let leftSideMixersW7LS = new Item("W7LSLSM", "Left Side Mixers", ["Simple Syrup", "Orange Juice", "Cranberry Juice"]);
 
   // 700 Well Overstock ------------------------------------------------------------------------------------------------------------------------------------------------
-  let ghostInfusedW7O = new Item("W5OGI", "Ghost Infused", ["1 Row", "----------------------", "6 Bottles Total"]);
-  let teremanaW7O = new Item("W5OT", "Teremana", ["1 Row", "----------------------", "6 Bottles Total"]);
-  let wellVodkaW7O = new Item("W5OWV", "Well Vodka", ["1 Row", "----------------------", "7 Bottles Total"]);
-  let herraduraSilverW7O = new Item("W5OHS", "Herradura Silver", ["1 Row", "----------------------", "5 Bottles Total"]);
-  let elJimadorW7O = new Item("W5OEJ", "El Jimador", ["1 Row", "----------------------", "6 Bottles Total"]);
+  let ghostInfusedW7O = new Item("W5OGI", "Ghost Infused", ["Used in the Spicy Mango"]);
+  let teremanaW7O = new Item("W5OT", "Teremana", ["Used in the Rocco Rita"]);
+  let wellVodkaW7O = new Item("W5OWV", "Well Vodka", ["Happy Hour Vodka"]);
+  let herraduraSilverW7O = new Item("W5OHS", "Herradura Silver", ["Used in the Skinny Senorita"]);
+  let elJimadorW7O = new Item("W5OEJ", "El Jimador", ["Used in the", "Watermelon Kiss", "&", "Two Tango"]);
 
   // Server Pickup ------------------------------------------------------------------------------------------------------------------------------------------------
   let rightSideSP = new Item("SPLL", "Lemons & Limes", ["Also:", "Garnish Picks", "Ticket Holder", "Tall Straws", "Short Straws", "Tiny Clothes Pins"]);
@@ -432,7 +432,7 @@ $(document).ready(function(){
     $(".photo-containers").show();
     $("#serviceWellMain").show(400);
     $(".service-well-main").show(500);
-    selectedSection = document.getElementById("serviceWellPrinter").alt;
+    selectedSection = document.getElementById("serviceWellMain").alt;
     mainTitle.innerText = selectedSection;
   });
 
@@ -440,7 +440,7 @@ $(document).ready(function(){
     $(".photo-containers").show();
     $("#serviceWellTopRackLeft").show(400);
     $(".service-well-top-rack-left").show(500);
-    selectedSection = document.getElementById("serviceWellPrinter").alt;
+    selectedSection = document.getElementById("serviceWellTopRackLeft").alt;
     mainTitle.innerText = selectedSection;
   });
 
@@ -448,7 +448,7 @@ $(document).ready(function(){
     $(".photo-containers").show();
     $("#serviceWellTopRackRight").show(400);
     $(".service-well-top-rack-right").show(500);
-    selectedSection = document.getElementById("serviceWellPrinter").alt;
+    selectedSection = document.getElementById("serviceWellTopRackRight").alt;
     mainTitle.innerText = selectedSection;
   });
 
@@ -456,7 +456,7 @@ $(document).ready(function(){
     $(".photo-containers").show();
     $("#serviceWellFruit").show(400);
     $(".service-well-fruit").show(500);
-    selectedSection = document.getElementById("serviceWellPrinter").alt;
+    selectedSection = document.getElementById("serviceWellFruit").alt;
     mainTitle.innerText = selectedSection;
   });
   
@@ -464,7 +464,7 @@ $(document).ready(function(){
     $(".photo-containers").show();
     $("#serviceWellServerGarnish").show(400);
     $(".service-well-server-garnish").show(500);
-    selectedSection = document.getElementById("serviceWellPrinter").alt;
+    selectedSection = document.getElementById("serviceWellServerGarnish").alt;
     mainTitle.innerText = selectedSection;
   });
 
@@ -472,7 +472,7 @@ $(document).ready(function(){
     $(".photo-containers").show();
     $("#serviceWellOverstock").show(400);
     $(".service-well-overstock").show(500);
-    selectedSection = document.getElementById("serviceWellPrinter").alt;
+    selectedSection = document.getElementById("serviceWellOverstock").alt;
     mainTitle.innerText = selectedSection;
   });
 
@@ -480,7 +480,7 @@ $(document).ready(function(){
     $(".photo-containers").show();
     $("#serviceWellOverstockStorage").show(400);
     $(".service-well-overstock-storage").show(500);
-    selectedSection = document.getElementById("serviceWellPrinter").alt;
+    selectedSection = document.getElementById("serviceWellOverstockStorage").alt;
     mainTitle.innerText = selectedSection;
   });
 
@@ -501,7 +501,7 @@ $(document).ready(function(){
     $(".photo-containers").show();
     $("#well400SideStation").show(400);
     $(".well-400-side-station").show(500);
-    selectedSection = document.getElementById("well400Main").alt;
+    selectedSection = document.getElementById("well400SideStation").alt;
     mainTitle.innerText = selectedSection;
   });
 
