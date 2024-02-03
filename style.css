@@ -190,15 +190,15 @@ body {
       max-width: 60%;
     }
 
-    /*
-    {
-      max-width: 65%;
-    }
-    */
-
     #well500Garnish
     {
       max-width: 85%;
+    }
+
+    #wallOverstockSection1,
+    #wineOverstock
+    {
+      max-width: 95%;
     }
 
     #well700LeftStation
@@ -228,6 +228,11 @@ body {
       box-shadow: 1px 1px 30px rgb(255, 255, 255) , 1px 1px 30px rgb(255, 255, 255), 1px 1px 30px rgb(255, 255, 255);
       transition: transform .2s;
       transform: scale(1.75);
+    }
+
+    .overstock-pars{
+      border-radius: 15%;
+      border-color: antiquewhite;
     }
 
 
@@ -757,11 +762,51 @@ body {
     left: 48%;
   }
 
+  /* Overstock */
+  #btn1WOS1{
+    top: 87%;
+    left: 10%;
+  }
 
+  #btn2WOS1{
+    top: 87%;
+    left: 19.25%;
+  }
 
+  #btn3WOS1{
+    top: 87%;
+    left: 28%;
+  }
 
+  #btn4WOS1{
+    top: 87%;
+    left: 39%;
+  }
 
+  #btn5WOS1{
+    top: 87%;
+    left: 49%;
+  }
 
+  #btn6WOS1{
+    top: 87%;
+    left: 60%;
+  }
+
+  #btn7WOS1{
+    top: 87%;
+    left: 69%;
+  }
+
+  #btn8WOS1{
+    top: 87%;
+    left: 78%;
+  }
+
+  #btn9WOS1{
+    top: 87%;
+    left: 87%;
+  }
 
 
 
@@ -867,7 +912,7 @@ body {
 /*---------------------------------------------------------- S22 Ultra Landscape Mode ----------------------------------------------------------------------------*/
 
 
-@media screen and (orientation:landscape) and (max-width: 900px) {
+@media screen and (orientation:landscape) and (max-width: 850px) {
   #rotateScreenIcon,
   h1,
   #dropDownMenu,

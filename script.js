@@ -53,7 +53,7 @@ class Item{
   // Service Well Overstock
   let houseMargaritaStationSWO = new Item("SWOHMS", "House Margarita Station", ["2x - Large Store'N'Pour containers filled with House Margarita Batch", "Other commonly used ingredients:", "Jameson & Peach Schnapps for Green Tea Shots", "Kahlua and Creme De Cacao for Espresso Martinis"]);
   let topRowSWO = new Item("SWOTR", "Top Row", ["Lindeman's Merlot", "(Happy Hour Merlot & used in the Red Sangria)", "----------------------------------------", "Lindeman's Cabernet", "(Happy Hour Cabernet)", "----------------------------------------","Rocco Mango Batch", "Used in the Rocco Mango"]);
-  let topMiddleRowSWO = new Item("SWOTMR", "Top Middle Row", ["Casamigos Reposado", "(Frequently used tequila)", "----------------------------------------", "Casamigos Blanco", "(Frequently used tequila)", "----------------------------------------", "Ghost Tequila", "(Used in the Spicy Mango)"]);
+  let topMiddleRowSWO = new Item("SWOTMR", "Top Middle Row", ["Casamigos Reposado", "(Frequently used tequila)", "----------------------------------------", "Casamigos Blanco", "Used in the Casamigos Lemonade", "----------------------------------------", "Ghost Tequila", "(Used in the Spicy Mango)"]);
   let bottomMiddleRowSWO = new Item("SWOBMR", "Bottom Middle Row", ["Don Julio Blanco", "(Frequently used tequila)", "----------------------------------------", "Herradura Silver", "(Used in the Skinny senorita)", "----------------------------------------", "El Jimador Blanco", "(Used in the Watermelon Kiss & Two)"]);
   let bottomRowSWO = new Item("SWOBR", "Bottom Row", ["Parton Silver", "(Frequently used tequila)", "----------------------------------------", "Cazadores Reposado", "(Used in the Mexitini)", "----------------------------------------", "J.F. Haydens Coffee Liqueur", "(Used in the Mexitini)"]);
   let topStorageCabinetSWO = new Item("SWOTSC", "Top Of Starge Cabinet", ["Grand Marnier", "Zero Ritual (Tequila Alt.)", "Hornitos Anejo", "1x - Large Store'N'Pour container of Sour Mix", "1x - Large Store'N'Pour container of Rocco's Lime Mix", "-- Leave room for other liquors you may pull from the wall for service tickets. Place back when no longer needed. --"]);
@@ -62,7 +62,7 @@ class Item{
   // Service Well Overstock Storage
   let tanteoSWOS = new Item("SWOST", "Tanteo", ["Habanero or Chipotle", "You will Likely go through more Habanero."]);
   let herraduraSilverSWOS = new Item("SWOSHS", "Herradura Silver", ["Used in the Skinny Senorita"]);
-  let dosHombresJovenSWOS = new Item("SWOSDHJ", "Dos Hombres Joven", ["Used in the Two Tango, Smokey Mule & Dos Homb-Rise"]);
+  let dosHombresJovenSWOS = new Item("SWOSDHJ", "Dos Hombres Joven", ["Used in the:", "Two Tango", "Smokey Mule", "&", "Dos Homb-Rise"]);
   let anejo1800SWOS = new Item("SWOS1800A", "1800 Anejo", ["Used in the Cadillac Margarita & the Mexican Mule"]);
   let fletchaAzulSWOS = new Item("SWOSFAB", "Fletcha Azul Blanco", ["Used in the Strawberry Basil"]);
   let santoBlancoSWOS = new Item("SWOSSB", "Santo Blanco", ["Used in the Black Diamond"]);
@@ -144,6 +144,19 @@ class Item{
   let wellVodkaW7O = new Item("W5OWV", "Well Vodka", ["Happy Hour Vodka"]);
   let herraduraSilverW7O = new Item("W5OHS", "Herradura Silver", ["Used in the Skinny Senorita"]);
   let elJimadorW7O = new Item("W5OEJ", "El Jimador", ["Used in the", "Watermelon Kiss", "&", "Two Tango"]);
+
+  // Overstock ------------------------------------------------------------------------------------------
+  // Wall Overstock Section 1
+  let casamigosReposadoWOS1 = new Item("WOS1CR", "Casamigos Reposado", ["Frequently used tequila"]);
+  let casamigosBlancoWOS1 = new Item("WOS1CB", "Casamigos Blanco", ["Used in the Casamigos Lemonade"]);
+  let anejo1800WOS1 = new Item("WOS11800A", "1800 Anejo", ["Used in the Cadillac Margarita & the Mexican Mule"]);
+  let grandMarnierWOS1 = new Item("WOS1GM", "Grand Marnier", ["Used in the Cadillac Margarita"]);
+  let patronSilverWOS1 = new Item("WOS1PS", "Patron Silver", ["Frequently used tequila"]);
+  let donJulioBlancoWOS1 = new Item("WOS1DJB", "Don Julio Blanco", ["Frequently used tequila"]);
+  let dosHombresJovenWOS1 = new Item("WOS1DHJ", "Dos Hombres Joven", ["Used in the:", "Two Tango", "Smokey Mule", "&", "Dos Homb-Rise"]);
+  let fletchaAzulWOS1 = new Item("WOS1FAB", "Fletcha Azul Blanco", ["Used in the Strawberry Basil"]);
+  let santoBlancoWOS1 = new Item("WOS1SB", "Santo Blanco", ["Used in the Black Diamond"]);
+
 
   // Server Pickup ------------------------------------------------------------------------------------------------------------------------------------------------
   let rightSideSP = new Item("SPLL", "Lemons & Limes", ["Also:", "Garnish Picks", "Ticket Holder", "Tall Straws", "Short Straws", "Tiny Clothes Pins"]);
@@ -292,6 +305,17 @@ class Item{
     herraduraSilverW7O,
     elJimadorW7O,
 
+    // Overstock
+    casamigosReposadoWOS1,
+    casamigosBlancoWOS1,
+    anejo1800WOS1,
+    grandMarnierWOS1,
+    patronSilverWOS1,
+    donJulioBlancoWOS1,
+    dosHombresJovenWOS1,
+    fletchaAzulWOS1,
+    santoBlancoWOS1,
+
     // Server Pickup
     rightSideSP,
     leftSide1SP,
@@ -348,6 +372,7 @@ window.onclick = function(event) {
     var well400Section = document.getElementById("menuItem9");
     var well500Section = document.getElementById("menuItem12");
     var well700Section = document.getElementById("menuItem18");
+    var overstockSection = document.getElementById("menuItemOverstock");
     var batchRecipes = document.getElementById("menuItem22");
     var menuItemClosingDuties = document.getElementById("menuItemClosingDuties");
 
@@ -365,6 +390,10 @@ window.onclick = function(event) {
     };
 
     if (event.target == well700Section) {
+      dropDownMenu.style.display = "block";
+    };
+
+    if (event.target == overstockSection) {
       dropDownMenu.style.display = "block";
     };
 
@@ -401,6 +430,7 @@ $(document).ready(function(){
     $(".well-400-items").hide();
     $(".well-500-items").hide();
     $(".well-700-items").hide();
+    $(".overstock-items").hide();
     $(".batch-recipes").hide();
     $(".closing-duties").hide();
   });
@@ -592,6 +622,27 @@ $(document).ready(function(){
     $("#well700Overstock").show(400);
     $(".well-700-overstock").show(500);
     selectedSection = document.getElementById("well700Overstock").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItemOverstock").on('click', function(){
+    dropDownMenu.style.display = "block";
+    $(".overstock-items").toggle();
+  });
+  
+  $("#menuItemWOS1").on('click', function(){
+    $(".photo-containers").show();
+    $("#wallOverstockSection1").show(400);
+    $(".wall-overstock-section-1").show(500);
+    selectedSection = document.getElementById("wallOverstockSection1").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItemWineOverstock").on('click', function(){
+    $(".photo-containers").show();
+    $("#wineOverstock").show(400);
+    $(".wine-overstock").show(500);
+    selectedSection = document.getElementById("wineOverstock").alt;
     mainTitle.innerText = selectedSection;
   });
 
