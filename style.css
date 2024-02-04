@@ -986,7 +986,8 @@ body {
     max-width: 68%;
   }
 
-  #well700LeftStation
+  #well700LeftStation,
+  #wallOverstockSection1
   {
     max-width: 85%;
   }
@@ -1014,6 +1015,12 @@ body {
     transition: transform .2s;
     transform: scale(1.75);
   }
+
+  .overstock-pars{
+    border-radius: 15%;
+    border-color: antiquewhite;
+  }
+
 
 
   /* Service Well Printer */
@@ -1515,6 +1522,53 @@ body {
     top: 50%;
     left: 48%;
   }
+
+  /* Overstock */
+  #btn1WOS1{
+    top: 87%;
+    left: 14%;
+  }
+
+  #btn2WOS1{
+    top: 87%;
+    left: 22%;
+  }
+
+  #btn3WOS1{
+    top: 87%;
+    left: 30%;
+  }
+
+  #btn4WOS1{
+    top: 87%;
+    left: 39%;
+  }
+
+  #btn5WOS1{
+    top: 87%;
+    left: 49%;
+  }
+
+  #btn6WOS1{
+    top: 87%;
+    left: 59%;
+  }
+
+  #btn7WOS1{
+    top: 87%;
+    left: 67%;
+  }
+
+  #btn8WOS1{
+    top: 87%;
+    left: 74%;
+  }
+
+  #btn9WOS1{
+    top: 87%;
+    left: 83%;
+  }
+
 
 
 
