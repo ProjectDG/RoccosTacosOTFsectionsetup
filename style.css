@@ -176,6 +176,7 @@ body {
 
     #well500LeftSide,
     #serverPickup,
+    #serviceWellSpeedrack,
     #serviceWellOverstockStorage,
     #serviceWellOverstockCD,
     #well400Main
@@ -312,6 +313,77 @@ body {
     #btn7SWM{
       top: 50%;
       left: 55%;
+    }
+
+    /* Service Well Speedrack */
+    #btn1SWSR{
+      top: 28%;
+      left: 26%;
+    }
+
+    #btn2SWSR{
+      top: 28%;
+      left: 34%;
+    }
+
+    #btn3SWSR{
+      top: 28%;
+      left: 41.5%;
+    }
+
+    #btn4SWSR{
+      top: 28%;
+      left: 49%;
+    }
+
+    #btn5SWSR{
+      top: 28%;
+      left: 57%;
+    }
+
+    #btn6SWSR{
+      top: 28%;
+      left: 64%;
+    }
+
+    #btn7SWSR{
+      top: 28%;
+      left: 71%;
+    }
+
+    #btn8SWSR{
+      top: 83%;
+      left: 26%;
+    }
+
+    #btn9SWSR{
+      top: 83%;
+      left: 34%;
+    }
+
+    #btn10SWSR{
+      top: 83%;
+      left: 41.5%;
+    }
+
+    #btn11SWSR{
+      top: 83%;
+      left: 49%;
+    }
+
+    #btn12SWSR{
+      top: 83%;
+      left: 57%;
+    }
+
+    #btn13SWSR{
+      top: 83%;
+      left: 64%;
+    }
+
+    #btn14SWSR{
+      top: 83%;
+      left: 71%;
     }
 
     /* Service Well Top Rack Left */
@@ -931,7 +1003,11 @@ body {
   }
 
   .close {
-    font-size: 20px;
+    font-size: 15px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
   }
 
   .setup-images{
@@ -951,6 +1027,7 @@ body {
   #serviceWellMain,
   #well500Overstock,
   #serviceWellTopRackRight,
+  #serviceWellSpeedrack,
   #serviceWellMainCD,
   #well400MainCD,
   #well500Main
@@ -1099,6 +1176,91 @@ body {
   #btn7SWM{
     top: 50%;
     left: 55%;
+  }
+
+  /* Service Well Speedrack */
+  #btn1SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 34.5%;
+  }
+
+  #btn2SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 39.5%;
+  }
+
+  #btn3SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 44.25%;
+  }
+
+  #btn4SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 49%;
+  }
+
+  #btn5SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 53.5%;
+  }
+
+  #btn6SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 58%;
+  }
+
+  #btn7SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 62.5%;
+  }
+
+  #btn8SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 34.5%;
+  }
+
+  #btn9SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 39.5%;
+  }
+
+  #btn10SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 44.25%;
+  }
+
+  #btn11SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 49%;
+  }
+
+  #btn12SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 53.5%;
+  }
+
+  #btn13SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 58%;
+  }
+
+  #btn14SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 62.5%;
   }
 
   /* Service Well Top Rack Left */

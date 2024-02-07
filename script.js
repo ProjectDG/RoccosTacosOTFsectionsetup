@@ -24,8 +24,22 @@ class Item{
   let mainSWMLSM = new Item("SWMLSM", "Left Side Mixers", ["Simple Syrup", "Orange Juice", "Cranberry Juice"]);
   let mainSWMRSM = new Item("SWMRSM", "Right Side Mixers", ["Sour Mix", "Lime Juice", "Rocco's Lime Mix"]);
   let mainSWMF = new Item("SWMF", "Fruits", ["-- Click Here for Section --"]);
-  let mainSWMSR = new Item("SWMSR", "Speed Rack", ["Upper Rack ( Left to Right ):", "Dos Hombres Mezcal", "Triple Sec", "Triple Sec", "Jose Cuervo Tradicional Plata", "Jose Cuervo Tradicional Plata", "Titos", "Finlandia Or Other Well Vodka Brand", "Lower Rack ( Left to Right ):", "Teremana Blanco", "J.F. Hayden Citrus", "1800 Anejo", "Fletcha Azul Blanco", " Santo Blanco", "Tanteo Jalapeno", "Bacardi"]);
+  let mainSWMSR = new Item("SWMSR", "Speed Rack", ["-- Click Here for Section --"]);
   let mainSWSG = new Item("SWMSG", "Server Garnish", ["-- Click Here for Section --"]);
+
+  // Service Well Speedrack
+  let dosHombresJovenSWSR = new Item("SWSRDHJ", "Dos Hombres Joven", ["Used in the:", "Two Tango", "Smokey Mule", "&", "Dos Homb-Rise"]);
+  let tripleSecSWSR = new Item("SWSRTS", "Triple Sec", ["Used in:", "House Margarita", "Spicy Jalapeno", "Strawberry Basil", "Watermelon Kiss", "Happy Hour Margaritas"]);
+  let joseCuervoTradicionalSWSR = new Item("SWSRJCT", "Jose Cuervo Tradicional", ["Used in the: ", "House Margarita", "Coco Cabana", "Prickly Pineapple Express", "&", "Happy Hour Margaritas"]);
+  let titosSWSR = new Item("SWSRTITOS", "Tito's", ["Used in the American Mule"]);
+  let wellVodkaSWSR = new Item("SWSRWV", "Well Vodka", ["Happy Hour Vodka"]);
+  let cointreauSWSR = new Item("SWSRC", "Cointreau", ["Used in the Rocco Rita"]);
+  let teremanaBlancoSWSR = new Item("SWSRTB", "Teremana", ["Used in the Rocco Rita"]);
+  let anejo1800SWSR = new Item("SWSR1800A", "1800 Anejo", ["Used in the Rocco Rita"]);
+  let fletchaAzulBlancoSWSR = new Item("SWSRFAB", "Fletcha Azul Blanco", ["Used in the Strawberry Basil"]);
+  let santoBlancoSWSR = new Item("SWSRSB", "Santo Blanco", ["Used in the Black Diamond"]);
+  let tanteoJalapenoSWSR = new Item("SWSRTJ", "Tanteo Jalapeno", ["Used in the Spicy Jalapeno"]);
+  let bacardiSWSR = new Item("SWSRB", "Bacardi", ["Used as Well Rum"]);
 
   // Service Well Top Rack Left
   let pureesTRL = new Item("SWTRLP", "Purées", ["Coconut Purée", "Strawberry Purée", "Mango Purée", "Black Cherry Purée", "Olive Juice"]);
@@ -40,7 +54,6 @@ class Item{
   let toolsTRR = new Item("SWTRRT", "Tools", ["Strainers", "Muddler", "Stir Spoon", "Peeler"]);
   let pureesTRR = new Item("SWTRRP", "Purées", ["Prickly Pear", "Passion Fruit"]);
   let rosemaryTRR = new Item("SWTRRR", "Rosemary", ["Rosemary is used in the", "Roseberry Mocktail."]);
-
 
   // Service Well Fruits
   let fruitsSWF = new Item("SWF", "Fruits", ["Basil", " Strawberries", "Limes", "Mint", "Jalapenos", "Oranges", "Lemons"]);
@@ -175,7 +188,7 @@ class Item{
 
 
   itemList = [
-    // Servie Well Printer
+    // Service Well Printer
     sangriaBatchesSWP,
     syrupsSWP,
     glassRimmerSWP,
@@ -193,6 +206,20 @@ class Item{
     mainSWMF,
     mainSWMSR,
     mainSWSG,
+
+    // Service Well Speedrack
+    dosHombresJovenSWSR,
+    tripleSecSWSR,
+    joseCuervoTradicionalSWSR,
+    titosSWSR,
+    wellVodkaSWSR,
+    cointreauSWSR,
+    teremanaBlancoSWSR,
+    anejo1800SWSR,
+    fletchaAzulBlancoSWSR,
+    santoBlancoSWSR,
+    tanteoJalapenoSWSR,
+    bacardiSWSR,
 
     // Service Well Top Rack Left
     pureesTRL,
@@ -463,6 +490,14 @@ $(document).ready(function(){
     $("#serviceWellMain").show(400);
     $(".service-well-main").show(500);
     selectedSection = document.getElementById("serviceWellMain").alt;
+    mainTitle.innerText = selectedSection;
+  });
+
+  $("#menuItemServiceWellSpeedrack").on('click', function(){
+    $(".photo-containers").show();
+    $("#serviceWellSpeedrack").show(400);
+    $(".service-well-speedrack").show(500);
+    selectedSection = document.getElementById("serviceWellSpeedrack").alt;
     mainTitle.innerText = selectedSection;
   });
 
@@ -772,6 +807,11 @@ $(document).ready(function(){
                   $(".service-well-top-rack-right").show(500);
                 }
 
+                if(this.id === "btn6SWM"){
+                  $("#serviceWellSpeedrack").show(400);
+                  $(".service-well-speedrack").show(500);
+                }
+
                 if(this.id === "btn5SWM"){
                   $("#serviceWellFruit").show(400);
                   $(".service-well-fruit").show(500);
@@ -792,8 +832,9 @@ $(document).ready(function(){
                 if(this.id === "btn7SWO"){
                   $("#serviceWellOverstockStorage").show(400);
                   $(".service-well-overstock-storage").show(500);
-                  console.log("yay")
                 }
+
+                
                 
             }
           });
