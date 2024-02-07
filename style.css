@@ -1740,7 +1740,7 @@ body {
 
 /*---------------------------------------------------------- Portrait Mode ----------------------------------------------------------------------------*/
 
-@media screen and (orientation:portrait) and (max-width: 2000px) {
+@media screen and (orientation:portrait) and (max-width: 850px) {
   *{
     z-index: 2;
     color: rgb(241, 237, 231);
