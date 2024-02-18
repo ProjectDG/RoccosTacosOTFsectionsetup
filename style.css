@@ -95,7 +95,7 @@ body {
       position: absolute;
       left: 0;
       top: 10.5%;
-      z-index: 2;
+      z-index: 5;
       padding: 0% 0% 1% 0%;
       overflow: scroll;
       overflow-x: hidden;
@@ -132,6 +132,31 @@ body {
       max-height: 5%;
     }
 
+    /* Next / Previous Buttons */
+    
+    /* .round{
+      background-color: rgba(0, 0, 0, .8);
+      position: absolute;
+      font-size: 300%;
+      text-decoration: none;
+      box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
+      height: 15%;
+      width: 2%;
+      padding: 0;
+      border-radius: 10%;
+      z-index: 4;
+    }
+
+    .previous{
+      top: 50%;
+      left: 10%;
+    }
+
+    .next{
+      top: 50%;
+      right: 10%;
+    } */
+    
     /* Main */
     .photo-containers{
       display: flex;

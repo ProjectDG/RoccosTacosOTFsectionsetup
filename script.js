@@ -475,6 +475,7 @@ $(document).ready(function(){
   $("#menuItem1").on('click', function(){
     dropDownMenu.style.display = "block";
     $(".service-well-items").toggle();
+    this.scrollIntoView();
   });
 
   $("#menuItem2").on('click', function(){
@@ -483,7 +484,10 @@ $(document).ready(function(){
     $(".service-well-printer").show(500);
     selectedSection = document.getElementById("serviceWellPrinter").alt;
     mainTitle.innerText = selectedSection;
+    console.log("maybe");
   });
+
+
 
   $("#menuItem3").on('click', function(){
     $(".photo-containers").show();
@@ -552,6 +556,7 @@ $(document).ready(function(){
   $("#menuItem9").on('click', function(){
     dropDownMenu.style.display = "block";
     $(".well-400-items").toggle();
+    this.scrollIntoView();
   });
 
   $("#menuItem10").on('click', function(){
@@ -573,6 +578,7 @@ $(document).ready(function(){
   $("#menuItem12").on('click', function(){
     dropDownMenu.style.display = "block";
     $(".well-500-items").toggle();
+    this.scrollIntoView();
   });
   
   $("#menuItem13").on('click', function(){
@@ -618,6 +624,7 @@ $(document).ready(function(){
   $("#menuItem18").on('click', function(){
     dropDownMenu.style.display = "block";
     $(".well-700-items").toggle();
+    this.scrollIntoView();
   });
 
   $("#menuItem19").on('click', function(){
@@ -663,6 +670,7 @@ $(document).ready(function(){
   $("#menuItemOverstock").on('click', function(){
     dropDownMenu.style.display = "block";
     $(".overstock-items").toggle();
+    this.scrollIntoView();
   });
   
   $("#menuItemWOS1").on('click', function(){
@@ -696,11 +704,13 @@ $(document).ready(function(){
   $("#menuItem22").on('click', function(){
     dropDownMenu.style.display = "block";
     $(".batch-recipes").toggle();
+    this.scrollIntoView();
   });
 
   $("#menuItemClosingDuties").on('click', function(){
     dropDownMenu.style.display = "block";
     $(".closing-duties").toggle();
+    this.scrollIntoView();
   });
   
   $("#menuItemsBusTubs").on('click', function(){
@@ -743,6 +753,20 @@ $(document).ready(function(){
     mainTitle.innerText = selectedSection;
   });
 
+
+  // -----------------------------------------------------------------------------------------------------------------------------------------
+  // Next / Prev Buttons
+  // let photoArray = [
+  //   servWellPrint,
+  //   servWellMain
+  // ];
+
+  // photoArray.map(x => {
+  //   $(".next").on('click', function(){
+  //     console.log("www")
+  //     servWellMain;
+  //   })
+  // })
 
   // -----------------------------------------------------------------------------------------------------------------------------------------
 
