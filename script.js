@@ -180,7 +180,7 @@ class Item{
 
   // Batch Recipes ------------------------------------------------------------------------------------------------------------------------------------------------------
   let houseMargaritaBR = new Item("HMBR", "House Margarita", ["House Margarita Batch", "--------------------------------------------------", "- Use 22 liter container", "- 6 Bottles Jose Cuervo Tradicional", "- 3 Bottles of Triple Sec", "- 9 Liters of Sour Mix", "--------------------------------------------------", "Please make sure to measure out 9 liters of the sour mix. Do not pour 9 bottles."]);
-  let roccoLimeBR = new Item("RLBR", "Rocco Lime", ["Rocco Lime Batch", "--------------------------------------------------", "Coming Soon..."]);
+  let roccoLimeBR = new Item("RLBR", "Rocco Lime", ["Rocco Lime Batch", "---------------------------------------------------------------------", "Single batch:", "60 oz Lime Juice", "12 oz Agave", "13oz Aquafaba", "16oz Water ", "-----------------------------------------", "Large Batch:", "240 oz Lime Juice ( 7.1 liters )", "64 oz Agave", "52 oz Aquafaba", "64 oz Water"]);
   let roccoMangoBR = new Item("RMBR", "Rocco Mango", ["Rocco Mango Batch", "--------------------------------------------------", "Jose Cuervo Tradicional Silver:", "1500ml", "--------------------------------------------------", "Rock & Roll Mango Tequila:", "1500ml", "--------------------------------------------------", "J.F. Hayden's Mango Liqueur:", "1500ml"]);
   let sourMixBR = new Item("SMBR", "Sour Mix", ["Sour Mix Batch", "--------------------------------------------------", "- Use 22 liter container", "- Add 2 gallons of sour mix", "- Mix 1 Tablespoon of Aqua Faba with 8oz of water", "- Add Aqua Faba Mix", "- Stir until dissolved"]);
 
