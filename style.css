@@ -1810,7 +1810,7 @@ img[src="./images/logo.png"]{
   display: flex;
   flex-wrap: wrap;
   width: 60%;
-  height: 50%;
+  height: 60%;
   border: 10px solid black;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
