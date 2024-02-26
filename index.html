@@ -3,183 +3,372 @@
 
 <meta charset="UTF-8">
 
-<title>Rocco's Tacos & Tequila</title>
+<title>Rocco's Tacos & Tequila Section Setup</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 </style>
 
 <body>
-    <div id="logoDiv">
-        <img src="./images/logo.png" alt="Rocco's Taco Logo">
-    </div>
+  <div id="portraitContainer">
+    <h1>Please Rotate Screen</h1>
+    <img id="rotateScreenIcon" src="./images/rotateScreenIcon.png" alt="rotate screen icon">
+    <h1>For Section Setup</h1>
+    <button class="portrait-buttons" onclick="window.open('https://projectdg.github.io/SSImageGallery/', '_blank')"><span class="portrait-button-text">Image Gallery</span></button>
+    <button class="portrait-buttons" onclick="window.open('https://projectdg.github.io/RoccosTacosOTFwellstock/', '_blank')"><span class="portrait-button-text">Well Stock</span></button>
+  </div>
+
+  
+
+  <!-- Landscape Mode -->
+  <div class="topnav">
     
-    <div id="portraitContainer">
-        <h1>Please Rotate Screen</h1>
-        <img id="rotateScreenIcon" src="./images/rotateScreenIcon.png" alt="rotate screen icon">
-        <h1>For Drink Recipes</h1>
-    </div>
+    <a href="javascript:void(0);" id="icon" onclick="myFunction()">
+      <i id="iconActual" class="fa fa-bars"></i>
+    </a>  
+
+    <h2 id="mainTitle" class="titles"></h2>
+    <img src="./images/logo.png" alt="Rocco's Taco Logo">
+
+  </div>  
+
+
+  <div id="dropDownMenu">
+    <!-- Service Well -->
+    <p class="menu-items" id="menuItem1">Service Well</p>
+    <p class="menu-items service-well-items sub-menu-items" id="menuItem2">Service Well Printer</p>
+    <p class="menu-items service-well-items sub-menu-items" id="menuItem3">Service Well Main</p>
+    <p class="menu-items service-well-items sub-menu-items" id="menuItemServiceWellSpeedrack">Service Well Speedrack</p>
+    <p class="menu-items service-well-items sub-menu-items" id="menuItem4">Service Well Top Rack Left</p>
+    <p class="menu-items service-well-items sub-menu-items" id="menuItem5">Service Well Top Rack Right</p>
+    <p class="menu-items service-well-items sub-menu-items" id="menuItem6">Service Well Fruits</p>
+    <p class="menu-items service-well-items sub-menu-items" id="menuItem7">Service Well Server Garnish</p>
+    <p class="menu-items service-well-items sub-menu-items" id="menuItem8">Service Well Overstock</p>
     
-    <div id="portraitButtonDiv">
-            <button class="portraitButtons" onclick="window.open('https://projectdg.github.io/RoccosTacosOTFmenureview/', '_blank')"><span id="menuReviewButton" class="portraitButtonText">Menu Review</span></button>
-            <button class="portraitButtons" onclick="window.open('https://projectdg.github.io/RoccosTacosOTFinventory/', '_blank')"><span id="portraitInventoryButton" class="portraitButtonText">Inventory</span></button>
-            <button class="portraitButtons" onclick="window.open('https://projectdg.github.io/RoccosTacosOTFwellstock/', '_blank')"><span class="portraitButtonText">Well Stock</span></button>
-            <button class="portraitButtons" onclick="window.open('https://projectdg.github.io/RoccosTacosOTFsectionsetup/', '_blank')"><span class="portraitButtonText">Section Setup</span></button>
-            
-    </div>
 
+    <!-- 400 Well -->
+    <p class="menu-items" id="menuItem9">400 Well</p>
+    <p class="menu-items well-400-items sub-menu-items" id="menuItem10">Well 400 Main</p>
+    <p class="menu-items well-400-items sub-menu-items" id="menuItem11">Well 400 Side Station</p>
 
+    <!-- 500 Well -->
+    <p class="menu-items" id="menuItem12">500 Well</p>
+    <p class="menu-items well-500-items sub-menu-items" id="menuItem13">Well 500 Main</p>
+    <p class="menu-items well-500-items sub-menu-items" id="menuItem14">Well 500 Left Station</p>
+    <p class="menu-items well-500-items sub-menu-items" id="menuItem15">Well 500 Right Station</p>
+    <p class="menu-items well-500-items sub-menu-items" id="menuItem16">Well 500 Garnish</p>
+    
 
+    <!-- 700 Well -->
+    <p class="menu-items" id="menuItem18">700 Well</p>
+    <p class="menu-items well-700-items sub-menu-items" id="menuItem19">Well 700 Main</p>
+    <p class="menu-items well-700-items sub-menu-items" id="menuItem20">Well 700 Left Station</p>
+    <p class="menu-items well-700-items sub-menu-items" id="menuItemW7SRR">Well 700 Speedrack (Right)</p>
+    <p class="menu-items well-700-items sub-menu-items" id="menuItemW7SRL">Well 700 Speedrack (Left)</p>
+    
 
-    <!-- Main Container -->
-    <div id="mainContainer">
-        
-        <!-- Top Navigation Bar -->
-        <div id="topNavContainer" class="nav-containers">
-            <button class="nav-buttons top-nav-buttons" id="navMargarita">Margaritas</button>
-            <button class="nav-buttons top-nav-buttons" id="navSpecialty">Specialty Drinks</button>
-            <button class="nav-buttons top-nav-buttons" id="navHappyHour">Happy Hour</button>
-            <button class="nav-buttons top-nav-buttons" id="navMocktails">Mocktails</button>
-            <button class="nav-buttons top-nav-buttons" id="navFrozen">Frozen Drinks</button>
-            <button class="nav-buttons top-nav-buttons" id="navOther">Other Drinks</button>
-        </div>
+    <!-- Overstock -->
+    <p class="menu-items" id="menuItemOverstock">Overstock</p>
+    <p class="menu-items overstock-items sub-menu-items" id="menuItemServiceWellOverstockStorage">Service Well Overstock Storage</p>
+    <p class="menu-items overstock-items sub-menu-items" id="menuItem17">Well 500 Overstock</p>
+    <p class="menu-items overstock-items sub-menu-items" id="menuItem21">Well 700 Overstock</p>
+    <p class="menu-items overstock-items sub-menu-items" id="menuItemWOS1">Wall Overstock Section 1</p>
+    <p class="menu-items overstock-items sub-menu-items" id="menuItemWineOverstock">Wine Overstock</p>
 
+    <!-- Server Pickup -->
+    <p class="menu-items" id="menuItemSP">Server Pickup</p>
+    
+    <!-- Batch Recipes -->
+    <p class="menu-items" id="menuItem22">Batch Recipes</p>
+    <p class="menu-items sub-menu-items batch-recipes" id="houseMargaritaBR" name="House Margarita Batch">House Margarita</p>
+    <p class="menu-items sub-menu-items batch-recipes" id="roccoLimeBR" name="Rocco lime Batch">Rocco Lime</p>
+    <p class="menu-items sub-menu-items batch-recipes" id="roccoMangoBR" name="Rocco Mango Batch">Rocco Mango</p>
+    <p class="menu-items sub-menu-items batch-recipes" id="sangriaBR" name="Sangria Batches">Sangria</p>
+    <p class="menu-items sub-menu-items batch-recipes" id="sourMixBR" name="Sour Mix Batch">Sour Mix</p>
 
-
-        <div id="mainButtonContainer">
-            <div class="form-container">
-
-                    <input id="search" type="text" class="input" placeholder="search..."/>    
-
-                <button id="clear" class="nav-buttons">Clear</button>
-            </div>
-            
-            <div class="results-list" id="list"></div>
-            
-
-            <!-- Drink Photo & Recipe -->
-            <p class="drink-title" id="drinkTitle"></p>
-            <div id="recipeInfoDiv"></div>
-            <img id="drinkPhoto" src="" alt="current drink photo">
-            <div id="recipeDiv"></div>
-            
-            <!--
-            <div id="recipeDiv2"></div>
-            -->
-
-            
-
-        
-
-            <!-- Margarita Buttons -->
-            <div id="margBtnDiv">
-                <button class="all-buttons margarita-buttons" id="blackDiamond" value="Black Diamond">Black Diamond</button>
-                <button class="all-buttons margarita-buttons" id="cadillac" value="Cadillac">Cadillac</button>
-                <button class="all-buttons margarita-buttons" id="houseMargarita" value="House Margarita">House Margarita</button>
-                <button class="all-buttons margarita-buttons" id="roccoMango" value="Rocco Mango">Rocco Mango</button>
-                <button class="all-buttons margarita-buttons" id="roccoRita" value="Rocco Rita">Rocco Rita</button>
-                <button class="all-buttons margarita-buttons" id="skinnySenorita" value="Skinny Senorita">Skinny Senorita</button>
-                <button class="all-buttons margarita-buttons" id="spicyJalapeno" value="Spicy Jalapeno">Spicy Jalapeno</button>
-                <button class="all-buttons margarita-buttons" id="spicyMango" value="Spicy Mango">Spicy Mango</button>
-                <button class="all-buttons margarita-buttons" id="strawberryBasil" value="Strawberry Basil">Strawberry Basil</button>
-                <button class="all-buttons margarita-buttons" id="twoTango" value="Two Tango">Two Tango</button>
-                <button class="all-buttons margarita-buttons" id="watermelonKiss" value="Watermelon Kiss">Watermelon Kiss</button>
-            </div>
-
-            
-            
-
-            <div id="specialtyBtnDiv">
-                <!-- Specialty Buttons -->
-                <button class="all-buttons specialty-buttons" id="casamigosLemonade" value="Casamigos Lemonade">Casamigos Lemonade</button>
-                <button class="all-buttons specialty-buttons" id="cocoCabana" value="Coco Cabana">Coco Cabana</button>
-                <button class="all-buttons specialty-buttons" id="dosHombrise" value="Dos Homb-Rise">Dos Homb-Rise</button>
-                <button class="all-buttons specialty-buttons" id="mojito" value="Mojito">Mojito</button>
-                <button class="all-buttons specialty-buttons" id="mexitini" value="Mexitini">Mexitini</button>
-                <button class="all-buttons specialty-buttons" id="oldFashioned" value="Old Fashioned">Old Fashioned</button>
-                <button class="all-buttons specialty-buttons" id="pricklyPineappleExpress" value="Prickly Pineapple Express">Prickly Pineapple Express</button>
-                <button class="all-buttons specialty-buttons" id="rosaRita" value="Rosa Rita">Rosa Rita</button>
-                <button class="all-buttons specialty-buttons" id="theMules" value="The Mules">The Mules</button>
-                <!--<button class="all-buttons specialty-buttons" id="" value=""></button>-->
-            </div>
-                
-                <!-- Mocktails Buttons -->
-                <button class="all-buttons mocktail-buttons" id="mockarita" value="Mockarita">Mockrita</button>
-                <button class="all-buttons mocktail-buttons" id="mulecumber" value="Mulecumber">Mulecumber</button>
-                <button class="all-buttons mocktail-buttons" id="pinita" value="Pinita (Nut Allergy)">Pinita</button>
-                <button class="all-buttons mocktail-buttons" id="roseberry" value="Roseberry">Roseberry</button>
-
-                <!-- Happy Hour -->
-                <button class="all-buttons happyhour-buttons" id="house" value="House">House</button>
-                <button class="all-buttons happyhour-buttons" id="jalapenoHH" value="Jalapeno">Jalapeno</button>
-                <button class="all-buttons happyhour-buttons" id="skinny" value="Skinny">Skinny</button>
-                <button class="all-buttons happyhour-buttons" id="volcanic" value="Volcanic">Volcaninc</button>
-                <button class="all-buttons happyhour-buttons" id="watermelon" value="Watermelon">Watermelon</button>
-
-                <!-- Frozen Buttons -->
-                <button class="all-buttons frozen-buttons" id="cadillacFrozen" value="Cadillac (Frozen)">Cadillac (Frozen)</button>
-                <button class="all-buttons frozen-buttons" id="houseMargaritaFrozen" value="House Margarita (Frozen)">House Margarita (Frozen)</button>
-                <button class="all-buttons frozen-buttons" id="jalapenoFrozen" value="Jalapeno (Frozen)">Jalapeno (Frozen)</button>
-                <button class="all-buttons frozen-buttons" id="roccoRitaFrozen" value="Rocco Rita (Frozen)">Rocco Rita (Frozen)</button>
-                <button class="all-buttons frozen-buttons" id="watermelonKissFrozen" value="Watermelon Kiss (Frozen)">Watermelon Kiss (Frozen)</button>
-                <!--<button class="all-buttons frozen-buttons" id="" value=""></button>-->
-
-                <!-- Other Buttons -->
-                <div id="otherBtnDiv">
-                <!--<button class="all-buttons other-buttons" id="" value=""></button>-->
-                <button class="all-buttons other-buttons" id="aperolSpritz" value="Aperol Spritz">Aperol Spritz</button>
-                <button class="all-buttons other-buttons" id="appleMartini" value="Apple Martini">Apple Martini</button>
-                <button class="all-buttons other-buttons" id="chocolateMartini" value="Chocolate Martini">Chocolate Martini</button>
-                <button class="all-buttons other-buttons" id="espressoMartini" value="Espresso Martini">Espresso Martini</button>
-                <button class="all-buttons other-buttons" id="french75" value="French 75">French 75</button>
-                <button class="all-buttons other-buttons" id="frenchMartini" value="French Martini">French Martini</button>
-                <button class="all-buttons other-buttons" id="hurricane" value="Hurricane">Hurricane</button>
-                <button class="all-buttons other-buttons" id="longIslandIcedTea" value="Long Island Iced Tea">Long Island Iced Tea</button>
-                <button class="all-buttons other-buttons" id="maiTai" value="Mai Tai"> Mai Tai</button>
-                <button class="all-buttons other-buttons" id="negroni" value="Negroni">Negroni</button>
-                <button class="all-buttons other-buttons" id="sexOnTheBeach" value="Sex On The Beach">Sex On The Beach</button>
-                <button class="all-buttons other-buttons" id="siesta" value="Siesta">Siesta</button>
-                </div>
-                
-                <!-- Sangria -->
-                <button class="all-buttons sangria-buttons" id="redSangria" value="Red Sangria" style="padding: 0 3vh;">Red Sangria</button>
-                <button class="all-buttons sangria-buttons" id="roseSangria" value="Rose Sangria">Rose Sangria</button>
-                <button class="all-buttons sangria-buttons" id="whiteSangria" value="White Sangria">White Sangria</button>
-
-                <!-- Specials -->
-                <button class="all-buttons specials-buttons" id="diddyRita" value="Diddy Rita">Diddy Rita</button>
-                <button class="all-buttons specials-buttons" id="tacoTuesday" value="$2 Off All Tacos and Margaritas">Taco Tuesday</button>
-                
-                <!-- Brunch Buttons -->
-                <button class="all-buttons brunch-buttons" id="mimosa" value="Mimosa">Mimosa</button>
-                <button class="all-buttons brunch-buttons" id="bloodyMary" value="Bloody Mary">Bloody Mary</button>
-                <button class="all-buttons brunch-buttons" id="rose" value="Rosé">Rosé</button>
-
-                <!-- Batch Buttons -->
-                <button class="all-buttons batch-buttons" id="houseLiterBatch" value="House Liter (Batch)">House Liter (Batch)</button>
-                <button class="all-buttons batch-buttons" id="houseLiterFlavorBatch" value="House Liter Flavor (Batch)">House Liter Flavor (Batch)</button>
-                <button class="all-buttons batch-buttons" id="roccoMango" value="Rocco Mango (Batch)">Rocco Mango (Batch)</button>
-
-            
-
-        </div><!--end of button container-->
-
-        
-        
-        <!-- Bottom Navigation Container -->
-        <div id="bottomNavContainer" class="nav-containers">
-            <button class="nav-buttons btm-nav-buttons" id="navSangria">Sangria</button>
-            <button class="nav-buttons btm-nav-buttons" id="navSpecials">Specials</button>
-            <button class="nav-buttons btm-nav-buttons" id="navBrunch">Brunch</button>
-            <button class="nav-buttons btm-nav-buttons" id="navBatch">Batch Recipes</button>
-        </div>
-        
-    </div>
+    <!-- Closing -->
+    <p class="menu-items" id="menuItemClosingDuties">Closing Duties</p>
+    <p class="menu-items sub-menu-items closing-duties" id="menuItemsBusTubs" name="Bus Tubs">Bus Tubs</p>
+    <p class="menu-items sub-menu-items closing-duties" id="menuItemsServiceWellPrinterCD" name="Service Well Printer">Service Well Printer</p>
+    <p class="menu-items sub-menu-items closing-duties" id="menuItemsServiceWellMainCD" name="Service Well Main">Service Well Main</p>
+    <p class="menu-items sub-menu-items closing-duties" id="menuItemsServiceWellOverstockCD" name="Service Well Overstock">Service Well Overstock</p>
+    <p class="menu-items sub-menu-items closing-duties" id="menuItemsWell400MainCD" name="Well 400 Main">Well 400 Main</p>
+    
+  </div>
+  
     
   
+
+<!-- <button class="previous round">&#8249;</button>     -->
+
+  <div class="photo-containers" id="SWPDiv">
+    <!---------------------------------------------------------------------------------------------------------------------- Service Well -->
+
+    <!-- Service Well Printer Station -->
+    <img class="setup-images" id="serviceWellPrinter" src="./images/service-well-printer.jpg" alt="Service Well Printer">
+    <button class="image-numbers service-well-printer" id="btn1SWP" name="SWPSB" value="Sangria Batches">1</button>
+    <button class="image-numbers service-well-printer" id="btn2SWP" name="SWPS" value="Syrups">2</button>
+    <button class="image-numbers service-well-printer" id="btn3SWP" name="SWPGR" value="Glass Rimmer">3</button>
+    <button class="image-numbers service-well-printer" id="btn4SWP" name="SWPSRB" value="Side Rim & Bitters">4</button>
+    <button class="image-numbers service-well-printer" id="btn5SWP" name="SWPM" value="Mixers">5</button>
+    <button class="image-numbers service-well-printer" id="btn6SWP" name="SWPT" value="Tonics">6</button>
+    <button class="image-numbers service-well-printer" id="btn7SWP" name="SWPPS" value="Printer Stand">7</button>
+    <button class="image-numbers service-well-printer" id="btn8SWP" name="SWPEG" value="Extra Garnish">8</button>
+
+    <!-- Service Well Main Setup -->
+    <img class="setup-images" id="serviceWellMain" src="./images/service-well-main.jpg" alt="Service Well Main">
+    <button class="image-numbers service-well-main" id="btn1SWM" name="SWMTRL" value="Alt. Mixers & Purées">1</button>
+    <button class="image-numbers service-well-main" id="btn2SWM" name="SWMTRR" value="Main Mixer & Tools">2</button>
+    <button class="image-numbers service-well-main" id="btn3SWM" name="SWMLSM" value="Left Side Mixers">3</button>
+    <button class="image-numbers service-well-main" id="btn4SWM" name="SWMRSM" value="Right Side Mixers">4</button>
+    <button class="image-numbers service-well-main" id="btn5SWM" name="SWMF" value="Fruits">5</button>
+    <button class="image-numbers service-well-main" id="btn6SWM" name="SWMSR" value="Speed Rack">6</button>
+    <button class="image-numbers service-well-main" id="btn7SWM" name="SWMSG" value="Server Garnish">7</button>
+
+    <!-- Service Well Speedrack -->
+    <img class="setup-images" id="serviceWellSpeedrack" src="./images/service-well-speedrack.jpg" alt="Service Well Speedrack">
+    <button class="image-numbers service-well-speedrack" id="btn1SWSR" name="SWSRDHJ" value="Dos Hombres Joven">1</button>
+    <button class="image-numbers service-well-speedrack" id="btn2SWSR" name="SWSRTS" value="Triple Sec">2</button>
+    <button class="image-numbers service-well-speedrack" id="btn3SWSR" name="SWSRTS" value="Triple Sec">3</button>
+    <button class="image-numbers service-well-speedrack" id="btn4SWSR" name="SWSRJCT" value="Jose Cuervo Tradicional">4</button>
+    <button class="image-numbers service-well-speedrack" id="btn5SWSR" name="SWSRJCT" value="Jose Cuervo Tradicional">5</button>
+    <button class="image-numbers service-well-speedrack" id="btn6SWSR" name="SWSRTITOS" value="Tito's">6</button>
+    <button class="image-numbers service-well-speedrack" id="btn7SWSR" name="SWSRWV" value="Well Vodka">7</button>
+    <button class="image-numbers service-well-speedrack" id="btn8SWSR" name="SWSRC" value="Cointreau">8</button>
+    <button class="image-numbers service-well-speedrack" id="btn9SWSR" name="SWSRTB" value="Teremana Blanco">9</button>
+    <button class="image-numbers service-well-speedrack" id="btn10SWSR" name="SWSR1800A" value="1800 Anejo">10</button>
+    <button class="image-numbers service-well-speedrack" id="btn11SWSR" name="SWSRFAB" value="Fletcha Azul Blanco">11</button>
+    <button class="image-numbers service-well-speedrack" id="btn12SWSR" name="SWSRSB" value="Santo Blanco">12</button>
+    <button class="image-numbers service-well-speedrack" id="btn13SWSR" name="SWSRTJ" value="Tanteo Jalapeno">13</button>
+    <button class="image-numbers service-well-speedrack" id="btn14SWSR" name="SWSRB" value="Bacardi">14</button>
+
+    <!-- Service Well Top Rack Left -->
+    <img class="setup-images" id="serviceWellTopRackLeft" src="./images/service-well-top-rack-left.jpg" alt="Service Well Top Rack Left">
+    <button class="image-numbers service-well-top-rack-left" id="btn1SWTRL" name="SWTRLP" value="Purées">1</button>
+    <button class="image-numbers service-well-top-rack-left" id="btn2SWTRL" name="SWTRLJ" value="Jigger">2</button>
+    <button class="image-numbers service-well-top-rack-left" id="btn3SWTRL" name="SWTRLT1" value="Alt. Mixer #1">3</button>
+    <button class="image-numbers service-well-top-rack-left" id="btn4SWTRL" name="SWTRLT2" value="Alt. Mixer #2">4</button>
+    <button class="image-numbers service-well-top-rack-left" id="btn5SWTRL" name="SWTRLT3" value="Alt. Mixer #3">5</button>
+
+    <!-- Service Well Top Rack Right -->
+    <img class="setup-images" id="serviceWellTopRackRight" src="./images/service-well-top-rack-right.jpg" alt="Service Well Top Rack Right">
+    <button class="image-numbers service-well-top-rack-right" id="btn1SWTRR" name="SWTRRMT" value="Main Mixer">1</button>
+    <button class="image-numbers service-well-top-rack-right" id="btn2SWTRR" name="SWTRRA" value="Agave">2</button>
+    <button class="image-numbers service-well-top-rack-right" id="btn3SWTRR" name="SWTRRT" value="Tools">3</button>
+    <button class="image-numbers service-well-top-rack-right" id="btn4SWTRR" name="SWTRRP" value="Purées">4</button>
+    <button class="image-numbers service-well-top-rack-right" id="btn5SWTRR" name="SWTRRR" value="Rosemary">5</button>
+    
+
+    <!-- Service Well Fruit -->
+    <img class="setup-images" id="serviceWellFruit" src="./images/service-well-fruit.jpg" alt="Service Well Muddle Fruit">
+    <button class="image-numbers service-well-fruit" id="btn1SWF" name="SWF" value="Fruits">1</button>
+
+    <!-- Service Well Server Garnish -->
+    <img class="setup-images" id="serviceWellServerGarnish" src="./images/service-well-server-garnish.jpg" alt="Service Well Server Garnish">
+    <button class="image-numbers service-well-server-garnish" id="btn1SWSG" name="SWSG" value="Limes & Lemons">1</button>
+    <button class="image-numbers service-well-server-garnish" id="btn2SWSG" name="SWSGBFC" value="Bottom Fruit Caddy">2</button>
+    <button class="image-numbers service-well-server-garnish" id="btn3SWSG" name="SWSGTFC" value="Top Fruit Caddy">3</button>
+
+    <!-- Service Well Overstock -->
+    <img class="setup-images" id="serviceWellOverstock" src="./images/service-well-overstock.jpg" alt="Service Well Overstock Station">
+    <button class="image-numbers service-well-overstock" id="btn1SWO" name="SWOHMS" value="House Margarita Station">1</button>
+    <button class="image-numbers service-well-overstock" id="btn2SWO" name="SWOTR" value="Top Row">2</button>
+    <button class="image-numbers service-well-overstock" id="btn3SWO" name="SWOTMR" value="Top Middle Row">3</button>
+    <button class="image-numbers service-well-overstock" id="btn4SWO" name="SWOBMR" value="Bottom Middle Row">4</button>
+    <button class="image-numbers service-well-overstock" id="btn5SWO" name="SWOBR" value="Bottom Row">5</button>
+    <button class="image-numbers service-well-overstock" id="btn6SWO" name="SWOTSC" value="Top Of Storage Cabinet">6</button>
+    <button class="image-numbers service-well-overstock" id="btn7SWO" name="SWOSC" value="Storage Cabinet">7</button>
+
+    <!-- Service Well Overstock Storage-->
+    <img class="setup-images" id="serviceWellOverstockStorage" src="./images/service-well-overstock-storage.jpg" alt="Service Well Storage">
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn1SWOS" name="SWOST" value="Tanteo">1</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn2SWOS" name="SWOSHS" value="Herradura Silver">2</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn3SWOS" name="SWOSDHJ" value="Dos Hombres Joven">2</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn4SWOS" name="SWOS1800A" value="1800 Anejo">2</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn5SWOS" name="SWOSFAB" value="Fletcha Azul Blanco">2</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn6SWOS" name="SWOSSB" value="Santo Blanco">2</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn7SWOS" name="SWOSJCT" value="Jose Cuervo Tradicional">6</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn8SWOS" name="SWOSTS" value="Triple Sec">6</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn9SWOS" name="SWOSTITOS" value="Titos">6</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn10SWOS" name="SWOSWV" value="Well Vodka">6</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn11SWOS" name="SWOSGI" value="Ghost Infused">6</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn12SWOS" name="SWOSTJ" value="Tanteo Jalapeno">6</button>
+    <button class="image-numbers service-well-overstock-storage overstock-pars" id="btn13SWOS" name="SWOSB" value="Bacardi">6</button>
+    
+
+
+
+
+    <!-------------------------------------------------------------------------------------------------------------------------- Well 400 -->
+    <!-- Well 400 Main -->
+    <img class="setup-images" id="well400Main" src="./images/well-400-main.jpg" alt="Well 400 Main">
+    <button class="image-numbers well-400-main" id="btn1W4M" name="W4MAMT" value="Alt. Mixers & Tools">1</button>
+    <button class="image-numbers well-400-main" id="btn2W4M" name="W4MLSM" value="Left Side Mixers">2</button>
+    <button class="image-numbers well-400-main" id="btn3W4M" name="W4MRSM" value="Right Side Mixers">3</button>
+    <button class="image-numbers well-400-main" id="btn4W4M" name="W4MP" value="Purées">4</button>
+    <button class="image-numbers well-400-main" id="btn5W4M" name="W4MMG" value="Muddled Garnish">5</button>
+    <button class="image-numbers well-400-main" id="btn6W4M" name="W4ML" value="Limes">6</button>
+    <button class="image-numbers well-400-main" id="btn7W4M" name="W4MSRTR" value="Speed Rack Top Row">7</button>
+    <button class="image-numbers well-400-main" id="btn8W4M" name="W4MSRBR" value="Speed Rack Bottom Row">8</button>
+
+    <!-- Well 400 Side Station -->
+    <img class="setup-images" id="well400SideStation" src="./images/well-400-side-station.jpg" alt="Well 400 Side Station">
+    <button class="image-numbers well-400-side-station" id="btn1W4SS" name="W4SSGR" value="Glass Rimmer">1</button>
+    <button class="image-numbers well-400-side-station" id="btn2W4SS" name="W4SSLO" value="Lemons & Oranges">2</button>
+    <button class="image-numbers well-400-side-station" id="btn3W4SS" name="W4SSDG" value="Dry Garnish">3</button>
+    <button class="image-numbers well-400-side-station" id="btn4W4SS" name="W4SSSP" value="Side Plates">4</button>
+    <button class="image-numbers well-400-side-station" id="btn5W4SS" name="W4SSS" value="Silverware">5</button>
+
+    <!-------------------------------------------------------------------------------------------------------------------------- Well 500 -->
+    <!-- Well 500 Main -->
+    <img class="setup-images" id="well500Main" src="./images/well-500-main.jpg" alt="Well 500 Main">
+    <button class="image-numbers well-500-main" id="btn1W5M" name="W5MAMT" value="Alt. Mixers & Tools">1</button>
+    <button class="image-numbers well-500-main" id="btn2W5M" name="W5MLSM" value="Left Side Mixers">2</button>
+    <button class="image-numbers well-500-main" id="btn3W5M" name="W5MRSM" value="Right Side Mixers">3</button>
+    <button class="image-numbers well-500-main" id="btn4W5M" name="W5MSRTR" value="Speed Rack Top Row">4</button>
+    <button class="image-numbers well-500-main" id="btn5W5M" name="W5MSRBR" value="Speed Rack Bottom Row">5</button>
+    <button class="image-numbers well-500-main" id="btn6W5M" name="W5MMMT" value="Main Mixer & Tools">6</button>
+
+    <!-- Well 500 Left Side -->
+    <img class="setup-images" id="well500LeftSide" src="./images/well-500-left-side.jpg" alt="Well 500 Left Station">
+    <button class="image-numbers well-500-left-side" id="btn1W5LS" name="W5LSTM" value="Tonics & Mixers">1</button>
+    <button class="image-numbers well-500-left-side" id="btn2W5LS" name="W5LSP" value="Purées">2</button>
+
+    <!-- Well 500 Right Side -->
+    <img class="setup-images" id="well500RightSide" src="./images/well-500-right-side.jpg" alt="Well 500 Right Station">
+    <button class="image-numbers well-500-right-side" id="btn1W5RS" name="W5RSGR" value="Glass Rimmer">1</button>
+    <button class="image-numbers well-500-right-side" id="btn2W5RS" name="W5RSL" value="Limes">2</button>
+    <button class="image-numbers well-500-right-side" id="btn3W5RS" name="W5RSDG" value="Dry Garnish">3</button>
+    <button class="image-numbers well-500-right-side" id="btn4W5RS" name="W5RSSR" value="Side Rim">4</button>
+    <button class="image-numbers well-500-right-side" id="btn5W5RS" name="W5RSGM" value="Grand Marnier">5</button>
+    <button class="image-numbers well-500-right-side" id="btn6W5RS" name="W5RSEG" value="Extra Garnish">6</button>
+    
+    
+    <!-- Well 500 Garnish -->
+    <img class="setup-images" id="well500Garnish" src="./images/well-500-garnish.jpg" alt="Well 500 Garnish">
+    <button class="image-numbers well-500-garnish" id="btn1W5G" name="W5GGTR" value="Garnish Top Row">1</button>
+    <button class="image-numbers well-500-garnish" id="btn2W5G" name="W5GGBR" value="Garnish Bottom Row">2</button>
+    <button class="image-numbers well-500-garnish" id="btn3W5G" name="W5GPS" value="Plates & Silverware">3</button>
+
+
+    <!-- Well 500 Overstock -->
+    <img class="setup-images" id="well500Overstock" src="./images/well-500-overstock.jpg" alt="Well 500 Overstock">
+    <button class="image-numbers well-500-overstock overstock-pars" id="btn1W5O" name="W5OJCT" value="Jose Cuervo Tradicional">12</button>
+    <button class="image-numbers well-500-overstock overstock-pars" id="btn2W5O" name="W5OTS" value="Triple Sec">12</button>
+    <button class="image-numbers well-500-overstock overstock-pars" id="btn3W5O" name="W5OTJ" value="Tanteo Jalapeno">6</button>
+
+
+    <!-------------------------------------------------------------------------------------------------------------------------- Well 700 -->
+    <!-- Well 700 Main -->
+    <img class="setup-images" id="well700Main" src="./images/well-700-main.jpg" alt="Well 700 Main Station">
+    <button class="image-numbers well-700-main" id="btn1W7M" name="W7MGR" value="Glass Rimmer">1</button>
+    <button class="image-numbers well-700-main" id="btn2W7M" name="W7ML" value="Limes">2</button>
+    <button class="image-numbers well-700-main" id="btn3W7M" name="W7MDG" value="Dry Garnish">3</button>
+    <button class="image-numbers well-700-main" id="btn4W7M" name="W7MSRGM" value="Side Rim & Grand Marnier">4</button>
+    <button class="image-numbers well-700-main" id="btn5W7M" name="W7MAMT" value="Alt. Mixers & Tools">5</button>
+    <button class="image-numbers well-700-main" id="btn6W7M" name="W7MMG" value="Muddled Garnish">6</button>
+    <button class="image-numbers well-700-main" id="btn7W7M" name="W7MMM" value="Main Mixer">7</button>
+    <button class="image-numbers well-700-main" id="btn8W7M" name="W7MRSM" value="Right Side Mixers">8</button>
+    
+
+    <!-- Well 700 Left Station -->
+    <img class="setup-images" id="well700LeftStation" src="./images/well-700-left-station.jpg" alt="Well 700 Left Station">
+    <button class="image-numbers well-700-left-station" id="btn1W7LS" name="W7LSTM" value="Tonics & Mixers">1</button>
+    <button class="image-numbers well-700-left-station" id="btn2W7LS" name="W7LSP" value="Purées">2</button>
+    <button class="image-numbers well-700-left-station" id="btn3W7LS" name="W7LSLSM" value="Left Side Mixers">3</button>
+
+
+    <!-- Well 700 Speed Rack Right -->
+    <img class="setup-images" id="well700SpeedRackRight" src="./images/well-700-speedrack-right.jpg" alt="Well 700 Right Speedrack">
+
+
+    <!-- Well 700 Speed Rack Left -->
+    <img class="setup-images" id="well700SpeedRackLeft" src="./images/well-700-speedrack-left.jpg" alt="Well 700 Left Speedrack">
+
+
+    <!-- Well 700 Overstock -->
+    <img class="setup-images" id="well700Overstock" src="./images/well-700-overstock.jpg" alt="Well 700 Overstock">
+    <button class="image-numbers well-700-overstock overstock-pars" id="btn1W7O" name="W5OGI" value="Ghost Infused">6</button>
+    <button class="image-numbers well-700-overstock overstock-pars" id="btn2W7O" name="W5OT" value="Teremana">6</button>
+    <button class="image-numbers well-700-overstock overstock-pars" id="btn3W7O" name="W5OWV" value="Well Vodka">7</button>
+    <button class="image-numbers well-700-overstock overstock-pars" id="btn4W7O" name="W5OHS" value="Herradura Silver">5</button>
+    <button class="image-numbers well-700-overstock overstock-pars" id="btn5W7O" name="W5OEJ" value="El Jimador">6</button>
+
+
+    <!-- Wall Overstock Section 1 -->
+    <img class="setup-images" id="wallOverstockSection1" src="./images/wall-overstock-section-1.jpg" alt="Liquor Wall Overstock Section 1">
+    <button class="image-numbers wall-overstock-section-1 overstock-pars" id="btn1WOS1" name="WOS1CR" value="Casamigos Reposado">5</button>
+    <button class="image-numbers wall-overstock-section-1 overstock-pars" id="btn2WOS1" name="WOS1CB" value="Casamigos Blanco">5</button>
+    <button class="image-numbers wall-overstock-section-1 overstock-pars" id="btn3WOS1" name="WOS11800A" value="1800 Anejo">6</button>
+    <button class="image-numbers wall-overstock-section-1 overstock-pars" id="btn4WOS1" name="WOS1GM" value="Grand Marnier">4</button>
+    <button class="image-numbers wall-overstock-section-1 overstock-pars" id="btn5WOS1" name="WOS1PS" value="Patron Silver">5</button>
+    <button class="image-numbers wall-overstock-section-1 overstock-pars" id="btn6WOS1" name="WOS1DJB" value="Don Julio Blanco">5</button>
+    <button class="image-numbers wall-overstock-section-1 overstock-pars" id="btn7WOS1" name="WOS1DHJ" value="Dos Hombres Joven">5</button>
+    <button class="image-numbers wall-overstock-section-1 overstock-pars" id="btn8WOS1" name="WOS1FAB" value="Fletcha Azul Blanco">5</button>
+    <button class="image-numbers wall-overstock-section-1 overstock-pars" id="btn9WOS1" name="WOS1SB" value="Santo Blanco">6</button>
+
+
+    <!-- Wine Overstock -->
+    <img class="setup-images" id="wineOverstock" src="./images/wine-overstock.jpg" alt="Wine Overstock">
+
+
+    <!-------------------------------------------------------------------------------------------------------------------------- Server Pickup -->
+    <!-- Server Pickup -->
+    <img class="setup-images" id="serverPickup" src="./images/server-pickup.jpg" alt="Server Pickup">
+    <button class="image-numbers server-pickup" id="btn1SP" name="SPLL" value="Lemons & Limes">1</button>
+    <button class="image-numbers server-pickup" id="btn2SP" name="SPSGL" value="Server Garnish">2</button>
+    <button class="image-numbers server-pickup" id="btn3SP" name="SPSGR" value="Server Garnish">3</button>
+
+
+    <!-------------------------------------------------------------------------------------------------------------------------- Closing Duties -->
+    <!-- Closing Duties -->
+    <!-- Bus Tubs -->
+    <img class="setup-images" id="busTubsCD" src="./images/closing-duties-bus-tubs.jpg" alt="Bus Tubs for Wells">
+    <img class="setup-images" id="serviceWellPrinterCD" src="./images/closing-duties-service-well-printer.jpg" alt="Service Well Printer Closed">
+    <img class="setup-images" id="serviceWellMainCD" src="./images/closing-duties-service-well-main.jpg" alt="Service Well Main Closed">
+    <img class="setup-images" id="serviceWellOverstockCD" src="./images/closing-duties-service-well-overstock.jpg" alt="Service Well Overstock Closed">
+    <img class="setup-images" id="well400MainCD" src="./images/closing-duties-well-400-main.jpg" alt="Well 400 Main Closed">
+
+
+  </div>
+
+  
+  <!-- <button class="next round">&#8250;</button> -->
+  
+
+
+
+
+  <!-------------------------------------------------------------------------------------------------------------------------- Batch Recipe Div -->
+  <!-- Batch Recipe Div -->
+  <div id="batchRecipesDiv"></div>
+
+
+
+
+
+
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalListContainer">
+        <ul id="modalList"></ul>
+      </div>
+      
+    </div>
+  
+  </div>
+    
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

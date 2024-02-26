@@ -5,16 +5,36 @@
     font-family: Arial, sans-serif;
   }
 
+  /*
 ::-webkit-scrollbar {
     display: none;
   }
-  
+  */
+
+  /* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(129, 129, 129);
+  border-radius: 10px;
+}
+
 body {
-    font-size: 14px;
+    font-size: 2vh;
     background-image: url("./images/newWoodBackground2.jpg");
     background-size: 105% 120%;
     display: block;
     height: 97vh;
+    text-align: center;
   }
 
   ::backdrop {
@@ -22,544 +42,1812 @@ body {
     background-size: 105% 120%;
     display: block;
   }  
+  
 
-@media screen and (orientation:portrait) {
+@media screen and (orientation:landscape) and (max-width: 4000px) {
+    #rotateScreenIcon,
+    h1,
+    #dropDownMenu,
+    #batchRecipesDiv,
+    .setup-images,
+    .portrait-buttons,
+    .image-numbers,
+    #batchRecipePhotos
+    {
+    display: none;
+    }
 
     *{
-        z-index: 2;
         color: rgb(241, 237, 231);
     }
     
-
-    .form,
-    #otherBtnDiv,
-    #drinkPhoto,
-    #mainButtonContainer,
-    #clear{
-    display: none;
+    body{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    #logoDiv{
-        /*
-        border-bottom: 1vh solid rgb(41, 41, 41);
-        background-color: rgba(0, 0, 0, 0.5);
-        */
-        max-width: 100%;
-        height: 16vh;
-        padding: 3% 0% 0% 0%;
-        
+    /* Header */
+    .topnav {
+      background-color: rgba(0, 0, 0, .6);
+      border-bottom: 10px solid black;
+      color: white;
+      width: 100%;
+      height: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #icon{
+      position: absolute;
+      top: 2%;
+      left: 2%;
+      font-size: 3em;
+    }
+
+    #dropDownMenu{
+      background-color: rgba(0, 0, 0, .8);
+      border-right: 10px solid black;
+      border-bottom: 10px solid black;
+      width: 30%;
+      height: 85.5%;
+      position: absolute;
+      left: 0;
+      top: 10.5%;
+      z-index: 5;
+      padding: 0% 0% 1% 0%;
+      overflow: scroll;
+      overflow-x: hidden;
+      box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
+    }
+
+    .menu-items{
+      padding: 3% 0% 3% 8%;
+      height: 8%;
+      font-size: 1.75em;
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-items:hover{
+      background-color: #2a2a2a;
+    }
+
+    .sub-menu-items{
+      font-size: 1.25em;
+      padding-left: 15%;
+      background-color: #515151;
+    }
+
+    .titles{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 300%;
     }
 
     img[src="./images/logo.png"]{
-        display: block;
-        margin: auto;
-        height: auto;
-        max-width: 90%;
+      position: absolute;
+      top: 3%;
+      right: 2%;
+      max-height: 5%;
     }
 
-
-    #portraitButtonDiv{
-        border: 4px outset rgb(122, 113, 113);
-        margin: 5%;
-        padding: 3%;
-        height: 30%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.5);
+    /* Next / Previous Buttons */
+    
+    /* .round{
+      background-color: rgba(0, 0, 0, .8);
+      position: absolute;
+      font-size: 300%;
+      text-decoration: none;
+      box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
+      height: 15%;
+      width: 2%;
+      padding: 0;
+      border-radius: 10%;
+      z-index: 4;
     }
 
-    .portraitButtons{
-        border: 4px outset rgb(122, 113, 113);
-        width: 35vw;
-        height: 12.5vh;
-        font-size: 2vh;
-        background-color: black;
-        color: white;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        margin: 2vw;
-        justify-content: center;
-        padding: 6%;
-    }  
+    .previous{
+      top: 50%;
+      left: 10%;
+    }
 
-    .portraitButtonText{
-        width: auto;
-        height: auto;
-        display: block;
-        justify-content: center;
+    .next{
+      top: 50%;
+      right: 10%;
+    } */
+    
+    /* Main */
+    .photo-containers{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: fit-content;
+      width: 100vw;
+      padding: 1.5%;
+      position: relative;
+      top: -3%;
+      overflow: hidden;
+    }
+
+    .setup-images{
+      box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
+      border-radius: 1.5%;
+      max-width: 70%;
     }
     
-    #portraitInventoryButton{
-        padding-top: 0%;
+
+    #serviceWellFruit
+    {
+      max-width: 45%;
     }
 
-    button, img, p, .grid-item{
-        display: none;
+    #serviceWellMain,
+    #well500Overstock,
+    #serviceWellTopRackRight,
+    #busTubsCD,
+    #serviceWellMainCD,
+    #well500Main
+    {
+      max-width: 45%;
     }
 
-    #portraitContainer{
-        height: 30%;
-        border: 4px outset rgb(122, 113, 113);
-        margin: 0% 10%;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        align-items: center;
-        justify-content: center;
-        padding: 5%;
+    #well700Overstock,
+    #well400MainCD,
+    #serviceWellPrinterCD
+    {
+      max-width: 50%;
     }
 
-    h1{
-        display: grid;
-        justify-content: center;
-        height: auto;
-        font-size: 1.5em;
-        font-family: monospace;
-        padding: 2%;
-        font-weight: 400;
-        text-shadow: 2px 2px rgb(13, 13, 13);
+    #well500LeftSide,
+    #serverPickup,
+    #serviceWellSpeedrack,
+    #serviceWellOverstockStorage,
+    #serviceWellOverstockCD,
+    #well400Main
+    {
+      max-width: 58%;
     }
 
-    #rotateScreenIcon{
-        display: block;
-        margin: auto;
-        height: auto;
+    #serviceWellTopRackLeft,
+    #serviceWellServerGarnish,
+    #well500RightSide
+    {
+      max-width: 60%;
     }
-}
+
+    #well500Garnish
+    {
+      max-width: 85%;
+    }
+
+    #wallOverstockSection1,
+    #wineOverstock
+    {
+      max-width: 95%;
+    }
+
+    #well700LeftStation
+    {
+      max-width: 100%;
+    }
 
 
-@media screen and (max-width: 3088px) and (orientation:landscape) {
+    
 
-/* Initialization */  
-.frozen-buttons, 
-.specialty-buttons, 
-.mocktail-buttons, 
-.happyhour-buttons,
-.monthly-specials-buttons,
-.other-buttons,
-.brunch-buttons,
-.batch-buttons,
-.sangria-buttons, 
-.form-container, 
-.results-container,
-.specials-buttons, 
-#rotateScreenIcon,
-#portraitContainer,
-#portraitButtonDiv,
-#photoDiv,
-#drinkPhoto,
-#drinkTitle,
-#list,
-#recipeDiv,
-#recipeInfoDiv,
-.recipe-container2,
-.recipe-ingredients-container2,
-#logoDiv,
-#clear
-{
-    display: none;
-}
+    .image-numbers{
+      font-size: 1em;
+      box-shadow: 1px 1px 30px rgb(0, 0, 0, 1), 1px 1px 30px rgb(0, 0, 0, 1), 1px 1px 30px rgb(0, 0, 0, 1);
+      border: .2em solid rgb(38, 255, 0);
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+      border-radius: 50%;
+      width: 3%;
+      height: 6.25%;
+      position: absolute;
+      text-align: center;
+    }
 
-#mainContainter{
-    height: 70%;
-}
+    .image-numbers:hover{
+      background-color: rgb(0, 0, 0, .7);
+      color: antiquewhite;
+      box-shadow: 1px 1px 30px rgb(255, 255, 255) , 1px 1px 30px rgb(255, 255, 255), 1px 1px 30px rgb(255, 255, 255);
+      transition: transform .2s;
+      transform: scale(1.75);
+    }
+
+    .overstock-pars{
+      border-radius: 15%;
+      border-color: antiquewhite;
+    }
 
 
-/* Navigation */
-.nav-containers{
-    margin: 1% auto;
-    width: 95%;
-    height: 14vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    /* Service Well Printer */
+    #btn1SWP{
+      top: 40%;
+      left: 18%;
+    }
 
-.nav-buttons{
-    border: 4px outset rgb(122, 113, 113);
-    color: antiquewhite;
-    background-color: black;
-    margin: 0 auto;
-    height: 12vh;
-    width: 16%;
-    font-size: 3vh;
-    text-align: center;
-    padding: 0 2%;
-}
+    #btn2SWP{
+      top: 25%;
+      left: 32%;
+    }
 
-.btm-nav-buttons{
-    margin-bottom: 1%;
-    width: 24%;
-}
+    #btn3SWP{
+      top: 70%;
+      left: 47.25%;
+    }
 
-  
-/* Main Button Container */
-#mainButtonContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 4px inset rgb(122, 113, 113);
-    background-color: rgba(0, 0, 0, 0.7);
-    margin: auto;
-    width: 90%;
-    height: 55vh;
-    padding: 2%;
-}
+    #btn4SWP{
+      top: 73%;
+      left: 22%;
+    }
 
-.all-buttons{
-    margin: 1.5%;
-    padding: 0% 1vw;
-    width: 12vw;
-    height: 16vh;
-    font-size: 2.75vh;
-    border-radius: 12.5%;
-    border: 4px inset rgb(14, 14, 14);
-    box-shadow: 1px 1px 5px rgb(88, 88, 88), 0 0 5px rgb(88, 88, 88), 0 0 5px rgb(88, 88, 88);
-    color: white;
-    background-color: rgb(39, 39, 39);
-    cursor: pointer;
+    #btn5SWP{
+      top: 45%;
+      left: 42%;
+    }
+
+    #btn6SWP{
+      top: 33%;
+      left: 54%;
+    }
+
+    #btn7SWP{
+      top: 42%;
+      left: 70%;
+    }
+
+    #btn8SWP{
+      top: 17%;
+      left: 67%;
+    }
+
+
+    /* Service Well Main */
+    #btn1SWM{
+      top: 36%;
+      left: 37%;
+    }
+
+    #btn2SWM{
+      top: 43%;
+      left: 65%;
+    }
+
+    #btn3SWM{
+      top: 63%;
+      left: 48%;
+    }
+
+    #btn4SWM{
+      top: 66%;
+      left: 56%;
+    }
+
+    #btn5SWM{
+      top: 70%;
+      left: 34%;
+    }
+
+    #btn6SWM{
+      top: 82%;
+      left: 52%;
+    }
+
+    #btn7SWM{
+      top: 50%;
+      left: 55%;
+    }
+
+    /* Service Well Speedrack */
+    #btn1SWSR{
+      top: 28%;
+      left: 26%;
+    }
+
+    #btn2SWSR{
+      top: 28%;
+      left: 34%;
+    }
+
+    #btn3SWSR{
+      top: 28%;
+      left: 41.5%;
+    }
+
+    #btn4SWSR{
+      top: 28%;
+      left: 49%;
+    }
+
+    #btn5SWSR{
+      top: 28%;
+      left: 57%;
+    }
+
+    #btn6SWSR{
+      top: 28%;
+      left: 64%;
+    }
+
+    #btn7SWSR{
+      top: 28%;
+      left: 71%;
+    }
+
+    #btn8SWSR{
+      top: 83%;
+      left: 26%;
+    }
+
+    #btn9SWSR{
+      top: 83%;
+      left: 34%;
+    }
+
+    #btn10SWSR{
+      top: 83%;
+      left: 41.5%;
+    }
+
+    #btn11SWSR{
+      top: 83%;
+      left: 49%;
+    }
+
+    #btn12SWSR{
+      top: 83%;
+      left: 57%;
+    }
+
+    #btn13SWSR{
+      top: 83%;
+      left: 64%;
+    }
+
+    #btn14SWSR{
+      top: 83%;
+      left: 71%;
+    }
+
+    /* Service Well Top Rack Left */
+    #btn1SWTRL{
+      top: 20%;
+      left: 34%;
+    }
+
+    #btn2SWTRL{
+      top: 80%;
+      left: 30%;
+    }
+
+    #btn3SWTRL{
+      top: 60%;
+      left: 42.5%;
+    }
+
+    #btn4SWTRL{
+      top: 56%;
+      left: 54%;
+    }
+
+    #btn5SWTRL{
+      top: 52%;
+      left: 65%;
+    }
+
+
+    /* Service Well Top Rack Right */
+    #btn1SWTRR{
+      top: 75%;
+      left: 49.5%;
+    }
+
+    #btn2SWTRR{
+      top: 55%;
+      left: 60%;
+    }
+
+    #btn3SWTRR{
+      top: 43%;
+      left: 54%;
+    }
+
+    #btn4SWTRR{
+      top: 37.5%;
+      left: 48%;
+    }
+
+    #btn5SWTRR{
+      top: 32%;
+      left: 42%;
+    }
+
+    /* Service Well Fruit */
+    #btn1SWF{
+      top: 45%;
+      left: 49%;
+    }
+
+    /* Service Well Server Garnish */
+    #btn1SWSG{
+      top: 73%;
+      left: 49%;
+    }
+    
+    #btn2SWSG{
+      top: 41%;
+      left: 47.5%;
+    }
+
+    #btn3SWSG{
+      top: 21%;
+      left: 47.5%;
+    }
+
+    /* Service Well Overstock */
+    #btn1SWO{
+      top: 68%;
+      left: 24%;
+    }
+
+    #btn2SWO{
+      top: 34.5%;
+      left: 33.5%;
+    }
+
+    #btn3SWO{
+      top: 48%;
+      left: 33%;
+    }
+
+    #btn4SWO{
+      top: 62%;
+      left: 32.5%;
+    }
+
+    #btn5SWO{
+      top: 75%;
+      left: 32%;
+    }
+
+    #btn6SWO{
+      top: 55%;
+      left: 62%;
+    }
+
+    #btn7SWO{
+      top: 85%;
+      left: 62%;
+    }
+
+    /* Service Well Overstock Storage*/
+  #btn1SWOS{
+    top: 20%;
+    left: 30%;
   }
 
-/* Button Divs */
-#margBtnDiv,
-#specialtyBtnDiv,
-#otherBtnDiv,
-.result-list
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    overflow: scroll;
+  #btn2SWOS{
+    top: 20.5%;
+    left: 38%;
+  }
+
+  #btn3SWOS{
+    top: 21%;
+    left: 45.25%;
+  }
+
+  #btn4SWOS{
+    top: 21.5%;
+    left: 51%;
+  }
+
+  #btn5SWOS{
+    top: 22%;
+    left: 57%;
+  }
+
+  #btn6SWOS{
+    top: 22.75%;
+    left: 64%;
+  }
+
+  #btn7SWOS{
+    top: 85%;
+    left: 29%;
+  }
+
+  #btn8SWOS{
+    top: 85%;
+    left: 35%;
+  }
+
+  #btn9SWOS{
+    top: 85%;
+    left: 41%;
+  }
+
+  #btn10SWOS{
+    top: 85%;
+    left: 47%;
+  }
+
+  #btn11SWOS{
+    top: 85%;
+    left: 53%;
+  }
+
+  #btn12SWOS{
+    top: 85%;
+    left: 59%;
+  }
+
+  #btn13SWOS{
+    top: 85%;
+    left: 65%;
+  }
+
+    /* Well 400 Main*/
+    #btn1W4M{
+      top: 28%;
+      left: 28%;
+    }
+
+    #btn2W4M{
+      top: 50%;
+      left: 40%;
+    }
+
+    #btn3W4M{
+      top: 49.5%;
+      left: 52.5%;
+    }
+
+    #btn4W4M{
+      top: 48%;
+      left: 60.5%;
+    }
+
+    #btn5W4M{
+      top: 43%;
+      left: 66.5%;
+    }
+
+    #btn6W4M{
+      top: 55%;
+      left: 72%;
+    }
+
+    #btn7W4M{
+      top: 63%;
+      left: 48%;
+    }
+
+    #btn8W4M{
+      top: 75%;
+      left: 48%;
+    }
+
+    /* Well 400 Side Station */
+    #btn1W4SS{
+      top: 55%;
+      left: 21.5%;
+    }
+
+    #btn2W4SS{
+      top: 48%;
+      left: 32.75%;
+    }
+
+    #btn3W4SS{
+      top: 48%;
+      left: 44%;
+    }
+
+    #btn4W4SS{
+      top: 48%;
+      left: 55%;
+    }
+
+    #btn5W4SS{
+      top: 48%;
+      left: 70%;
+    }
+
+    /* Well 500 Main */
+    #btn1W5M{
+      top: 30%;
+      left: 30%;
+    }
+
+    #btn2W5M{
+      top: 48%;
+      left: 43%;
+    }
+
+    #btn3W5M{
+      top: 48%;
+      left: 59%;
+    }
+
+    #btn4W5M{
+      top: 69%;
+      left: 50%;
+    }
+    
+    #btn5W5M{
+      top: 82%;
+      left: 50%;
+    }
+
+    #btn6W5M{
+      top: 26%;
+      left: 50%;
+    }
+
+    /* Well 500 Left Side */
+    #btn1W5LS{
+      top: 50%;
+      left: 44%;
+    }
+
+    #btn2W5LS{
+      top: 66%;
+      left: 62%;
+    }
+    
+    /* Well 500 Right Side */
+    #btn1W5RS{
+      top: 67%;
+      left: 41%;
+    }
+
+    #btn2W5RS{
+      top: 28%;
+      left: 31.5%;
+    }
+
+    #btn3W5RS{
+      top: 23%;
+      left: 59.5%;
+    }
+
+    #btn4W5RS{
+      top: 60%;
+      left: 66%;
+    }
+
+    #btn5W5RS{
+      top: 45%;
+      left: 41%;
+    }
+
+    #btn6W5RS{
+      top: 40%;
+      left: 60%;
+    }
+
+    /* Well 500 Garnish */
+    #btn1W5G{
+      top: 30%;
+      left: 42%;
+    }
+
+    #btn2W5G{
+      top: 50%;
+      left: 42%;
+    }
+
+    #btn3W5G{
+      top: 42%;
+      left: 78%;
+    }
+
+    /* Well 500 Overstock */
+  #btn1W5O{
+    top: 78%;
+    left: 40%;
+  }
+
+  #btn2W5O{
+    top: 78%;
+    left: 49%;
+  }
+
+  #btn3W5O{
+    top: 78%;
+    left: 58%;
+  }
+
+    /* Well 700 Main */
+    #btn1W7M{
+      top: 66%;
+      left: 38%;
+    }
+
+    #btn2W7M{
+      top: 51%;
+      left: 38%;
+    }
+
+    #btn3W7M{
+      top: 38%;
+      left: 38%;
+    }
+
+    #btn4W7M{
+      top: 60%;
+      left: 53.5%;
+    }
+
+    #btn5W7M{
+      top: 22%;
+      left: 64%;
+    }
+
+    #btn6W7M{
+      top: 53%;
+      left: 64%;
+    }
+
+    #btn7W7M{
+      top: 26%;
+      left: 43%;
+    }
+
+    #btn8W7M{
+      top: 56%;
+      left: 22%;
+    }
+
+    /* Well 700 Left Station */
+    #btn1W7LS{
+      top: 55%;
+      left: 19%;
+    }
+
+    #btn2W7LS{
+      top: 55%;
+      left: 48%;
+    }
+
+    #btn3W7LS{
+      top: 55%;
+      left: 79%;
+    }
+    
+    /* Well 700 Overstock */
+  #btn1W7O{
+    top: 84%;
+    left: 37%;
+  }
+
+  #btn2W7O{
+    top: 84%;
+    left: 43%;
+  }
+
+  #btn3W7O{
+    top: 84%;
+    left: 48.75%;
+  }
+
+  #btn4W7O{
+    top: 84%;
+    left: 54.25%;
+  }
+
+  #btn5W7O{
+    top: 84%;
+    left: 60%;
+  }
+
+  /* Server Pickup */
+  #btn1SP{
+    top: 25%;
+    left: 60%;
+  }
+
+  #btn2SP{
+    top: 58%;
+    left: 42%;
+  }
+
+  #btn3SP{
+    top: 50%;
+    left: 48%;
+  }
+
+  /* Overstock */
+  #btn1WOS1{
+    top: 87%;
+    left: 10%;
+  }
+
+  #btn2WOS1{
+    top: 87%;
+    left: 19.25%;
+  }
+
+  #btn3WOS1{
+    top: 87%;
+    left: 28%;
+  }
+
+  #btn4WOS1{
+    top: 87%;
+    left: 39%;
+  }
+
+  #btn5WOS1{
+    top: 87%;
+    left: 49%;
+  }
+
+  #btn6WOS1{
+    top: 87%;
+    left: 60%;
+  }
+
+  #btn7WOS1{
+    top: 87%;
+    left: 69%;
+  }
+
+  #btn8WOS1{
+    top: 87%;
+    left: 78%;
+  }
+
+  #btn9WOS1{
+    top: 87%;
+    left: 87%;
+  }
+
+
+
+    #batchRecipePhotos{
+      border: 2px solid red;
+      width: 50%;
+      height: 60%
+    }
+
+
+    #batchRecipesDiv{
+      border: 4px solid rgb(23, 23, 23);
+      background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+      box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
+      width: 50%;
+      height: fit-content;
+      padding: 6% 0;
+      font-size: 1.5em;
+      overflow: scroll;
+      overflow-x: hidden;
+      list-style: none;
+    }
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
 }
 
-#otherBtnDiv{
-    height: 40vh;
+/* Modal Content */
+.modal-content {
+  background-color: rgb(0, 0, 0, .9);
+  margin: auto;
+  padding: 1%;
+  border: 5px solid #888;
+  border-radius: 4%;
+  width: 40%;
+  height: 50%;
 }
 
-#specialtyBtnDiv{
-    width: 80%;
+.modal-content h2{
+  position: relative;
+  margin: 0 auto 2% auto;
+  color: antiquewhite;
+  width: fit-content;
+  font-size: 2em;
+  text-decoration: underline;
 }
 
-.mocktail-buttons{
-    width: 14vw;
-    height: 20vh;
+.modal-content span{
+  margin-right: 2%;
 }
 
-.form-container{
-    margin: auto;
-    padding: auto;
-    width: 90vw;
-    display: block;
-    float: left;
-    justify-content: center;
-    align-items: center;
+.modal-content ul{
+  width: 100%;
 }
 
-
-
-/* Search */
-#search{
-    margin: auto 1.5vw auto 0;
-    width: 65vw;
-    height: 5vh;
-    padding: 1%;
-    font-size: 3vh;
+.modal-content li{
+  margin: 0 auto;
+  padding: 2% 0%;
+  font-size: 1.5em;
+  width: 80%;
+  list-style-type: none;
 }
 
-#clear{
-    margin: auto;
-    height: 8vh;
-    background-color: rgb(72, 72, 72);
-    font-size: 4vh;
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-#list{
-    width: 100%;
-    height: 85%;
-    overflow: scroll;
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.result-item{
-    border-radius: 0%;
-    padding: 1%;
-    width: 80%;
-    height: 8vh;
-    margin: 1% auto;
-    overflow: hidden;
+#modalListContainer{
+  height: 80%;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 4% 0 0 0;
 }
 
-/* Drink Photo & Recipe */
-#drinkTitle{
-    text-shadow: 2px 2px 10px rgb(182, 145, 121, .5), 0 0 10px rgb(182, 145, 121, .5), 0 0 10px rgb(182, 145, 121, .5);
+} 
+
+
+/*---------------------------------------------------------- S22 Ultra Landscape Mode ----------------------------------------------------------------------------*/
+
+
+@media screen and (orientation:landscape) and (max-width: 850px) {
+  #rotateScreenIcon,
+  h1,
+  #dropDownMenu,
+  #batchRecipesDiv,
+  .setup-images,
+  .portrait-buttons,
+  .image-numbers
+  {
+  display: none;
+  }
+
+  #icon{
+    top: 1.5%;
+    left: 2%;
+    font-size: 4em;
+  }
+
+  .close {
+    font-size: 15px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .setup-images{
+    box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
+    border-radius: 1.5%;
+    max-width: 55%;
+  }
+
+  #busTubsCD{
+    max-width: 30%;
+  }
+
+  #serviceWellFruit{
+    max-width: 35%;
+  }
+
+  #serviceWellMain,
+  #well500Overstock,
+  #serviceWellTopRackRight,
+  #serviceWellSpeedrack,
+  #serviceWellMainCD,
+  #well400MainCD,
+  #well500Main
+  {
+    max-width: 35%;
+  }
+
+  #well700Overstock,
+  #serviceWellOverstockStorage
+  {
+    max-width: 40%;
+  }
+
+  #well500LeftSide,
+  #serverPickup,
+  #serviceWellPrinterCD,
+  #serviceWellOverstockCD,  
+  #well400Main{
+    max-width: 45%;
+  }
+
+  #serviceWellTopRackLeft,
+  #serviceWellOverstock,
+  #well700Main,
+  #serviceWellServerGarnish,
+  #well500RightSide
+  {
+    max-width: 48%;
+  }
+
+  #well500Garnish
+  {
+    max-width: 68%;
+  }
+
+  #well700LeftStation,
+  #wallOverstockSection1
+  {
+    max-width: 85%;
+  }
+
+
+
+
+  .image-numbers{
+    font-size: 1.5em;
+    box-shadow: 1px 1px 30px rgb(0, 0, 0, 1), 1px 1px 30px rgb(0, 0, 0, 1), 1px 1px 30px rgb(0, 0, 0, 1);
+    border: .2em solid rgb(38, 255, 0);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 3%;
+    height: 7.75%;
+    position: absolute;
+    text-align: center;
+  }
+
+  .image-numbers:hover{
+    background-color: rgb(0, 0, 0, .7);
     color: antiquewhite;
-    font-size: 4vh;
-    text-decoration: underline;
-    width: 100%;
-    margin-bottom: 2vh;
+    box-shadow: 1px 1px 30px rgb(255, 255, 255) , 1px 1px 30px rgb(255, 255, 255), 1px 1px 30px rgb(255, 255, 255);
+    transition: transform .2s;
+    transform: scale(1.75);
+  }
+
+  .overstock-pars{
+    border-radius: 15%;
+    border-color: antiquewhite;
+  }
+
+
+
+  /* Service Well Printer */
+  #btn1SWP{
+    top: 40%;
+    left: 28%;
+  }
+
+  #btn2SWP{
+    top: 25%;
+    left: 41%;
+  }
+
+  #btn3SWP{
+    top: 66%;
+    left: 47.75%;
+  }
+
+  #btn4SWP{
+    top: 72%;
+    left: 27.5%;
+  }
+
+  #btn5SWP{
+    top: 45%;
+    left: 45%;
+  }
+
+  #btn6SWP{
+    top: 33%;
+    left: 54%;
+  }
+
+  #btn7SWP{
+    top: 55%;
+    left: 67%;
+  }
+
+  #btn8SWP{
+    top: 17%;
+    left: 64%;
+  }
+
+
+  /* Service Well Main */
+  #btn1SWM{
+    top: 35%;
+    left: 40%;
+  }
+
+  #btn2SWM{
+    top: 41%;
+    left: 60%;
+  }
+
+  #btn3SWM{
+    top: 60%;
+    left: 49%;
+  }
+
+  #btn4SWM{
+    top: 64%;
+    left: 56%;
+  }
+
+  #btn5SWM{
+    top: 70%;
+    left: 38%;
+  }
+
+  #btn6SWM{
+    top: 82%;
+    left: 50%;
+  }
+
+  #btn7SWM{
+    top: 50%;
+    left: 55%;
+  }
+
+  /* Service Well Speedrack */
+  #btn1SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 34.5%;
+  }
+
+  #btn2SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 39.5%;
+  }
+
+  #btn3SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 44.25%;
+  }
+
+  #btn4SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 49%;
+  }
+
+  #btn5SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 53.5%;
+  }
+
+  #btn6SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 58%;
+  }
+
+  #btn7SWSR{
+    width: 2.5%;
+    top: 28%;
+    left: 62.5%;
+  }
+
+  #btn8SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 34.5%;
+  }
+
+  #btn9SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 39.5%;
+  }
+
+  #btn10SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 44.25%;
+  }
+
+  #btn11SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 49%;
+  }
+
+  #btn12SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 53.5%;
+  }
+
+  #btn13SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 58%;
+  }
+
+  #btn14SWSR{
+    width: 2.5%;
+    top: 83%;
+    left: 62.5%;
+  }
+
+  /* Service Well Top Rack Left */
+  #btn1SWTRL{
+    top: 28%;
+    left: 38%;
+  }
+
+  #btn2SWTRL{
+    top: 80%;
+    left: 35%;
+  }
+
+  #btn3SWTRL{
+    top: 60%;
+    left: 44%;
+  }
+
+  #btn4SWTRL{
+    top: 56%;
+    left: 53%;
+  }
+
+  #btn5SWTRL{
+    top: 53%;
+    left: 61%;
+  }
+
+
+  /* Service Well Top Rack Right */
+  #btn1SWTRR{
+    top: 75%;
+    left: 49.5%;
+  }
+
+  #btn2SWTRR{
+    top: 58%;
+    left: 57%;
+  }
+
+  #btn3SWTRR{
+    top: 43%;
+    left: 52%;
+  }
+
+  #btn4SWTRR{
+    top: 37.5%;
+    left: 47.5%;
+  }
+
+  #btn5SWTRR{
+    top: 32%;
+    left: 43%;
+  }
+
+  /* Service Well Fruit */
+  #btn1SWF{
+    top: 45%;
+    left: 49%;
+  }
+
+  /* Service Well Server Garnish */
+  #btn1SWSG{
+    top: 73%;
+    left: 49%;
+  }
+  
+  #btn2SWSG{
+    top: 41%;
+    left: 47.5%;
+  }
+
+  #btn3SWSG{
+    top: 19%;
+    left: 47.5%;
+  }
+
+  /* Service Well Overstock */
+  #btn1SWO{
+    top: 65%;
+    left: 30%;
+  }
+
+  #btn2SWO{
+    top: 34.5%;
+    left: 37%;
+  }
+
+  #btn3SWO{
+    top: 48%;
+    left: 36.5%;
+  }
+
+  #btn4SWO{
+    top: 62%;
+    left: 36%;
+  }
+
+  #btn5SWO{
+    top: 75%;
+    left: 35.5%;
+  }
+
+  #btn6SWO{
+    top: 55%;
+    left: 59%;
+  }
+
+  #btn7SWO{
+    top: 85%;
+    left: 59%;
+  }
+
+  /* Service Well Overstock Storage*/
+  #btn1SWOS{
+    top: 20%;
+    left: 35%;
+  }
+
+  #btn2SWOS{
+    top: 20.5%;
+    left: 40.5%;
+  }
+
+  #btn3SWOS{
+    top: 21%;
+    left: 46%;
+  }
+
+  #btn4SWOS{
+    top: 21.5%;
+    left: 51%;
+  }
+
+  #btn5SWOS{
+    top: 22%;
+    left: 56%;
+  }
+
+  #btn6SWOS{
+    top: 22.75%;
+    left: 61%;
+  }
+
+  #btn7SWOS{
+    top: 85%;
+    left: 34%;
+  }
+
+  #btn8SWOS{
+    top: 85%;
+    left: 38.5%;
+  }
+
+  #btn9SWOS{
+    top: 85%;
+    left: 43.1%;
+  }
+
+  #btn10SWOS{
+    top: 85%;
+    left: 47.5%;
+  }
+
+  #btn11SWOS{
+    top: 85%;
+    left: 51.75%;
+  }
+
+  #btn12SWOS{
+    top: 85%;
+    left: 56%;
+  }
+
+  #btn13SWOS{
+    top: 85%;
+    left: 60.5%;
+  }
+
+  /* Well 400 Main*/
+  #btn1W4M{
+    top: 34%;
+    left: 31%;
+  }
+
+  #btn2W4M{
+    top: 50%;
+    left: 41%;
+  }
+
+  #btn3W4M{
+    top: 49.5%;
+    left: 51.5%;
+  }
+
+  #btn4W4M{
+    top: 48%;
+    left: 58.5%;
+  }
+
+  #btn5W4M{
+    top: 43%;
+    left: 63.25%;
+  }
+
+  #btn6W4M{
+    top: 55%;
+    left: 68%;
+  }
+
+  #btn7W4M{
+    top: 63%;
+    left: 46%;
+  }
+
+  #btn8W4M{
+    top: 75%;
+    left: 46%;
+  }
+
+  /* Well 400 Side Station */
+  #btn1W4SS{
+    top: 55%;
+    left: 27.25%;
+  }
+
+  #btn2W4SS{
+    top: 48%;
+    left: 36%;
+  }
+
+  #btn3W4SS{
+    top: 48%;
+    left: 45%;
+  }
+
+  #btn4W4SS{
+    top: 48%;
+    left: 54%;
+  }
+
+  #btn5W4SS{
+    top: 48%;
+    left: 66%;
+  }
+
+  /* Well 500 Main */
+  #btn1W5M{
+    top: 34%;
+    left: 35%;
+  }
+
+  #btn2W5M{
+    top: 48%;
+    left: 45%;
+  }
+
+  #btn3W5M{
+    top: 48%;
+    left: 56%;
+  }
+
+  #btn4W5M{
+    top: 69%;
+    left: 50%;
+  }
+  
+  #btn5W5M{
+    top: 82%;
+    left: 50%;
+  }
+
+  #btn6W5M{
+    top: 26%;
+    left: 50%;
+  }
+
+  /* Well 500 Left Side */
+  #btn1W5LS{
+    top: 50%;
+    left: 44%;
+  }
+
+  #btn2W5LS{
+    top: 66%;
+    left: 58%;
+  }
+  
+  /* Well 500 Right Side */
+  #btn1W5RS{
+    top: 67%;
+    left: 42.75%;
+  }
+
+  #btn2W5RS{
+    top: 28%;
+    left: 36%;
+  }
+
+  #btn3W5RS{
+    top: 23%;
+    left: 56%;
+  }
+
+  #btn4W5RS{
+    top: 60%;
+    left: 62%;
+  }
+
+  #btn5W5RS{
+    top: 45%;
+    left: 44%;
+  }
+
+  #btn6W5RS{
+    top: 39%;
+    left: 57.5%;
+  }
+
+  /* Well 500 Garnish */
+  #btn1W5G{
+    top: 30%;
+    left: 42%;
+  }
+
+  #btn2W5G{
+    top: 50%;
+    left: 42%;
+  }
+
+  #btn3W5G{
+    top: 42%;
+    left: 74%;
+  }
+
+  /* Well 500 Overstock */
+  #btn1W5O{
+    top: 78%;
+    left: 42.5%;
+  }
+
+  #btn2W5O{
+    top: 78%;
+    left: 49.5%;
+  }
+
+  #btn3W5O{
+    top: 78%;
+    left: 56%;
+  }
+
+  /* Well 700 Main */
+  #btn1W7M{
+    top: 66%;
+    left: 40%;
+  }
+
+  #btn2W7M{
+    top: 49%;
+    left: 40%;
+  }
+
+  #btn3W7M{
+    top: 37%;
+    left: 40%;
+  }
+
+  #btn4W7M{
+    top: 60%;
+    left: 52.5%;
+  }
+
+  #btn5W7M{
+    top: 22%;
+    left: 64%;
+  }
+
+  #btn6W7M{
+    top: 53%;
+    left: 64%;
+  }
+
+  #btn7W7M{
+    top: 24%;
+    left: 43%;
+  }
+
+  #btn8W7M{
+    top: 65%;
+    left: 26%;
+  }
+
+  /* Well 700 Left Station */
+  #btn1W7LS{
+    top: 55%;
+    left: 21%;
+  }
+
+  #btn2W7LS{
+    top: 55%;
+    left: 48%;
+  }
+
+  #btn3W7LS{
+    top: 55%;
+    left: 79%;
+  }
+
+  /* Server Pickup */
+  #btn1SP{
+    top: 27%;
+    left: 57%;
+  }
+
+  #btn2SP{
+    top: 61%;
+    left: 42%;
+  }
+
+  #btn3SP{
+    top: 50%;
+    left: 48%;
+  }
+
+  /* Overstock */
+  #btn1WOS1{
+    top: 87%;
+    left: 14%;
+  }
+
+  #btn2WOS1{
+    top: 87%;
+    left: 22%;
+  }
+
+  #btn3WOS1{
+    top: 87%;
+    left: 30%;
+  }
+
+  #btn4WOS1{
+    top: 87%;
+    left: 39%;
+  }
+
+  #btn5WOS1{
+    top: 87%;
+    left: 49%;
+  }
+
+  #btn6WOS1{
+    top: 87%;
+    left: 59%;
+  }
+
+  #btn7WOS1{
+    top: 87%;
+    left: 67%;
+  }
+
+  #btn8WOS1{
+    top: 87%;
+    left: 74%;
+  }
+
+  #btn9WOS1{
+    top: 87%;
+    left: 83%;
+  }
+
+
+
+
+
 }
 
-#photoDiv{
-    border: 2px solid purple;
-    width: 50vw;
-    height: 43vh;
+
+/*---------------------------------------------------------- Portrait Mode ----------------------------------------------------------------------------*/
+
+@media screen and (orientation:portrait) {
+  *{
+    z-index: 2;
+    color: rgb(241, 237, 231);
 }
 
-#drinkPhoto{
-    margin-bottom: 5vh;
-    border: 4px outset rgb(122, 113, 113);
-    box-shadow: 1px 1px 5px rgb(182, 145, 121, .5), 0 0 5px rgb(182, 145, 121, .5), 0 0 5px rgb(182, 145, 121, .5);
-    max-width: auto;
-    height: 45vh;
-    /*display: block;*/
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li,
+#modalTitle,
+#batchRecipesDiv,
+.topnav,
+.photo-containers,
+.setup-images,
+.menu-items,
+.close,
+.image-numbers,
+#dropDownMenu,
+#myModal
+{
+  display: none;
+}
+
+#logoDiv {
+    max-width: 100%;
+    height: 16vh;
+    padding: 3% 0% 0% 0%;
 }
 
 img[src="./images/logo.png"]{
-    padding: 2%;
-    max-height: 20%;
-    background-color: black;
+    display: flex;
+    margin: auto;
+    height: auto;
+    max-width: 90%;
 }
 
-/* Recipe Section */
-#recipeDiv {
-    display: none;
-    color: antiquewhite;
-    margin-left: 5%;
-    width: 40%;                    
-    height: 85%;
-    padding-left: 0;
-    background-color: rgba(0, 0, 0, 0);
-    grid-column: 2 / span 2;
-    grid-row: 1;
-    justify-content: left;
+#portraitContainer{
+  box-shadow: 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5), 1px 1px 30px rgb(0, 0, 0, .5);
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 60%;
+  border: 10px solid black;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  padding: 8%;
 }
 
-#recipeInfoDiv{
-    border-left: 1px solid antiquewhite;
-    border-right: 1px solid antiquewhite;
-    max-width: auto;
-    height: 40vh;
-    width: 28%;                    
-    height: 75%;
-    color: antiquewhite;
-    font-size: 3.3vh;
-    margin-bottom: 2%;
-    margin-right: 3vw;
-    padding: 1%;
-}
+.portrait-buttons{
+  border: 4px outset rgb(122, 113, 113);
+  width: 35vw;
+  height: 8vh;
+  font-size: 2vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 2vw;
+  justify-content: center;
+  padding: 0 6%;
+} 
 
-.recipe-container{
+h1{
     display: grid;
-    grid-template-columns: auto; /*dont need the extra columns fix later*/
-    grid-template-rows: min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content min-content;
-    column-gap: 1.5vw;
-    height: 100%;
-    font-size: 3.5vh;
+    justify-content: center;
+    height: auto;
+    font-size: 2.75vh;
+    font-family: monospace;
+    padding: 5% 10%;
+    font-weight: 400;
+    text-shadow: 2px 2px rgb(13, 13, 13);
 }
 
-#glass{
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: left;
-}
-
-#glassRecipe{
-    grid-column: 2 / span 2;
-    grid-row: 1;
-    justify-self: left;
-}
-
-#rim{
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: left;
-}
-
-#rimRecipe{
-    grid-column: 2 / span 2;
-    grid-row: 2;
-    justify-self: left;
-}
-
-#liquor{
-    grid-column: 1;
-    grid-row: 3;
-    justify-self: left;
-}
-
-#liquorRecipe{
-    grid-column: 2 / span 2;
-    grid-row: 3;
-    justify-self: left;
-}
-
-#liquorRecipe2{
-    display: none;
-    grid-column: 2 / span 2;
-    grid-row: 4;
-    justify-self: left;
-}
-
-#liquorRecipe3{
-    display: none;
-    grid-column: 2 / span 2;
-    grid-row: 5;
-    justify-self: left;
-}
-
-#liquorRecipe4{
-    display: none;
-    grid-column: 2 / span 2;
-    grid-row: 6;
-    justify-self: left;
-}
-
-#liquorRecipe5{
-    display: none;
-    grid-column: 2 / span 2;
-    grid-row: 7;
-    justify-self: left;
-}
-
-#liqueur{
-    grid-column: 1;
-    grid-row: 8;
-    justify-self: left;
-}
-
-#liqueurRecipe{
-    grid-column: 2 / span 2;
-    grid-row: 8;
-    justify-self: left;
-}
-
-#liqueurRecipe2{
-    grid-column: 2 / span 2;
-    grid-row: 9;
-    justify-self: left;
-}
-
-#liqueurRecipe3{
-    grid-column: 2 / span 2;
-    grid-row: 10;
-    justify-self: left;
-}
-
-#mixers{
-    grid-column: 1;
-    grid-row: 11;
-    justify-self: left;
-}
-
-#mixersRecipe{
-    grid-column: 2 / span 2;
-    grid-row: 11;
-    justify-self: left;
-}
-
-#mixersRecipe2{
-    display: none;
-    grid-column: 2 / span 2;
-    grid-row: 12;
-    justify-self: left;
-}
-
-#mixersRecipe3{
-    display: none;
-    grid-column: 2 / span 2;
-    grid-row: 13;
-    justify-self: left;
-}
-
-#mixersRecipe4{
-    display: none;
-    grid-column: 2 / span 2;
-    grid-row: 14;
-    justify-self: left;
-}
-
-#mixersRecipe5{
-    display: none;
-    grid-column: 2 / span 2;
-    grid-row: 15;
-    justify-self: left;
-}
-
-#mixersRecipe6{
-    display: none;
-    grid-column: 2 / span 2;
-    grid-row: 16;
-    justify-self: left;
-}
-
-#garnish{
-    grid-column: 1;
-    grid-row: 17;
-    justify-self: left;
-}
-
-#garnishRecipe{
-    grid-column: 2 / span 2;
-    grid-row: 17;
-    justify-self: left;
-}
-
-#garnishRecipe2{
-    grid-column: 2 / span 2;
-    grid-row: 18;
-    justify-self: left;
-}
-
-#garnishRecipe3{
-    grid-column: 2 / span 2;
-    grid-row: 19;
-    justify-self: left;
-}
-
-#garnishRecipe4{
-    grid-column: 2 / span 2;
-    grid-row: 20;
-    justify-self: left;
-}
-
-#garnishRecipe5{
-    grid-column: 2 / span 2;
-    grid-row: 21;
-    justify-self: left;
+#rotateScreenIcon{
+    display: block;
+    margin: auto;
+    height: 30%;
 }
 }
-
-/* Fire Tablet Resolution 1200 x 1920 */
-@media screen and (max-width: 1920px) and (orientation:landscape) {
-
-    #recipeInfoDiv{
-        width: 2%;
-        font-size: 2.5vh;
-    }
-
-    #drinkPhoto{
-        height: 65%;
-        margin-bottom: 10vh;
-    }
-
-    #recipeDiv{
-        margin-top: 4vh;
-        width: 5vw;
-    }
-
-    .recipe-container{
-        width: fit-content;
-        height: 5%;
-        font-size: 2.5vh;
-    }
-
- }
-
-
-
-/* S22 Ultra Resolution 1440 x 3088 */
